@@ -1166,7 +1166,7 @@ gap: 1.5vw !important;
                 .avatar{
                   
                     .card{
-                        border-radius: 200px !important;
+                        border-radius: 0px !important;
                     width: 100% !important;
                     
                     }
