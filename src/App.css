@@ -952,4 +952,6 @@ width: 100vw;
       .circle-menu ul li:not(.open) {
         opacity: 0 !important;
       }
-      
+      .github , .livelink{
+        color: white !important;
+      }

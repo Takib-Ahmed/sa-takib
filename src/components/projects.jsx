@@ -9,10 +9,9 @@ import { useEffect } from 'react'
 import { useRef } from 'react'
 
 const Projects = ({setView,view}) => {
-  const [listprojects] = useState([
-    {
-    image:"/public/fullsize.png",
-    name:"Aniwatch Clone"
+  const [listprojects] = useState([ {
+    image:"/public/Projects/screencapture-localhost-5173-2025-01-16-22_39_56.png",
+    name:"Portpolio"
     ,
     Des:"This is a fully responsive web application replicating the Aniwatch.tv streaming platform's interface. It features a dynamic display of popular anime series, top airing shows, and upcoming releases. The design includes interactive elements such as carousels, user comment sections, and trending posts. Built with HTML, CSS, and JavaScript, the clone emphasizes clean UI/UX principles, showcasing a modern, visually rich streaming site experience."
     ,
@@ -21,24 +20,43 @@ const Projects = ({setView,view}) => {
     languages:"#html #css  #js",
     frameworkicon:'/public/framework.png',
     frameworks:'#bootstrap',
-    langicon:'/public/programming-language-modified.png'
+    langicon:'/public/programming-language-modified.png',
+      github:'https://github.com/Takib-Ahmed/sa-takib.git',
+    live:'https://sa-takib.vercel.app/'
+  },
+    {
+    image:"/Projects/screencapture-nasafits-vercel-app-2025-01-16-22_23_26.png",
+    name:"Nasa Fits"
+    ,
+    Des:"This is a fully responsive web application replicating the Aniwatch.tv streaming platform's interface. It features a dynamic display of popular anime series, top airing shows, and upcoming releases. The design includes interactive elements such as carousels, user comment sections, and trending posts. Built with HTML, CSS, and JavaScript, the clone emphasizes clean UI/UX principles, showcasing a modern, visually rich streaming site experience."
+    ,
+    mission:'Designer,Full-Stack-developer'
+    ,
+    languages:"#html #css  #js",
+    frameworkicon:'/framework.png',
+    frameworks:'#react',
+    langicon:'/programming-language-modified.png',
+    github:'https://github.com/Takib-Ahmed/sa-takib.git',
+    live:'https://nasafits.vercel.app/'
   },
   {
-    image:"/public/screencapture-takib-ahmed-github-io-aniwatchclone-2024-10-18-20_29_02 (1).png",
-    name:"Aniwatch Clone"
+    image:"/Projects/screencapture-feedbacksnet-vercel-app-2025-01-16-22_23_47.png",
+    name:"Feedback.net "
     ,
     Des:"This is a fully responsive web application replicating the Aniwatch.tv streaming platform's interface. It features a dynamic display of popular anime series, top airing shows, and upcoming releases. The design includes interactive elements such as carousels, user comment sections, and trending posts. Built with HTML, CSS, and JavaScript, the clone emphasizes clean UI/UX principles, showcasing a modern, visually rich streaming site experience."
     ,
     mission:'Frontend Developer'
     ,
-    languages:"#html #css  #js",
-    frameworkicon:'/public/framework.png',
-    frameworks:'#bootstrap',
-    langicon:'/public/programming-language-modified.png'
+    languages:"#html #css #js",
+    frameworkicon:'/framework.png',
+    frameworks:'#react',
+    langicon:'/public/programming-language-modified.png',
+    github:'https://github.com/Takib-Ahmed/feedback.com.git',
+    live:'https://feedbacksnet.vercel.app/'
   } ,
   {
-    image:"/public/fullsize.png",
-    name:"Aniwatch Clone"
+    image:"/public/Projects/screencapture-taskmanager-app-virid-vercel-app-2025-01-16-22_26_49.png",
+    name:"Task Manager"
     ,
     Des:"This is a fully responsive web application replicating the Aniwatch.tv streaming platform's interface. It features a dynamic display of popular anime series, top airing shows, and upcoming releases. The design includes interactive elements such as carousels, user comment sections, and trending posts. Built with HTML, CSS, and JavaScript, the clone emphasizes clean UI/UX principles, showcasing a modern, visually rich streaming site experience."
     ,
@@ -46,8 +64,10 @@ const Projects = ({setView,view}) => {
     ,
     languages:"#html #css  #js",
     frameworkicon:'/public/framework.png',
-    frameworks:'#bootstrap',
-    langicon:'/public/programming-language-modified.png'
+    frameworks:'#react',
+    langicon:'/public/programming-language-modified.png',
+     github:'https://github.com/Takib-Ahmed/taskmanager.app.git',
+    live:'https://taskmanager-app-virid.vercel.app/'
   },  
   {
     image:"/public/fullsize.png",
@@ -60,21 +80,11 @@ const Projects = ({setView,view}) => {
     languages:"#html #css  #js",
     frameworkicon:'/public/framework.png',
     frameworks:'#bootstrap',
-    langicon:'/public/programming-language-modified.png'
+    langicon:'/public/programming-language-modified.png',
+     github:'https://github.com/Takib-Ahmed/aniwatchclone.git',
+    live:'https://takib-ahmed.github.io/aniwatchclone/'
   },   
-  {
-    image:"/public/fullsize.png",
-    name:"Aniwatch Clone"
-    ,
-    Des:"This is a fully responsive web application replicating the Aniwatch.tv streaming platform's interface. It features a dynamic display of popular anime series, top airing shows, and upcoming releases. The design includes interactive elements such as carousels, user comment sections, and trending posts. Built with HTML, CSS, and JavaScript, the clone emphasizes clean UI/UX principles, showcasing a modern, visually rich streaming site experience."
-    ,
-    mission:'Frontend Developer'
-    ,
-    languages:"#html #css  #js",
-    frameworkicon:'/public/framework.png',
-    frameworks:'#bootstrap',
-    langicon:'/public/programming-language-modified.png'
-  }])
+ ])
 
   const projectContainerRef = useRef(null);
   const changeViewButtonRef = useRef(null);
@@ -200,7 +210,7 @@ window.addEventListener("resize", handleResize);
  <img src= {value.image} alt="" className='  ' />
 <div className="flex absolute right-2 top-2 gap-1.5">
 <a href="https://github.com/Takib-Ahmed/aniwatchclone.git"><FontAwesomeIcon icon={faGithub} className='   github  text-white  '></FontAwesomeIcon></a>
-<a href="https://takib-ahmed.github.io/aniwatchclone/"><FontAwesomeIcon icon={faEye} className='        text-white eye '></FontAwesomeIcon></a>
+<a href="https://takib-ahmed.github.io/aniwatchclone/"><FontAwesomeIcon icon={faEye} className='    livelink    text-white eye '></FontAwesomeIcon></a>
 
 </div>
 </div>
