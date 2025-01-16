@@ -1164,9 +1164,9 @@ gap: 1.5vw !important;
             @media only screen and (max-width: 420px){
                 
                 .avatar{
-                  display: none;
+                  
                     .card{
-                        border-radius: 0px !important;
+                      
                     width: 100% !important;
                     
                     }

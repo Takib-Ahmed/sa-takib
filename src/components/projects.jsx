@@ -52,7 +52,7 @@ const Projects = ({setView,view}) => {
       Des: "A lightweight task management app that allows users to organize their daily activities efficiently. Built with React, it features responsive design and smooth user interactions.",
       mission: "Frontend Developer",
       languages: "#html #css #js",
-      frameworkicon: "/public/framework.png",
+      frameworkicon: "/framework.png",
       frameworks: "#react",
       langicon: "/programming-language-modified.png",
       github: "https://github.com/Takib-Ahmed/taskmanager.app.git",
@@ -64,11 +64,12 @@ const Projects = ({setView,view}) => {
       Des: "A replica of the Aniwatch.tv streaming platform, featuring dynamic sections for trending shows, carousels, and more. Built with HTML, CSS, and JavaScript, focusing on responsive and interactive design.",
       mission: "Frontend Developer",
       languages: "#html #css #js",
-      frameworkicon: "/public/framework.png",
+      frameworkicon: "/framework.png",
       frameworks: "#bootstrap",
       langicon: "/programming-language-modified.png",
       github: "https://github.com/Takib-Ahmed/aniwatchclone.git",
-      live: "https://takib-ahmed.github.io/aniwatchclone/"
+      live: "https://takib-ahmed.github.io/aniwatchclone/",
+    
     }
   ]);
   
