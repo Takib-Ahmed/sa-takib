@@ -31,7 +31,7 @@ const Projects = ({setView,view}) => {
       frameworkicon: "/framework.png",
       frameworks: "#react",
       langicon: "/programming-language-modified.png",
-      github: "https://github.com/Takib-Ahmed/sa-takib.git",
+      github: "https://github.com/Takib-Ahmed/nasafits.git",
       live: "https://nasafits.vercel.app/"
     },
     {
