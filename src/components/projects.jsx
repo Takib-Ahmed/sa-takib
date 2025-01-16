@@ -16,9 +16,9 @@ const Projects = ({setView,view}) => {
       Des: "A modern and fully responsive portfolio website designed to showcase personal projects, skills, and experiences. Built with a focus on clean UI and smooth navigation.",
       mission: "Frontend Developer",
       languages: "#html #css #js",
-      frameworkicon: "/public/framework.png",
+      frameworkicon: "/framework.png",
       frameworks: "#bootstrap",
-      langicon: "/public/programming-language-modified.png",
+      langicon: "/programming-language-modified.png",
       github: "https://github.com/Takib-Ahmed/sa-takib.git",
       live: "https://sa-takib.vercel.app/"
     },
