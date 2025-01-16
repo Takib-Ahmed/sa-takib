@@ -198,8 +198,8 @@ window.addEventListener("resize", handleResize);
 <div className="cover  relative ">
  <img src= {value.image} alt="" className='  ' />
 <div className="flex  flex-wrap absolute right-2 top-2 gap-1.5">
-<a href="https://github.com/Takib-Ahmed/aniwatchclone.git"><FontAwesomeIcon icon={faGithub} className='   github  text-white  '></FontAwesomeIcon></a>
-<a href="https://takib-ahmed.github.io/aniwatchclone/"><FontAwesomeIcon icon={faEye} className='    livelink    text-white eye '></FontAwesomeIcon></a>
+<a href={value.github}><FontAwesomeIcon icon={faGithub} className='   github  text-white  '></FontAwesomeIcon></a>
+<a href={value.live}><FontAwesomeIcon icon={faEye} className='    livelink    text-white eye '></FontAwesomeIcon></a>
 
 </div>
 </div>

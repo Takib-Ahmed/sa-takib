@@ -319,7 +319,7 @@ opacity: 0;
     -webkit-text-fill-color:transparent;
     -webkit-background-clip: text;
     font-size: 2em;
-height: 45px;
+height: 40px;
     &::before{
         content: '';
        
