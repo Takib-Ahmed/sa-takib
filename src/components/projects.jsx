@@ -11,7 +11,7 @@ import { useRef } from 'react'
 const Projects = ({setView,view}) => {
   const [listprojects] = useState([
     {
-      image: "/public/Projects/screencapture-localhost-5173-2025-01-16-22_39_56.png",
+      image: "/Projects/screencapture-localhost-5173-2025-01-16-22_39_56.png",
       name: "Portpolio",
       Des: "A modern and fully responsive portfolio website designed to showcase personal projects, skills, and experiences. Built with a focus on clean UI and smooth navigation.",
       mission: "Frontend Developer",
@@ -42,31 +42,31 @@ const Projects = ({setView,view}) => {
       languages: "#html #css #js",
       frameworkicon: "/framework.png",
       frameworks: "#react",
-      langicon: "/public/programming-language-modified.png",
+      langicon: "/programming-language-modified.png",
       github: "https://github.com/Takib-Ahmed/feedback.com.git",
       live: "https://feedbacksnet.vercel.app/"
     },
     {
-      image: "/public/Projects/screencapture-taskmanager-app-virid-vercel-app-2025-01-16-22_26_49.png",
+      image: "/Projects/screencapture-taskmanager-app-virid-vercel-app-2025-01-16-22_26_49.png",
       name: "Task Manager",
       Des: "A lightweight task management app that allows users to organize their daily activities efficiently. Built with React, it features responsive design and smooth user interactions.",
       mission: "Frontend Developer",
       languages: "#html #css #js",
       frameworkicon: "/public/framework.png",
       frameworks: "#react",
-      langicon: "/public/programming-language-modified.png",
+      langicon: "/programming-language-modified.png",
       github: "https://github.com/Takib-Ahmed/taskmanager.app.git",
       live: "https://taskmanager-app-virid.vercel.app/"
     },
     {
-      image: "/public/fullsize.png",
+      image: "/fullsize.png",
       name: "Aniwatch Clone",
       Des: "A replica of the Aniwatch.tv streaming platform, featuring dynamic sections for trending shows, carousels, and more. Built with HTML, CSS, and JavaScript, focusing on responsive and interactive design.",
       mission: "Frontend Developer",
       languages: "#html #css #js",
       frameworkicon: "/public/framework.png",
       frameworks: "#bootstrap",
-      langicon: "/public/programming-language-modified.png",
+      langicon: "/programming-language-modified.png",
       github: "https://github.com/Takib-Ahmed/aniwatchclone.git",
       live: "https://takib-ahmed.github.io/aniwatchclone/"
     }
@@ -174,7 +174,7 @@ window.addEventListener("resize", handleResize);
         }`}
         onClick={() => setView("list")}
       >
-  <img src="/public/list-47-512.png" alt="" className=' invert w-5' />
+  <img src="/list-47-512.png" alt="" className=' invert w-5' />
       </button>
       <a href="#projects"><button
         className={`px-4 py-2 text-white rounded-md ${

@@ -25,12 +25,12 @@ const Home = () => {
 </div>
           <div className="links flex gap-5 ">
         
-             <a href="/public/CV/Sa Takib.pdf" className='cv' download  ><div className=' flex  gap-2'><p>CV</p> <img src={Download} alt="" className=' hidden sm:block mt-2 w-7 h-7 invert ' /></div></a>
+             <a href="/CV/Sa Takib.pdf" className='cv' download  ><div className=' flex  gap-2'><p>CV</p> <img src={Download} alt="" className=' hidden sm:block mt-2 w-7 h-7 invert ' /></div></a>
              <a href="" className=' relative hidden sm:block'><FontAwesomeIcon href='#' icon={faLinkedin}/></a><a href='https://github.com/Takib-Ahmed' ><FontAwesomeIcon icon={faGithub}/></a><a href='https://www.instagram.com/md.takeb'><FontAwesomeIcon icon={faInstagram}/></a><a href='https://wa.me/01615081141'><FontAwesomeIcon  icon={faWhatsapp}/></a></div></div>
         
         <div className=" avatar text-right   ">
           <div className="card   mb-0 md:my-0 inline-flex flex-col w-100 ">
-            <img src='/public/profile copy.png' alt="" className=' profile' />
+            <img src='/profile copy.png' alt="" className=' profile' />
             <div className="info">
               <div>Front tend developer</div>
               <div>Bangladeshi</div>
