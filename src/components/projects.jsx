@@ -233,7 +233,7 @@ window.addEventListener("resize", handleResize);
 <div className=" flex gap-4">
        <img src={value.frameworkicon} alt=""  className=' w-9 h-9  plicon invert framework  '/>
        <div className=' text-[#7711ED]' >
-  <p className=' text-white  '>Framwork</p>
+  <p className=' text-white  '>Library</p>
 <font className="font-bold">  {value.frameworks}</font>
 </div>
 </div> 
