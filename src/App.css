@@ -1137,6 +1137,9 @@ padding: 1px;
             
             }
             @media only screen and (max-width: 420px){
+                .profession{
+                    height: auto !important;
+                }
                 .projectlist2{
                     position: relative;
                 height: auto;
@@ -1398,9 +1401,7 @@ padding: 1px;
             }
           
             @media only screen and (max-width: 350px){
-.profession{
-    height: auto !important;
-}
+
             }   
     .Loader{
         color:#d1cdcdc1;
