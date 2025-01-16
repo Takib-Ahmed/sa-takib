@@ -338,7 +338,7 @@ padding: 1px;
       .avatar{
         justify-content: center;
         align-items: center;
-        margin-right: 10vw;
+        margin-right: 0 !important;
       }
 
 
@@ -929,6 +929,7 @@ padding: 1px;
 
 
         @media only screen and (max-width: 470px) {
+        
             .header{
 
                 width: 100%;
@@ -1391,7 +1392,7 @@ padding: 1px;
                 }
                 
                 .avatar{
-                  
+                  margin-right: 0 !important;
                     .card{
                       
                     width: 100% !important;
