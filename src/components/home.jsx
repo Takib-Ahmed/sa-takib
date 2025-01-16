@@ -13,7 +13,7 @@ const Home = () => {
   return (
     <div>
       
-      <section className="home m-5 md:m-0     flex-col   lg:grid  lg:gap-10  " id='home'>
+      <section className="home sm:m-5 md:m-0     flex-col   lg:grid  lg:gap-10  " id='home'>
         <div className="content">
           <div className="name"><span className='myname'>SA Takib</span></div>
           
@@ -26,7 +26,7 @@ const Home = () => {
           <div className="links flex gap-5 ">
         
              <a href="/public/CV/Sa Takib.pdf" className='cv' download  ><div className=' flex  gap-2'><p>CV</p> <img src={Download} alt="" className=' hidden sm:block mt-2 w-7 h-7 invert ' /></div></a>
-             <a href="" className=' relative'><FontAwesomeIcon href='#' icon={faLinkedin}/></a><a href='https://github.com/Takib-Ahmed' ><FontAwesomeIcon icon={faGithub}/></a><a href='https://www.instagram.com/md.takeb'><FontAwesomeIcon icon={faInstagram}/></a><a href='https://wa.me/01615081141'><FontAwesomeIcon  icon={faWhatsapp}/></a></div></div>
+             <a href="" className=' relative hidden sm:block'><FontAwesomeIcon href='#' icon={faLinkedin}/></a><a href='https://github.com/Takib-Ahmed' ><FontAwesomeIcon icon={faGithub}/></a><a href='https://www.instagram.com/md.takeb'><FontAwesomeIcon icon={faInstagram}/></a><a href='https://wa.me/01615081141'><FontAwesomeIcon  icon={faWhatsapp}/></a></div></div>
         
         <div className=" avatar text-right   ">
           <div className="card   mb-0 md:my-0 inline-flex flex-col w-100 ">
