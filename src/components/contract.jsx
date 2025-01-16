@@ -3,11 +3,11 @@ import { useState } from "react"
 export function Contract(){
     const [listcontracts] = useState([{
      title:'Phone Number'
-     ,value:"01467478214"
+     ,value:"01615081141"
         
     },{
 title:'Email'
-,value:"easycoding@gmail.com"
+,value:"satakib300@gmail.com"
     },
 {
     title:"Youtube"
@@ -28,7 +28,7 @@ title:'Email'
 </div>
 <div className="contractcontainer flex flex-wrap justify-center   flex-col-reverse lg:flex-row  lg:flex-nowrap lg:justify-between gap-52 p-5 pb-0 contract">
     <div className="inputs grid gap-4  pb-0 lg:ms-[-5vw]  mt-32 lg:mt-0">
-  <form action="" name="contractus" netlify>
+  <form action="" name="contractus" >
           <div className="name">
             <h4 className="title">Name</h4><br />
             <input type="name" required placeholder="Name" className="nameinput input rounded-[30px] contract  w-[60vw]  lg:w-[30vw] " />
