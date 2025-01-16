@@ -1,0 +1,8 @@
+export function coursepage (){
+    return<>
+    
+    
+    
+    
+    </>
+}
