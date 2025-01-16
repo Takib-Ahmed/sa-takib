@@ -11,8 +11,8 @@ export function Navbar ({view})
     return<>
     
  <header className="  ">
-    <div className="logo "><img src={logo} alt=""  className="w-14 sm:w-20"/></div>
-    <nav className=" text-sm sm:text-base gap-5 sm:gap-16">
+    <div className="logo "><img src={logo} alt=""  className="w-10 sm:w-20"/></div>
+    <nav className=" text-xs sm:text-base gap-5 sm:gap-16">
      
         {
             listnav.map((value,key)=>(
