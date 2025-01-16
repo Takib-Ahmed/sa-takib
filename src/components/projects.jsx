@@ -183,7 +183,7 @@ window.addEventListener("resize", handleResize);
         onClick={() => setView("grid")}
       >
         
-      <img src="/public/menu.png" alt="" className=' invert w-5' />
+      <img src="/menu.png" alt="" className=' invert w-5' />
       </button></a>
     </div>
         <div className={` grid gap-60  mt-20 w-fit ` +` ${view =='list' ? 'projectlist':'projectlist2 justify-center lg:justify-normal'}`} ref={projectContainerRef}>
