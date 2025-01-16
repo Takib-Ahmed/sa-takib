@@ -85,7 +85,19 @@ const Skills = () => {
   }, []);
 
   // Ensure that the 9th element exists before adding a class
+  const [isLgScreen, setIsLgScreen] = useState(false);
 
+  // Monitor screen size
+  useEffect(() => {
+    const checkScreenSize = () => {
+      setIsLgScreen(window.innerWidth >= 1024); // Tailwind's lg breakpoint
+    };
+
+    checkScreenSize(); // Initial check
+    window.addEventListener("resize", checkScreenSize);
+
+    return () => window.removeEventListener("resize", checkScreenSize); // Cleanup
+  }, []);
   return (
     <div className=" ">
       <section className="skills my-10 mt-20" id="skills">
@@ -100,9 +112,7 @@ const Skills = () => {
               <div
            
 
-              style={{
-                transitionDelay: `${key * 150}ms`, // Direct transition-delay per item
-              }}
+              style={isLgScreen ? { transitionDelay: `${key * 150}ms` } : {}}
                 key={key}
                 ref={(el) => (itemRefs.current[key] = el)} // Assign refs to each item
                 className="item Hidden" // Default class is Hidden
