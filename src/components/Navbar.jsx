@@ -12,7 +12,7 @@ export function Navbar ({view})
     
  <header className="  ">
     <div className="logo"><img src={logo} alt="" /></div>
-    <nav>
+    <nav className=" gap-5 sm:gap-16">
      
         {
             listnav.map((value,key)=>(

@@ -196,7 +196,7 @@ window.addEventListener("resize", handleResize);
 
 <div className="cover  relative ">
  <img src= {value.image} alt="" className='  ' />
-<div className="flex absolute right-2 top-2 gap-1.5">
+<div className="flex  flex-wrap absolute right-2 top-2 gap-1.5">
 <a href="https://github.com/Takib-Ahmed/aniwatchclone.git"><FontAwesomeIcon icon={faGithub} className='   github  text-white  '></FontAwesomeIcon></a>
 <a href="https://takib-ahmed.github.io/aniwatchclone/"><FontAwesomeIcon icon={faEye} className='    livelink    text-white eye '></FontAwesomeIcon></a>
 
@@ -208,7 +208,7 @@ window.addEventListener("resize", handleResize);
 
               <h3>{value.name}</h3>
             </div> 
-            <div className="des">
+            <div className="des  description">
               <p>{value.Des}</p>
 
             </div>
@@ -221,7 +221,7 @@ window.addEventListener("resize", handleResize);
   {value.mission}
 </div>
          </div>
-<div className="languages flex  gap-10">
+<div className="languages flex flex-wrap sm:flex-nowrap gap-3 sm:gap-10">
 <div className=" flex gap-4">
        <img src={value.langicon} alt=""  className=' w-9 h-9   plicon'/>  
        {/* w-12 h-12 */}
