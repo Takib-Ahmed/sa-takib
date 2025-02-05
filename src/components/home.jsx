@@ -29,7 +29,7 @@ const Home = () => {
         
         <div className=" avatar text-right   ">
           <div className="card   mb-0 md:my-0 inline-flex flex-col w-100 ">
-            <img src='/public/profile copy.png' alt="" className=' profile'  />
+            <img src='/profile copy.png' alt="" className=' profile'  />
             <div className="info">
               <div>Front tend developer</div>
               <div>Bangladeshi</div>
