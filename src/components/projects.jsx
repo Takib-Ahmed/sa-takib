@@ -190,7 +190,7 @@ window.addEventListener("resize", handleResize);
         <div className={` grid gap-60  mt-20 w-fit ` +` ${view =='list' ? 'projectlist':'projectlist2 justify-center lg:justify-normal'}`} ref={projectContainerRef}>
           
       {listprojects.map((value,key)=>(
-            <div className="projectcard relative   flex justify-around" loading='lazy' key={key} style={{
+            <div className="projectcard relative   flex justify-around"  key={key} style={{
               '--position': key + 1}} ref={(el) => (boxesRef.current[key] = el)} onMouseMove={(e)=>{
                 handleMouseMove(e,key)
               }}>
