@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
-import React, { useState } from 'react'
-import project from '../assets/project.png'
+import  { useState } from 'react'
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import myrole from '../assets/user-role.svg'
 import { faGithub } from '@fortawesome/free-brands-svg-icons/faGithub'
@@ -145,7 +145,7 @@ const handleMouseMove = (e, index) => {
         contracts.forEach(Contract => observer.unobserve(Contract));
       }
     };
-  }, []);
+  }, [contracts,setView]);
 
 
   useEffect(() => {
@@ -160,7 +160,7 @@ const handleMouseMove = (e, index) => {
 window.addEventListener("resize", handleResize);
     // Cleanup on unmount
  
-  }, []);
+  }, [setView]);
   return (
     <>
       <section className="projects " id='projects' >
@@ -190,7 +190,7 @@ window.addEventListener("resize", handleResize);
         <div className={` grid gap-60  mt-20 w-fit ` +` ${view =='list' ? 'projectlist':'projectlist2 justify-center lg:justify-normal'}`} ref={projectContainerRef}>
           
       {listprojects.map((value,key)=>(
-            <div className="projectcard relative   flex justify-around" key={key} style={{
+            <div className="projectcard relative   flex justify-around" loading='lazy' key={key} style={{
               '--position': key + 1}} ref={(el) => (boxesRef.current[key] = el)} onMouseMove={(e)=>{
                 handleMouseMove(e,key)
               }}>

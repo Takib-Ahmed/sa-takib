@@ -1,7 +1,6 @@
-import React, { useEffect } from "react";
-import { useState } from "react";
-import { useRef } from "react";
 
+import { useEffect, useState } from "react";
+import { useRef } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faReact } from "@fortawesome/free-brands-svg-icons";
 import { faHtml5 } from "@fortawesome/free-brands-svg-icons";
@@ -11,7 +10,7 @@ import { faBootstrap } from "@fortawesome/free-brands-svg-icons";
 import { faGit } from "@fortawesome/free-brands-svg-icons";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 
-import FakeCodeEditor from "./Skilldetailbox";
+
 
 const Skills = () => {
   const [listskills] = useState([
@@ -107,7 +106,7 @@ const Skills = () => {
         <br />
         <div className="listanimation  ">
           {" "}
-          <div className="list ">
+          <div className="list "  >
             {listskills.map((value, key) => (
               <div
            
@@ -117,7 +116,7 @@ const Skills = () => {
                 ref={(el) => (itemRefs.current[key] = el)} // Assign refs to each item
                 className="item Hidden" // Default class is Hidden
               >
-                <FontAwesomeIcon icon={value.icon}></FontAwesomeIcon>
+                <FontAwesomeIcon icon={value.icon} ></FontAwesomeIcon>
                 <h3>{value.name}</h3>
                 <div className="des">{value.des}</div>
               </div>

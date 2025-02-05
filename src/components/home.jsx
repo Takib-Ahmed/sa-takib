@@ -1,5 +1,4 @@
-import React from 'react'
-import profile from '../assets/profile2.png'
+
 import CV from '../assets/pngegg (2).png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faInstagram } from '@fortawesome/free-brands-svg-icons'
@@ -13,7 +12,7 @@ const Home = () => {
   return (
     <div>
       
-      <section className="home sm:m-5 md:m-0     flex-col   lg:grid  lg:gap-10  " id='home'>
+      <section className="home sm:m-5 md:m-0     flex-col   lg:grid  lg:gap-10  " id='home' >
         <div className="content">
           <div className="name"><span className='myname'>SA Takib</span></div>
           
@@ -30,7 +29,7 @@ const Home = () => {
         
         <div className=" avatar text-right   ">
           <div className="card   mb-0 md:my-0 inline-flex flex-col w-100 ">
-            <img src='/profile copy.png' alt="" className=' profile' />
+            <img src='/public/profile copy.png' alt="" className=' profile' loading='fast' />
             <div className="info">
               <div>Front tend developer</div>
               <div>Bangladeshi</div>
