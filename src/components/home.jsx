@@ -1,5 +1,5 @@
 
-import CV from '../assets/pngegg (2).png'
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faInstagram } from '@fortawesome/free-brands-svg-icons'
 import { faGithub } from '@fortawesome/free-brands-svg-icons'

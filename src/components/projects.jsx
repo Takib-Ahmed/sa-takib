@@ -121,7 +121,10 @@ const handleMouseMove = (e, index) => {
     };
   }, []);
   useEffect(() => {
-    setView(window.innerWidth < 1240 ? "grid" : 'list');
+    if(window.innerWidth < 1240){
+      setView("grid" );
+    }
+   
     const observerCallback = (entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting && contracts) {
@@ -187,7 +190,7 @@ window.addEventListener("resize", handleResize);
       <img src="/menu.png" alt="" className=' invert w-5' />
       </button></a>
     </div>
-        <div className={` grid gap-60  mt-20 w-fit ` +` ${view =='list' ? 'projectlist':'projectlist2 justify-center lg:justify-normal'}`} ref={projectContainerRef}>
+        <div className={` grid gap-60  mt-20 w-fit ` +` ${view ==='list' ? 'projectlist':'projectlist2 justify-center lg:justify-normal'}`} ref={projectContainerRef}>
           
       {listprojects.map((value,key)=>(
             <div className="projectcard relative   flex justify-around"  key={key} style={{
