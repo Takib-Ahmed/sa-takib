@@ -789,12 +789,12 @@ grid-template-columns: repeat(auto-fill,300px); */
 display: flex;
 
 text-wrap: nowrap;
-width:inherit;
+width:105%;
 font-weight: 450;
 font-size: 1rem;
 font-family: "Mona Sans", "MonaSansFallback", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
 justify-content: space-between;
-gap: 1.5vw;
+gap: 1vw;
 position: relative;
 flex-wrap: wrap;
 
@@ -817,7 +817,7 @@ left: 50%;
 }
 & .item{
   margin-bottom:1.5vw;
-    padding:50px 70px;
+    padding:45px 70px;
     border-radius: 20px;
     transition:all 1s ;
     background-color:transparent;
@@ -852,37 +852,30 @@ animation-timeline: view(80% 5%); */
     } */
 }
 & :nth-child(1){
-  
-  svg{
- padding: 5px 10px;
-    color: #E34F26;
-  }
+  /* html */
+
 }
 & :nth-child(2){
-    animation-delay: 0.1s;
-    svg{
-        padding: 5px 5px;
-      color: #1572B6;
-    }
+    /* css */
+
+
   }
   & :nth-child(3){
-    animation-delay: 0.2s;
-    svg{
-        
-      color: #7711ED;
-    }
+    /* bootstrap */
+
+ 
   }
  
   
 & :nth-child(4){
-    animation-delay: 0.3s;
+    /* talwind */
+  
     
-    
-position: relative;
 
 
 
-    &::before{
+
+    /* &::before{
         content: url(../public/tailwind-css-svgrepo-com.svg) ;
         content: url(./tailwindsvg2.svg);
      
@@ -898,42 +891,34 @@ font-size: 60px;
       -webkit-backdrop-filter: blur(100px);
        box-shadow: 0 8px 32px rgba(0,0,0,0.37);
 
-    }
+    } */
 
 
 }
 & :nth-child(5){
-    
+    /* js */
   
-    svg{
-        padding: 2px 5px;
-      color: #F7DF1E;
-    }
+  
   }
   & :nth-child(6){
-    svg{
-        padding: 3px 3px;
-      color: #61DAFB;
-    }
+    /* react */
+
   }
 
   & :nth-child(7){
-    svg{
-        padding: 3px 3px;
-      color: #F05032;
-    }
+    /* git */
+  
   }
   & :nth-child(8){
-    svg{
-        padding: 3px 3px;
-      color: #ffff;
-    }
+    /* .github */
+
   }
   
 & :nth-child(9){
+    /* vs */
     position: relative;
     
-        &::before{
+        /* &::before{
             content: url(./assets/vscode-alt.svg) ;
             
             content: url(./assets/vscode.svg);
@@ -941,26 +926,33 @@ font-size: 60px;
           
           
             text-align: justify;
-      
-    
-        
 
-  
+      
+
       
       
+    }  */
+
     } 
- 
-    &:hover{
-      
-      
+    & :nth-child(16){
+        /* vs */
+        position: relative;
+         &::before{
+                content: url(./assets/vscode-alt.svg) ;
+                
+                content: url(./assets/vscode.svg);
+     
+            
               
-&::before{
-   
-  
-}
-        
-    }
-    } 
+                text-align: justify;
+    
+          
+    
+          
+          
+        }  
+    
+        } 
 
     
           
