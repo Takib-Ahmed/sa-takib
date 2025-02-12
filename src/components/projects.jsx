@@ -23,7 +23,7 @@ const Projects = ({setView,view}) => {
       live: "https://sa-takib.vercel.app/"
     },
     {
-      image: "/Projects/screencapture-nasafits-vercel-app-2025-02-13-02_06_03.png",
+      image: "/Projects/nasafits.com.png",
       name: "Nasa Fits",
       Des: "A visually engaging and responsive landing page inspired by space exploration. Built with React, this project emphasizes sleek design and modern interactivity. (Planning to make it a full-stack website as it is my first client project)",
       mission: "Designer,Full-Stack-developer",
@@ -35,7 +35,7 @@ const Projects = ({setView,view}) => {
       live: "https://nasafits.vercel.app/"
     },
     {
-      image: "/Projects/screencapture-feedbacksnet-vercel-app-2025-01-16-22_23_47.png",
+      image: "/Projects/feedback.net.png",
       name: "Feedback.net",
       Des: "A user-friendly feedback collection platform designed with React. This project highlights interactive components and a clean, professional UI layout.",
       mission: "Frontend Developer",
@@ -47,7 +47,7 @@ const Projects = ({setView,view}) => {
       live: "https://feedbacksnet.vercel.app/"
     },
     {
-      image: "/Projects/screencapture-taskmanager-app-virid-vercel-app-2025-01-16-22_26_49.png",
+      image: "/Projects/taskmanager.png",
       name: "Task Manager",
       Des: "A lightweight task management app that allows users to organize their daily activities efficiently. Built with React, it features responsive design and smooth user interactions.",
       mission: "Frontend Developer",
@@ -59,7 +59,7 @@ const Projects = ({setView,view}) => {
       live: "https://taskmanager-app-virid.vercel.app/"
     },
     {
-      image: "/fullsize.png",
+      image: "/Projects/aniwatch.clone.png",
       name: "Aniwatch Clone",
       Des: "A replica of the Aniwatch.tv streaming platform, featuring dynamic sections for trending shows, carousels, and more. Built with HTML, CSS, and JavaScript, focusing on responsive and interactive design.",
       mission: "Frontend Developer",
