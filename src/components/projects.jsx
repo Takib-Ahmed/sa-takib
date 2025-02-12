@@ -23,7 +23,7 @@ const Projects = ({setView,view}) => {
       live: "https://sa-takib.vercel.app/"
     },
     {
-      image: "/public/Projects/screencapture-nasafits-vercel-app-2025-02-13-02_06_03.png",
+      image: "/Projects/screencapture-nasafits-vercel-app-2025-02-13-02_06_03.png",
       name: "Nasa Fits",
       Des: "A visually engaging and responsive landing page inspired by space exploration. Built with React, this project emphasizes sleek design and modern interactivity. (Planning to make it a full-stack website as it is my first client project)",
       mission: "Designer,Full-Stack-developer",
