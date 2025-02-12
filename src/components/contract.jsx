@@ -39,7 +39,7 @@ title:'Email'
         </div>
         <div className="message relative  ">
             <h4 className="title">message</h4><br />
-            <textarea type="text" name="text" placeholder="message" className="messageinput input h-[30vw] lg:h-[16vw] w-[60vw]  lg:w-[30vw] placeholder:text-center placeholder:translate-y-[11vw] lg:placeholder:translate-y-[5vw]  left-[0px] mt-1  contract" />
+            <textarea type="text" name="text" placeholder="message" className="messageinput input min-h-[30vw] lg:min-h-[16vw] w-[60vw]  lg:w-[30vw] placeholder:text-center placeholder:translate-y-[11vw] lg:placeholder:translate-y-[5vw]  left-[0px] mt-1  contract" />
         </div>
    <br />
         <div className="send  button"><button className=" bg-pink-700 w-[60vw]   lg:w-[30vw] rounded-[25px] p-2 py-3 contract " type="submit">
