@@ -69,10 +69,11 @@ const Skills = () => {
   }, []);
 
   // Ensure that the 9th element exists before adding a class
-  const [isLgScreen, setIsLgScreen] = useState('');
+  const [isLgScreen, setIsLgScreen] = useState(window.innerWidth);
 
   // Monitor screen size
   useEffect(() => {
+    setIsLgScreen(window.innerWidth);
     const checkScreenSize = () => {
       setIsLgScreen(window.innerWidth); // Tailwind's lg breakpoint
     };
@@ -101,11 +102,11 @@ const Skills = () => {
               style={isLgScreen ? { transitionDelay: `${key * 150}ms` } : {}}
                 key={key}
                 ref={(el) => (itemRefs.current[key] = el)} // Assign refs to each item
-                className={`item Hidden items-center justify-center ${value.name === 'Bootstrap' && ' hidden sm:block'}`} // Default class is Hidden
+                className={`item Hidden items-center justify-center ${value.name === 'Bootstrap' && isLgScreen<392  ? ' hidden':""}`} // Default class is Hidden
               >
 {value.icon ? 
   (value.name === 'HTML' ? 
-    <FontAwesomeIcon icon={value.icon}    style={{ color: value.color , fontSize:isLgScreen>=768? '90px':'40px'}} /> 
+    <FontAwesomeIcon icon={value.icon}    style={{ color: value.color , fontSize:isLgScreen>=768? '90px':'45px'}} /> 
     : <value.icon 
      
         className={`shadow  items-center  `} 
