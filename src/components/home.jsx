@@ -22,10 +22,10 @@ const Home = () => {
           </p>
 
 </div>
-          <div className="links  flex gap-5 ">
+          <div className="links  flex gap-3 sm:gap-5  items-center">
         
              <a href="/CV/Sa Takib.pdf" className='cv' download  ><div className=' flex  gap-2'><p>CV</p> <img src={Download} alt="" className=' hidden sm:block mt-2 w-7 h-7 invert ' /></div></a>
-             <a href="" className=' relative hidden sm:block'><FontAwesomeIcon href='#' icon={faLinkedin}/></a><a href='https://github.com/Takib-Ahmed' ><FontAwesomeIcon icon={faGithub}/></a><a href='https://www.instagram.com/md.takeb'><FontAwesomeIcon icon={faInstagram}/></a><a href='https://wa.me/01615081141'><FontAwesomeIcon  icon={faWhatsapp}/></a></div></div>
+             <a href="" className=' relative rounded-[100%]  text-4xl px-[1.05rem] py-[0.7rem] '><FontAwesomeIcon href='#' icon={faLinkedin}/></a><a href='https://github.com/Takib-Ahmed'  className=' relative rounded-[100%]  text-4xl px-[1.05rem] py-[0.7rem] '><FontAwesomeIcon icon={faGithub}/></a><a href='https://www.instagram.com/md.takeb'  className=' relative rounded-[100%]  text-4xl px-[1.05rem] py-[0.7rem]'><FontAwesomeIcon icon={faInstagram}/></a><a href='https://wa.me/01615081141' className=' relative rounded-[100%]  text-4xl px-[1.05rem] py-[0.7rem]' ><FontAwesomeIcon  icon={faWhatsapp}/></a></div></div>
         
         <div className=" avatar text-right   ">
           <div className="card   mb-0 md:my-0 inline-flex flex-col  h-[20rem] mt-8 sm:mt-0 sm:h-[100%]">

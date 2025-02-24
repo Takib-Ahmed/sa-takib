@@ -184,15 +184,16 @@ section{
     }
     & .links{
         animation: Toup .8s linear forwards;
+        
     }
 
                 & a {
                   
-                   font-size: 30px;
+                   
                     border: 1px solid transparent;
-                    border-radius: 50%;
+            
               background: #e945e6ea;
-                    padding:1% 2.5%;
+                   
                     /* box-shadow: white 0px 3px 8px; */
                     box-shadow:#faf8f8 0px 1px 10px 1px;
                     transition: all 0.5s !important;
