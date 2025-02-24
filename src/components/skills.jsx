@@ -17,6 +17,7 @@ import { SiCss3 } from "react-icons/si";
 import { FaBootstrap } from "react-icons/fa";
 import { FaGit } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
+import Vscode from "./svgs/vscode";
 const Skills = () => {
   const [listskills] = useState([
     { name: "Next.js", icon: SiNextdotjs, color: '#fff', size: 85 },
@@ -68,12 +69,12 @@ const Skills = () => {
   }, []);
 
   // Ensure that the 9th element exists before adding a class
-  const [isLgScreen, setIsLgScreen] = useState(false);
+  const [isLgScreen, setIsLgScreen] = useState('');
 
   // Monitor screen size
   useEffect(() => {
     const checkScreenSize = () => {
-      setIsLgScreen(window.innerWidth >= 1024); // Tailwind's lg breakpoint
+      setIsLgScreen(window.innerWidth); // Tailwind's lg breakpoint
     };
 
     checkScreenSize(); // Initial check
@@ -81,16 +82,18 @@ const Skills = () => {
 
     return () => window.removeEventListener("resize", checkScreenSize); // Cleanup
   }, []);
+
+
   return (
     <div className=" ">
-      <section className="skills my-10 " id="skills">
+      <section className="skills   md:my-5 lg:my-5 " id="skills">
         <div className="des">My Skills</div>
-        <div className="title">Technologies That I know</div>
+        <div className="title text-[1.8em] md:text-[2.5em] lg:text-[3em]">Technologies That I know</div>
         <br />
         <br />
         <div className="listanimation  ">
           {" "}
-          <div className="list "  >
+          <div className="list  items-center  sm:mt-5 md:mt-10 lg:mt-12"  >
             {listskills.map((value, key) => (
               <div
            
@@ -98,25 +101,25 @@ const Skills = () => {
               style={isLgScreen ? { transitionDelay: `${key * 150}ms` } : {}}
                 key={key}
                 ref={(el) => (itemRefs.current[key] = el)} // Assign refs to each item
-                className="item Hidden" // Default class is Hidden
+                className={`item Hidden items-center justify-center ${value.name === 'Bootstrap' && ' hidden sm:block'}`} // Default class is Hidden
               >
 {value.icon ? 
   (value.name === 'HTML' ? 
-    <FontAwesomeIcon icon={value.icon}    style={{ color: value.color , fontSize:'90px'}} /> 
+    <FontAwesomeIcon icon={value.icon}    style={{ color: value.color , fontSize:isLgScreen>=768? '90px':'40px'}} /> 
     : <value.icon 
      
-        className={`shadow  `} 
+        className={`shadow  items-center  `} 
         style={{ color: value.color }} 
-        size={value.size} 
+        size={isLgScreen>=768? value.size:40} 
         
       /> 
   ) 
-  : <div className="h-8" />
+  : <><Vscode  size={isLgScreen>=768? 70:35}/><div className="h-2 " ></div></>
 }
 
          
-                <h3>{value.name}</h3>
-                <div className="des">{value.des}</div>
+                <h3 className="  text-[0.5rem]  sm:text-xs text-wrap  md:text-sm lg:text-base">{value.name}</h3>
+              
               </div>
             ))}
           </div>

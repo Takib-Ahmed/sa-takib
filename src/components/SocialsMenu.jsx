@@ -54,7 +54,7 @@ const CircularMenu = () => {
   }, []);
 
   return (
-    <div ref={bubbleRef} className="relative w-20 h-20 ">
+    <div ref={bubbleRef} className="relative w-10 h-10 lg:w-20 lg:h-20   ">
       <div
         className={`circle-menu relative w-72 h-72 ${isOpen ? "open" : ""}`}
       >

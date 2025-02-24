@@ -114,11 +114,11 @@ section{
     padding: 50px;
     box-sizing: border-box;
     &.home{
-        padding-top: 10px;
+       
        justify-content: center;
         grid-template-columns: repeat(2,1fr);
    
-        gap: 50px;
+      
         align-items: center;
         justify-content: space-between;
         
@@ -127,7 +127,7 @@ section{
 
     font-family: "MuseoModerno",system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     & .name{
-        padding-top: 80px;
+        
         font-size: 7em;
         font-weight: bold;
         line-height: 1em;
@@ -726,10 +726,10 @@ animation: toup2 0.1s linear forwards reverse;
 }
 @keyframes toup2 {
     from{
-        transform: translateY(110px);
+        transform: translateY(130px);
     }
     to{
-        transform: translateY(10px);
+        transform: translateY(0px);
     }
 }
 /* Default Hidden state */
@@ -766,7 +766,7 @@ animation: toup2 0.1s linear forwards reverse;
 
     & .title{
       text-align: center;
-      font-size: 3em;  
+      
       font-family: "MuseoModerno",system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 
     }
@@ -783,12 +783,12 @@ animation: toup2 0.1s linear forwards reverse;
    & .list {
     
     text-align: center;
-margin-top: 50px;
+
 /* display: grid;
 grid-template-columns: repeat(auto-fill,300px); */
 display: flex;
 
-text-wrap: nowrap;
+
 width:105%;
 font-weight: 450;
 font-size: 1rem;
@@ -817,11 +817,13 @@ left: 50%;
 }
 & .item{
   margin-bottom:1.5vw;
-    padding:45px 70px;
-    border-radius: 20px;
+  justify-content: center;
+    padding:4% 6%;
+    border-radius: 10%;
     transition:all 1s ;
     background-color:transparent;
     box-shadow: 0 8px 32px rgba(0,0,0,0.37);
+    text-wrap:wrap;
 /* animation: Reveal 1s linear both;
 animation-timeline: view(80% 5%); */
 
@@ -830,11 +832,14 @@ animation-timeline: view(80% 5%); */
     -webkit-backdrop-filter: blur(100px);
     /* background-color: #010824; */
     & svg{
-        font-size: 70px;
-        background-color:transparent ;
+       
+    
       
+        justify-self:center;
+        background-color:transparent ;
+        border-radius: 15%;
    margin-bottom: 25%;
-        border-radius: 10px;
+
         backdrop-filter: blur(100px);
         filter: url(../public/filter.svg);
        -webkit-backdrop-filter: blur(100px);
@@ -934,25 +939,7 @@ font-size: 60px;
     }  */
 
     } 
-    & :nth-child(16){
-        /* vs */
-        position: relative;
-         &::before{
-                content: url(./assets/vscode-alt.svg) ;
-                
-                content: url(./assets/vscode.svg);
-     
-            
-              
-                text-align: justify;
-    
-          
-    
-          
-          
-        }  
-    
-        } 
+   
 
     
           
