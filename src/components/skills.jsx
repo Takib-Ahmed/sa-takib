@@ -69,20 +69,20 @@ const Skills = () => {
   }, []);
 
   // Ensure that the 9th element exists before adding a class
-  const [isLgScreen, setIsLgScreen] = useState(window.innerWidth);
+  const [screenSize, setScreenSize] = useState(() => window.innerWidth); // ✅ Use function to initialize state
 
-  // Monitor screen size
   useEffect(() => {
-    setIsLgScreen(window.innerWidth);
     const checkScreenSize = () => {
-      setIsLgScreen(window.innerWidth); // Tailwind's lg breakpoint
+      setScreenSize(window.innerWidth);
     };
 
-    checkScreenSize(); // Initial check
     window.addEventListener("resize", checkScreenSize);
-
-    return () => window.removeEventListener("resize", checkScreenSize); // Cleanup
+    return () => window.removeEventListener("resize", checkScreenSize);
   }, []);
+
+
+
+
 
 
   return (
@@ -99,23 +99,23 @@ const Skills = () => {
               <div
            
 
-              style={isLgScreen ? { transitionDelay: `${key * 150}ms` } : {}}
+              style={screenSize ? { transitionDelay: `${key * 150}ms` } : {}}
                 key={key}
                 ref={(el) => (itemRefs.current[key] = el)} // Assign refs to each item
-                className={`item Hidden items-center justify-center ${value.name === 'Bootstrap' && isLgScreen<392  ? ' hidden':""}`} // Default class is Hidden
+                className={`item Hidden items-center justify-center ${value.name === 'Bootstrap' && screenSize<400  ? ' hidden':""}`} // Default class is Hidden
               >
 {value.icon ? 
   (value.name === 'HTML' ? 
-    <FontAwesomeIcon icon={value.icon}    style={{ color: value.color , fontSize:isLgScreen>=768? '90px':'45px'}} /> 
+    <FontAwesomeIcon icon={value.icon}    style={{ color: value.color , fontSize:screenSize>=768? '90px':'45px'}} /> 
     : <value.icon 
      
         className={`shadow  items-center  `} 
         style={{ color: value.color }} 
-        size={isLgScreen>=768? value.size:40} 
+        size={screenSize>=768? value.size:40} 
         
       /> 
   ) 
-  : <><Vscode  size={isLgScreen>=768? 70:35}/><div className="h-2 " ></div></>
+  : <><Vscode  size={screenSize>=768? 70:35}/><div className="h-2 " ></div></>
 }
 
          
