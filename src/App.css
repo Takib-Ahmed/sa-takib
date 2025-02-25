@@ -1453,12 +1453,12 @@ padding: 1px;
                 & .des{
                   
                     color: #eee5;
-                    margin: 30px 0;
+                    margin: 20px 0 !important;
                     padding-left: 35px !important;
                     position: relative;
                     transition: color 0.5s;
                  
-            font-size: smaller !important;
+           
             
                     
                    
