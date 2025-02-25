@@ -18,7 +18,7 @@ const Home = () => {
           
           <div className="profession "></div>
           <div className="des text-left "><p><span></span>
-          I am a passionate and detail-oriented Junior Frontend Developer with a strong <br className=' br' /> foundation in HTML, CSS, and JavaScript. I have hands-on experience working with <br className=' br' /> modern frontend technologies such as Tailwind CSS, React, and Next.js to build <br className=' br' />responsive and dynamic web applications.Passionate about clean code and efficient <br className=' br' /> design, I focus on delivering fast, functional, and visually appealing websites.
+          I am a passionate and detail-oriented Junior Frontend Developer with a strong <br className='  hidden sm:block br' /> foundation in HTML, CSS, and JavaScript. I have hands-on experience working with <br className='hidden sm:block  br' /> modern frontend technologies such as Tailwind CSS, React, and Next.js to build <br className='hidden sm:block  br' />responsive and dynamic web applications.Passionate about clean code and efficient <br className='hidden sm:block  br' /> design, I focus on delivering fast, functional, and visually appealing websites.
           </p>
 
 </div>
