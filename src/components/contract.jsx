@@ -14,11 +14,11 @@ title:'Email'
     ,value:"@easycodingdev"
 }])
     return(
-    <div  className="">
+    <div  className=" flex justify-center items-center">
 
 
     
-    <div className="contracts relative overflow-y-hidden contract w-fit " id="contracts">
+    <div className="contracts relative overflow-y-hidden contract w-fit   " id="contracts">
 
 <div className="title text-[1.5em] md:text-[2.5em] lg:text-[5em]">
    <h1 className=""> This is my Contracts</h1>

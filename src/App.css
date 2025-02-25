@@ -1484,3 +1484,8 @@ width: 100vw;
       .github , .livelink{
         color: white !important;
       }
+
+
+      #projects{
+        padding: 30px !important;
+      }
