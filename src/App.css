@@ -1,4 +1,6 @@
-
+#projects{
+    padding: 50px !important;
+  }
 .projectlist2{
     position: relative;
 height: auto;
@@ -509,6 +511,9 @@ padding: 1px;
     }
       
     @media only screen and (max-width: 640px){
+              #projects{
+        padding: 28px !important;
+      }
         .avatar{
             img{
                 height:min(400px,80vh) !important ;
@@ -1486,6 +1491,3 @@ width: 100vw;
       }
 
 
-      #projects{
-        padding: 30px !important;
-      }
