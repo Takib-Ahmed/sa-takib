@@ -12,7 +12,7 @@ const Home = () => {
   return (
     <div>
       
-      <section className="home sm:m-5 md:m-0   gap-0    flex  lg:grid  lg:gap-10   p-[50px]" id='home' >
+      <section className=" section home sm:m-5 md:m-0   gap-0    flex  lg:grid  lg:gap-10   p-[50px]" id='home' >
         <div className="content">
           <div className="  name  sm:pt-20"><span className='Myname'>SA Takib</span></div>
           
