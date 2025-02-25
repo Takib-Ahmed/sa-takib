@@ -360,7 +360,7 @@ padding: 1px;
 
         width: min(1300px,100%);
         margin: auto;
-        padding: 50px;
+      
         box-sizing: border-box;
    
             
@@ -524,7 +524,7 @@ padding: 1px;
     
             width: min(1300px,100%);
             margin: auto;
-            padding: 50px;
+   
             box-sizing: border-box;
        
                 
@@ -986,7 +986,7 @@ padding: 1px;
         
                 width: min(1300px,100%);
                 margin: auto;
-                padding: 20px !important;
+                padding: 2% !important;
                 box-sizing: border-box;
            
                     
