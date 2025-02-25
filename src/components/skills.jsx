@@ -45,27 +45,22 @@ const Skills = () => {
   const itemRefs = useRef([]);
 
   useEffect(() => {
-    const observer = new IntersectionObserver((entries) => {
+    const observer = new IntersectionObserver((entries, observer) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           console.log("Adding Reveal class");
           entry.target.classList.add("Reveal");
-        } else {
-          entry.target.classList.remove("Reveal");
+          observer.unobserve(entry.target); // একবার observe করে unobserve করবে
         }
       });
     });
 
     itemRefs.current.forEach((item) => {
-      if (item) observer.observe(item); // Ensure the item exists
+      if (item) observer.observe(item);
     });
 
-    // Cleanup observer on unmount
-    return () => {
-      itemRefs.current.forEach((item) => {
-        if (item) observer.unobserve(item);
-      });
-    };
+    return () => observer.disconnect(); // সব observer বন্ধ করা হবে
+
   }, []);
 
   // Ensure that the 9th element exists before adding a class

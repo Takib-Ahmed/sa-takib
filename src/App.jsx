@@ -18,8 +18,8 @@ function App() {
 
 <Navbar view={view}></Navbar>
 <Home></Home>
-
-<Skills></Skills>
+<br className=' sm:hidden' /> <br className=' sm:hidden' /> 
+<Skills></Skills><br className=' sm:hidden' /> <br className=' sm:hidden' /> 
 <Projects view={view} setView={setView}></Projects>
 <Contract></Contract>
 

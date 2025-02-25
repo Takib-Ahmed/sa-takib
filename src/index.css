@@ -650,9 +650,9 @@ height: 40px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     text-align: center;
-    gap: 20px;
-    padding: 20px;
-    font-size: 1em;
+
+    padding: 5%;
+ 
 width: inherit;
 
 position: absolute;
@@ -727,10 +727,10 @@ animation: toup2 0.1s linear forwards reverse;
 }
 @keyframes toup2 {
     from{
-        transform: translateY(130px);
+        transform: translateY(130vw);
     }
     to{
-        transform: translateY(0px);
+        transform: translateY(0vw);
     }
 }
 /* Default Hidden state */
@@ -968,12 +968,12 @@ font-size: 60px;
     & .title{
         font-family: "MuseoModerno",system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
         text-align: center;
-        font-size: 5vw;
+      
         
 
     }
     & .subtitle{
-        font-size: 1.1em;
+       
         text-align: center;
         color: rgba(216, 209, 209, 0.689);
     }
@@ -1223,7 +1223,7 @@ backdrop-filter: blur(500px);
     font-family: "MuseoModerno",system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     padding-top: 50px;
     & .title{
-        font-size: 5vw;
+      
 
     }
     & .des{
@@ -1671,7 +1671,7 @@ margin-bottom : 2%;
         animation-timeline: view(95% 5%);
      position:static;
      display:grid  !important;
-top: calc(64px + (var(--position ) * 20px));
+
         width: 100%;
 background-image: linear-gradient(180deg,#010824 ,rgba(238, 238, 238, 0));
 backdrop-filter: blur(500px);

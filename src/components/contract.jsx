@@ -20,11 +20,11 @@ title:'Email'
     
     <div className="contracts relative overflow-y-hidden contract w-fit " id="contracts">
 
-<div className="title">
+<div className="title text-[1.5em] md:text-[2.5em] lg:text-[5em]">
    <h1 className=""> This is my Contracts</h1>
 </div>
 <div className="des text-wrap  mx-5">
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo culpa qui quibusdam odio, veritatis nobis, iste praesentium assumenda eius optio dicta corporis porro ad reprehenderit natus necessitatibus soluta sequi doloribus?
+Ensure transparency, professionalism, and a smooth working process for every project.
 </div>
 <div className="contractcontainer flex flex-wrap justify-center   flex-col-reverse lg:flex-row  lg:flex-nowrap lg:justify-between gap-52 p-5 pb-0 contract">
     <div className="inputs grid gap-4  pb-0 lg:ms-[-5vw]  mt-32 lg:mt-0">

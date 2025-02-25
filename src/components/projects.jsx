@@ -167,8 +167,8 @@ window.addEventListener("resize", handleResize);
   return (
     <>
       <section className="projects " id='projects' >
-        <h1 className='title'>This is my Projects</h1>
-        <h2 className='subtitle'>Take a Glimpse Into My Creative Journey Through Code and Design</h2>
+        <h1 className='title text-[1.5em] md:text-[2.5em] lg:text-[5em]'>This is my Projects</h1>
+        <h2 className='subtitle    text-[1em] sm:text-[1.1em]'>Take a Glimpse Into My Creative Journey Through Code and Design</h2>
        
        <div className="projectcontaier   ">
        <div className="Gridlistbutton flex justify-center items-center space-x-4 mt-5  " id='changview' ref={changeViewButtonRef}>
@@ -190,7 +190,7 @@ window.addEventListener("resize", handleResize);
       <img src="/menu.png" alt="" className=' invert w-5' />
       </button></a>
     </div>
-        <div className={` grid gap-60  mt-20 w-fit ` +` ${view ==='list' ? 'projectlist':'projectlist2 justify-center lg:justify-normal'}`} ref={projectContainerRef}>
+        <div className={` grid gap-60  mt-10 lg:mt-20 w-fit ` +` ${view ==='list' ? 'projectlist':'projectlist2 justify-center lg:justify-normal'}`} ref={projectContainerRef}>
           
       {listprojects.map((value,key)=>(
             <div className="projectcard relative   flex justify-around"  key={key} style={{
