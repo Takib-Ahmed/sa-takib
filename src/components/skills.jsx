@@ -82,7 +82,7 @@ const Skills = () => {
 
   return (
     <div className=" ">
-      <section className="skills   md:my-5 lg:my-5 " id="skills">
+      <section className="skills   md:my-5 lg:my-5 p-[25px]  sm:p-[50px]" id="skills">
         <div className="des">My Skills</div>
         <div className="title text-[1.8em] md:text-[2.5em] lg:text-[3em]">Technologies That I know</div>
         <br />
@@ -97,7 +97,7 @@ const Skills = () => {
               style={screenSize ? { transitionDelay: `${key * 150}ms` } : {}}
                 key={key}
                 ref={(el) => (itemRefs.current[key] = el)} // Assign refs to each item
-                className={`item Hidden items-center justify-center ${value.name === 'Bootstrap' && screenSize<400  ? ' hidden':""}`} // Default class is Hidden
+                className={`item Hidden items-center justify-center ${value.name === 'Bootstrap' && screenSize<373  ? ' hidden':""}`} // Default class is Hidden
               >
 {value.icon ? 
   (value.name === 'HTML' ? 

@@ -166,7 +166,7 @@ window.addEventListener("resize", handleResize);
   }, [setView]);
   return (
     <>
-      <section className="projects " id='projects' >
+      <section className="projects  " id='projects' >
         <h1 className='title text-[1.5em] md:text-[2.5em] lg:text-[5em]'>This is my Projects</h1>
         <h2 className='subtitle    text-[1em] sm:text-[1.1em]'>Take a Glimpse Into My Creative Journey Through Code and Design</h2>
        

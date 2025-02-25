@@ -111,7 +111,7 @@ section{
 
     width: min(1300px,100%);
     margin: auto;
-   
+
     box-sizing: border-box;
     &.home{
        
@@ -147,6 +147,7 @@ section{
       
         color:#d1cdcdc1;
         margin: 30px 0px;
+        
         padding-left: 50px;
         position: relative;
         transition: color 0.5s;
