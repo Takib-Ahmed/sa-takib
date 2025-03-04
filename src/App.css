@@ -18,7 +18,7 @@
 .rect2:nth-of-type(2) {
 
   
- 
+ transition: all linear 0.3s;
   
 }
 
