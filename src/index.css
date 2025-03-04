@@ -818,19 +818,19 @@ animation-timeline: view(80% 5%); */
   filter:brightness(1.1) saturate(1.1);
     -webkit-backdrop-filter: blur(100px);
     /* background-color: #010824; */
-    & svg{
+    & svg:not(.SVG){
        
     
       
         justify-self:center;
         background-color:transparent ;
-        /* border-radius: 15%; */
-   margin-bottom: 25%;
+        border-radius: 15%;
+   margin-bottom: 20%;
 
-        /* backdrop-filter: blur(100px);
+        backdrop-filter: blur(100px);
         filter: url(../public/filter.svg);
        -webkit-backdrop-filter: blur(100px);
-        box-shadow: 0 8px 32px rgba(0,0,0,0.37); */
+        box-shadow: 0 8px 32px rgba(0,0,0,0.37);
    
     }
 

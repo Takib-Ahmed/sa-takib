@@ -19,6 +19,7 @@ import { FaBootstrap } from "react-icons/fa";
 import { FaGit } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 import Vscode from "./svgs/vscode";
+import RectProgresss from "./Reactprogress";
 const Skills = () => {
   const [listskills] = useState([
     { name: "Next.js", icon: SiNextdotjs, color: '#fff', size: 85, skill:95  },
@@ -44,13 +45,15 @@ const Skills = () => {
   
   // Create a ref to store the list items
   const itemRefs = useRef([]);
-
+const [Revealed,setReveled] = useState([])
   useEffect(() => {
     const observer = new IntersectionObserver((entries, observer) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           console.log("Adding Reveal class");
           entry.target.classList.add("Reveal");
+        setReveled((prev)=>[...prev,entry.target.classList])
+        
           observer.unobserve(entry.target); // একবার observe করে unobserve করবে
         }
       });
@@ -95,49 +98,14 @@ const Skills = () => {
               <div
            
 
-              style={screenSize ? { transitionDelay: `${key * 140}ms` } : {}}
+              style={screenSize ? { transitionDelay: `${key * 125}ms` } : {}}
                 key={key}
                 ref={(el) => (itemRefs.current[key] = el)} // Assign refs to each item
-                className={`item  relative  Hidden items-center justify-center ${value.name === 'Bootstrap' && screenSize<400  ? ' hidden':""}`} // Default class is Hidden
+                className={`item  ${key}  shadow-slate-400 shadow-2xl relative  Hidden items-center justify-center ${value.name === 'Bootstrap' && screenSize<400  ? ' hidden':""}`} // Default class is Hidden
               >
 
 
-<svg 
-  fill="transparent"
-  id="svg" 
-  viewBox={screenSize>400 ?"0 0 110 117" :"0 0 95 130"}
- 
-  xmlns="http://www.w3.org/2000/svg" 
-  className="w-full h-full   rounded-[10%]    top-0 absolute left-0    "
-  
->
-  {/* Background Rectangle */}
-  <rect 
-   
-    fill="transparent" 
-   height='100%'
-   width='100%'
-    strokeWidth="3" 
-    
-    rx="10" 
-    ry="10"
-    className="rect2 "
-
-   
-  ></rect>
-
-  {/* Animated Stroke Rectangle */}
-  <rect 
-
-      strokeWidth="3"
-    height='100%'
-   width='100%'
-    rx="10" 
-    ry="10"
-    style={{strokeDashoffset:440 * value.skill*0.01,stroke:value.color}}
-  className="rect2  "
-  ></rect>
-</svg>
+<RectProgresss KEY={key} Revealed={Revealed} screenSize={screenSize} value={value}/>
 
       
 {value.icon ? 
@@ -151,12 +119,12 @@ const Skills = () => {
         
       /> 
   ) 
-  : <><Vscode  size={screenSize>=768? 85:35}/><div className="h-2 " ></div></>
+  : <><Vscode  size={screenSize>=768? 85:35}/><div className="h-" ></div></>
 }
 
          
-                <h3 className="  text-[0.5rem]  sm:text-xs text-wrap  md:text-sm lg:text-base">{value.name}</h3>
-              <h2 className={` text-[0.5rem]  sm:text-xs text-wrap  md:text-sm lg:text-base text-[#152256]   invert font-semibold`} >{value.skill+'%'}</h2>
+                <h3 className="  text-[0.5rem]  sm:text-xs text-wrap  md:text-sm lg:text-base">{value.name}</h3> 
+              <h2 className={` text-[0.5rem]   sm:text-xs text-wrap  md:text-sm lg:text-base text-[#152256]  translate-y-0.5 sm:translate-y-1  invert font-semibold`} >{value.skill+'%'}</h2>
               </div>
             ))}
           </div>

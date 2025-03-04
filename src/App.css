@@ -22,11 +22,7 @@
   
 }
 
-@keyframes fillStroke {
-    to{
-        stroke-dashoffset: calc(440 * 0.99); 
-    }
-}
+
  
 
 
