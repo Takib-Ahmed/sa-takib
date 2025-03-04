@@ -208,7 +208,7 @@ const handleMouseMove = (e, index) => {
 </div>
          <div className="details grid gap-0 ">
           <br className=' hidden sm:block' />
-         <div className="name mt-3 sm:mt-0" >
+         <div className="name mt-2.5 sm:mt-0" >
 
               <h3>{value.name}</h3>
             </div> 
@@ -225,7 +225,7 @@ const handleMouseMove = (e, index) => {
   {value.mission}
 </div>
          </div>
-<div className="languages flex flex-wrap sm:flex-nowrap gap-0.5 md:gap-2 lg:gap-3 sm:gap-10">
+<div className="languages flex flex-wrap sm:flex-nowrap gap-2 sm:gap-10">
 <div className=" flex gap-2 sm:gap-2.5 md:gap-3 lg:gap-4">
        <img src={value.langicon} alt=""  className=' w-9 h-9   plicon'/>  
        {/* w-12 h-12 */}

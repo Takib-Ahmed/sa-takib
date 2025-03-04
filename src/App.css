@@ -1243,7 +1243,7 @@ padding: 1px;
                    
                           height:auto !important;
                           overflow:hidden;
-                          margin-top:10px;
+                          margin-top:6px !important; 
                             }
                 
                             & .mission{
