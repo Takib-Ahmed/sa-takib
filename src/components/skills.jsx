@@ -1,8 +1,6 @@
 
 import { useEffect, useState } from "react";
 import { useRef } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
 import { FaHtml5 } from "react-icons/fa";
 import { SiNextui } from "react-icons/si";
 import { SiNextdotjs } from "react-icons/si";
@@ -18,8 +16,7 @@ import { SiCss3 } from "react-icons/si";
 import { FaBootstrap } from "react-icons/fa";
 import { FaGit } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
-import Vscode from "./svgs/vscode";
-import RectProgresss from "./Reactprogress";
+import SkillCard from "./skillcard";
 const Skills = () => {
   const [listskills] = useState([
     { name: "Next.js", icon: SiNextdotjs, color: '#fff', size: 85, skill:95  },
@@ -95,37 +92,7 @@ const [Revealed,setReveled] = useState([])
           {" "}
           <div className="list items-center  sm:mt-5 md:mt-10 lg:mt-12"  >
             {listskills.map((value, key) => (
-              <div
-           
-
-              style={screenSize ? { transitionDelay: `${key * 125}ms` } : {}}
-                key={key}
-                ref={(el) => (itemRefs.current[key] = el)} // Assign refs to each item
-                className={`item  ${key}  shadow-slate-400 shadow-2xl relative  Hidden items-center justify-center ${value.name === 'Bootstrap' && screenSize<400  ? ' hidden':""}`} // Default class is Hidden
-              >
-
-
-<RectProgresss KEY={key} Revealed={Revealed} screenSize={screenSize} value={value}/>
-
-      
-{value.icon ? 
-  (value.name === 'HTMLs' ? 
-    <FontAwesomeIcon icon={value.icon}    style={{ color: value.color , fontSize:screenSize>=768? '95px':'45px'}} /> 
-    : <value.icon 
-     
-        className={`shadow  items-center  `} 
-        style={{ color: value.color }} 
-        size={screenSize>=768? value.size:40} 
-        
-      /> 
-  ) 
-  : <><Vscode  size={screenSize>=768? 85:35}/><div className="h-" ></div></>
-}
-
-         
-                <h3 className="  text-[0.5rem]  sm:text-xs text-wrap  md:text-sm lg:text-base">{value.name}</h3> 
-              <h2 className={` text-[0.5rem]   sm:text-xs text-wrap  md:text-sm lg:text-base text-[#152256]  translate-y-0.5 sm:translate-y-1  invert font-semibold`} >{value.skill+'%'}</h2>
-              </div>
+       <SkillCard value={value} KEY={key} Revealed={Revealed} itemRefs={itemRefs}   screenSize={screenSize}/>
             ))}
           </div>
         </div>

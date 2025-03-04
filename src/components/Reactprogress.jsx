@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 
 export default function  RectProgresss({screenSize,value,Revealed,KEY}){
 
-    const [progress, setProgress] = useState(0);
+  const [progress, setProgress] = useState(0);
 
     useEffect(() => {
     
