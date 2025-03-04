@@ -2,7 +2,8 @@
 import { useEffect, useState } from "react";
 import { useRef } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHtml5 } from "@fortawesome/free-brands-svg-icons";
+
+import { FaHtml5 } from "react-icons/fa";
 import { SiNextui } from "react-icons/si";
 import { SiNextdotjs } from "react-icons/si";
 import { SiTailwindcss } from "react-icons/si";
@@ -20,24 +21,24 @@ import { FaGithub } from "react-icons/fa";
 import Vscode from "./svgs/vscode";
 const Skills = () => {
   const [listskills] = useState([
-    { name: "Next.js", icon: SiNextdotjs, color: '#fff', size: 85 },
-    { name: "React.js", icon: FaReact, color: '#61DAFB', size: 85 },
-    { name: "TypeScript", icon: BiLogoTypescript, color: '#3178C6', size: 90},
-    { name: "JavaScript", icon: IoLogoJavascript, color: '#F7DF1E', size: 85 },
+    { name: "Next.js", icon: SiNextdotjs, color: '#fff', size: 85, skill:95  },
+    { name: "React.js", icon: FaReact, color: '#61DAFB', size: 85 ,skill :50 },
+    { name: "TypeScript", icon: BiLogoTypescript, color: '#3178C6', size: 90, skill:95 },
+    { name: "JavaScript", icon: IoLogoJavascript, color: '#F7DF1E', size: 85 , skill:80},
    
-    { name: "Shadcn", icon: SiShadcnui, color: '#fff', size: 80 },
-    { name: "Next UI", icon: SiNextui, color: '#fff', size: 85 },
-    { name: "Tailwind CSS", icon: SiTailwindcss, color: '#38BDF8', size: 85 },
-    { name: "Bootstrap", icon: FaBootstrap, color: '#7711ED', size: 85 },
-    { name: "Node.js", icon: FaNodeJs, color: 'green', size: 85 },
-    { name: "Express", icon: SiExpress, color: '#fff', size: 85 },
-    { name: "MongoDB", icon: SiMongodb, color: 'green', size: 85 },
+    { name: "Shadcn", icon: SiShadcnui, color: '#fff', size: 80 ,skill:50             },
+    { name: "Next UI", icon: SiNextui, color: '#fff', size: 85 ,    skill:70        },
+    { name: "Tailwind CSS", icon: SiTailwindcss, color: '#38BDF8', size: 85, skill:95 },
+    { name: "Bootstrap", icon: FaBootstrap, color: '#7711ED', size: 85 , skill:90},
+    { name: "Node.js", icon: FaNodeJs, color: 'green', size: 85 ,skill:50},
+    { name: "Express", icon: SiExpress, color: '#fff', size: 85, skill:50 },
+    { name: "MongoDB", icon: SiMongodb, color: 'green', size: 85, skill:50 },
 
-    { name: "Git", icon: FaGit, color: '#F05032', size: 85 },
-    { name: "GitHub", icon: FaGithub, color: '#fff', size: 85 },
-    { name: "CSS", icon: SiCss3, color: '#1572B6', size: 85 },
-    { name: "HTML", icon: faHtml5, color: '#E34F26', size: 85 },
-    { name: "VS Code", color: '#007ACC', size: 85 },
+    { name: "Git", icon: FaGit, color: '#F05032', size: 85, skill:80 },
+    { name: "GitHub", icon: FaGithub, color: '#fff', size: 85, skill:90 },
+    { name: "CSS", icon: SiCss3, color: '#1572B6', size: 85, skill:95 },
+    { name: "HTML", icon: FaHtml5, color: '#E34F26', size: 85, skill:95 },
+    { name: "VS Code", color: '#007ACC', size: 85 , skill:95},
   ]);
   
   
@@ -100,10 +101,48 @@ const Skills = () => {
                 className={`item  relative  Hidden items-center justify-center ${value.name === 'Bootstrap' && screenSize<400  ? ' hidden':""}`} // Default class is Hidden
               >
 
+
+<svg 
+  fill="transparent"
+  id="svg" 
+  viewBox={screenSize>400 ?"0 0 110 117" :"0 0 95 130"}
+ 
+  xmlns="http://www.w3.org/2000/svg" 
+  className="w-full h-full   rounded-[10%]    top-0 absolute left-0    "
+  
+>
+  {/* Background Rectangle */}
+  <rect 
+   
+    fill="transparent" 
+   height='100%'
+   width='100%'
+    strokeWidth="3" 
+    
+    rx="10" 
+    ry="10"
+    className="rect2 "
+
+   
+  ></rect>
+
+  {/* Animated Stroke Rectangle */}
+  <rect 
+
+      strokeWidth="3"
+    height='100%'
+   width='100%'
+    rx="10" 
+    ry="10"
+    style={{strokeDashoffset:440 * value.skill*0.01,stroke:value.color}}
+  className="rect2  "
+  ></rect>
+</svg>
+
       
 {value.icon ? 
-  (value.name === 'HTML' ? 
-    <FontAwesomeIcon icon={value.icon}    style={{ color: value.color , fontSize:screenSize>=768? '90px':'45px'}} /> 
+  (value.name === 'HTMLs' ? 
+    <FontAwesomeIcon icon={value.icon}    style={{ color: value.color , fontSize:screenSize>=768? '95px':'45px'}} /> 
     : <value.icon 
      
         className={`shadow  items-center  `} 
@@ -112,12 +151,12 @@ const Skills = () => {
         
       /> 
   ) 
-  : <><Vscode  size={screenSize>=768? 70:35}/><div className="h-2 " ></div></>
+  : <><Vscode  size={screenSize>=768? 85:35}/><div className="h-2 " ></div></>
 }
 
          
                 <h3 className="  text-[0.5rem]  sm:text-xs text-wrap  md:text-sm lg:text-base">{value.name}</h3>
-              
+              <h2 className={` text-[0.5rem]  sm:text-xs text-wrap  md:text-sm lg:text-base text-[#152256]   invert font-semibold`} >{value.skill+'%'}</h2>
               </div>
             ))}
           </div>

@@ -26,7 +26,7 @@ const Projects = ({setView,view}) => {
       image: "/Projects/nasafits.com.png",
       name: "Ecommerce Site",
       Des: "A full-stack e-commerce site with user auth, product management, cart, secure checkout, user & admin dashboard.",
-      mission: "UI Design, Full-Stack",
+      mission: "Brand, Grapic & UI Design, Full-Stack",
       languages: "#html #css #js",
       frameworkicon: "/framework.png",
       frameworks:[ "#react",' #talwind'],
@@ -218,8 +218,8 @@ const handleMouseMove = (e, index) => {
             </div>
    <div className="grid gap-2">
     <br  className=' hidden sm:block'/>
-   <div className="mission flex gap-2 sm:gap-2.5 md:gap-3 lg:gap-4 mt-5 sm:mt-0">
-            <img  className={` w-9  ` + `${view==='list' && 'invert'}`} src={myrole} alt=""/ >
+   <div className="mission sm:     flex gap-2 sm:gap-2.5 md:gap-3 lg:gap-4 mt-5 sm:mt-0   ">
+            <img  className={` w-9   ` + `${view==='list' && 'invert'}`} src={myrole} alt=""/ >
             <div>
   <p className=' text-black  '>Mission</p>
   {value.mission}

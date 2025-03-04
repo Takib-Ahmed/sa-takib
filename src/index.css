@@ -791,7 +791,7 @@ grid-template-columns: repeat(auto-fill,300px); */
 display: flex;
 
 
-width:105%;
+
 font-weight: 450;
 font-size: 1rem;
 font-family: "Mona Sans", "MonaSansFallback", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
@@ -800,25 +800,9 @@ gap: 1vw;
 position: relative;
 flex-wrap: wrap;
 
-&::before{
-    position: absolute;
-    content: '';
-    width: 100%;
-    height: 100%;
-    /* background-image: linear-gradient(
-        -45deg,red,blue
-    ); */
 
-    top: 50%;
-left: 50%;
-    transform: translate(-50%,-50%);
-    border-radius: 20px;
-    background-size: 200% auto;
-
-
-}
 & .item{
-     
+     position: relative !important;
   margin-bottom:1.5vw;
   justify-content: center;
     padding:4% 6%;
