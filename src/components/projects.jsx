@@ -13,8 +13,8 @@ const Projects = ({setView,view}) => {
     {
       image: "/Projects/screencapture-localhost-5173-2025-01-16-22_39_56.png",
       name: "Portpolio",
-      Des: "A modern and fully responsive portfolio website designed to showcase personal projects, skills, and experiences. Built with a focus on clean UI and smooth navigation.",
-      mission: "Frontend Developer",
+      Des: "A modern and fully responsive portfolio website designed to showcase personal projects, skills, and experiences.",
+      mission: "Frontend",
       languages: "#html #css #js",
       frameworkicon: "/framework.png",
       frameworks: "#react",
@@ -24,21 +24,21 @@ const Projects = ({setView,view}) => {
     },
     {
       image: "/Projects/nasafits.com.png",
-      name: "Nasa Fits",
-      Des: "A visually engaging and responsive landing page inspired by space exploration. Built with React, this project emphasizes sleek design and modern interactivity. (Planning to make it a full-stack website as it is my first client project)",
-      mission: "Designer,Full-Stack-developer",
+      name: "Ecommerce Site",
+      Des: "A full-stack e-commerce site with user auth, product management, cart, secure checkout, user & admin dashboard.",
+      mission: "UI Design, Full-Stack",
       languages: "#html #css #js",
       frameworkicon: "/framework.png",
-      frameworks: "#react",
+      frameworks:[ "#react",' #talwind'],
       langicon: "/programming-language-modified.png",
       github: "https://github.com/Takib-Ahmed/nasafits.git",
       live: "https://nasafits.vercel.app/"
     },
     {
       image: "/Projects/feedback.net.png",
-      name: "Feedback.net",
-      Des: "A user-friendly feedback collection platform designed with React. This project highlights interactive components and a clean, professional UI layout.",
-      mission: "Frontend Developer",
+      name: "Feedback Platform",
+      Des: "A user-friendly feedback three-page platform (Home, Search, Details) with search functionality and interactive sliders for a smooth user experience.",
+      mission: "Frontend",
       languages: "#html #css #js",
       frameworkicon: "/framework.png",
       frameworks: "#react",
@@ -49,8 +49,8 @@ const Projects = ({setView,view}) => {
     {
       image: "/Projects/taskmanager.png",
       name: "Task Manager",
-      Des: "A lightweight task management app that allows users to organize their daily activities efficiently. Built with React, it features responsive design and smooth user interactions.",
-      mission: "Frontend Developer",
+      Des: "A lightweight task management app that allows users to organize their daily activities efficiently.",
+      mission: "Frontend",
       languages: "#html #css #js",
       frameworkicon: "/framework.png",
       frameworks: "#react",
@@ -61,8 +61,8 @@ const Projects = ({setView,view}) => {
     {
       image: "/Projects/aniwatch.clone.png",
       name: "Aniwatch Clone",
-      Des: "A replica of the Aniwatch.tv streaming platform, featuring dynamic sections for trending shows, carousels, and more. Built with HTML, CSS, and JavaScript, focusing on responsive and interactive design.",
-      mission: "Frontend Developer",
+      Des: "A replica of the Aniwatch.tv streaming platform, featuring dynamic sections for trending shows, carousels, and more.",
+      mission: "Frontend",
       languages: "#html #css #js",
       frameworkicon: "/framework.png",
       frameworks: "#bootstrap",
@@ -151,19 +151,19 @@ const handleMouseMove = (e, index) => {
   }, [contracts,setView]);
 
 
-  useEffect(() => {
-    const handleResize = () => {
-      setView(window.innerWidth < 1240 ? "grid" : 'list');
+//   useEffect(() => {
+//     const handleResize = () => {
+//       setView(window.innerWidth < 1240 ? "grid" : 'list');
 
-    };
+//     };
 
-    // Listen for window resize events
+//     // Listen for window resize events
 
-    window.addEventListener("load", handleResize);
-window.addEventListener("resize", handleResize);
-    // Cleanup on unmount
+//     window.addEventListener("load", handleResize);
+// window.addEventListener("resize", handleResize);
+//     // Cleanup on unmount
  
-  }, [setView]);
+//   }, [setView]);
   return (
     <>
       <section className=" projects   " id='projects' >
@@ -207,8 +207,8 @@ window.addEventListener("resize", handleResize);
 </div>
 </div>
          <div className="details grid gap-0 ">
-          <br />
-         <div className="name" >
+          <br className=' hidden sm:block' />
+         <div className="name mt-3 sm:mt-0" >
 
               <h3>{value.name}</h3>
             </div> 
@@ -217,16 +217,16 @@ window.addEventListener("resize", handleResize);
 
             </div>
    <div className="grid gap-2">
-    <br />
-   <div className="mission flex gap-4">
+    <br  className=' hidden sm:block'/>
+   <div className="mission flex gap-2 sm:gap-2.5 md:gap-3 lg:gap-4 mt-5 sm:mt-0">
             <img  className={` w-9  ` + `${view==='list' && 'invert'}`} src={myrole} alt=""/ >
             <div>
   <p className=' text-black  '>Mission</p>
   {value.mission}
 </div>
          </div>
-<div className="languages flex flex-wrap sm:flex-nowrap gap-3 sm:gap-10">
-<div className=" flex gap-4">
+<div className="languages flex flex-wrap sm:flex-nowrap gap-0.5 md:gap-2 lg:gap-3 sm:gap-10">
+<div className=" flex gap-2 sm:gap-2.5 md:gap-3 lg:gap-4">
        <img src={value.langicon} alt=""  className=' w-9 h-9   plicon'/>  
        {/* w-12 h-12 */}
        <div >
@@ -234,7 +234,7 @@ window.addEventListener("resize", handleResize);
 <font className=' font-bold'>  {value.languages}</font>
 </div>
 </div> 
-<div className=" flex gap-4">
+<div className=" flex gap-2 sm:gap-2.5 md:gap-3 lg:gap-4">
        <img src={value.frameworkicon} alt=""  className=' w-9 h-9  plicon invert framework  '/>
        <div className=' text-[#7711ED]' >
   <p className=' text-white  '>Library</p>

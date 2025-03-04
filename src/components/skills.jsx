@@ -94,11 +94,13 @@ const Skills = () => {
               <div
            
 
-              style={screenSize ? { transitionDelay: `${key * 150}ms` } : {}}
+              style={screenSize ? { transitionDelay: `${key * 140}ms` } : {}}
                 key={key}
                 ref={(el) => (itemRefs.current[key] = el)} // Assign refs to each item
-                className={`item Hidden items-center justify-center ${value.name === 'Bootstrap' && screenSize<400  ? ' hidden':""}`} // Default class is Hidden
+                className={`item  relative  Hidden items-center justify-center ${value.name === 'Bootstrap' && screenSize<400  ? ' hidden':""}`} // Default class is Hidden
               >
+
+      
 {value.icon ? 
   (value.name === 'HTML' ? 
     <FontAwesomeIcon icon={value.icon}    style={{ color: value.color , fontSize:screenSize>=768? '90px':'45px'}} /> 

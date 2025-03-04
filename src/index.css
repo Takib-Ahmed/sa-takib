@@ -818,6 +818,7 @@ left: 50%;
 
 }
 & .item{
+     
   margin-bottom:1.5vw;
   justify-content: center;
     padding:4% 6%;
@@ -839,15 +840,18 @@ animation-timeline: view(80% 5%); */
       
         justify-self:center;
         background-color:transparent ;
-        border-radius: 15%;
+        /* border-radius: 15%; */
    margin-bottom: 25%;
 
-        backdrop-filter: blur(100px);
+        /* backdrop-filter: blur(100px);
         filter: url(../public/filter.svg);
        -webkit-backdrop-filter: blur(100px);
-        box-shadow: 0 8px 32px rgba(0,0,0,0.37);
+        box-shadow: 0 8px 32px rgba(0,0,0,0.37); */
    
     }
+
+    
+
     & .des{
         text-align: left;
         width: 100%;

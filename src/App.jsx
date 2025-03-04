@@ -10,7 +10,7 @@ import Loader from './components/Loader'
 import CircularMenu from './components/SocialsMenu'
 
 function App() {
-  const [view, setView] = useState("list");
+  const [view, setView] = useState("grid");
   return (
     <main>
 <CircularMenu/>
