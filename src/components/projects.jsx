@@ -95,60 +95,60 @@ const handleMouseMove = (e, index) => {
 };
 
 
-  useEffect(() => {
-    const observerCallback = (entries) => {
-      entries.forEach((entry) => {
-        if (changeViewButtonRef.current) {
-          changeViewButtonRef.current.style.display = entry.isIntersecting  && window.innerWidth > 1240
-            ? "block"
-            : "none";
-        }
-      });
-    };
+  // useEffect(() => {
+  //   const observerCallback = (entries) => {
+  //     entries.forEach((entry) => {
+  //       if (changeViewButtonRef.current) {
+  //         changeViewButtonRef.current.style.display = entry.isIntersecting  && window.innerWidth > 1240
+  //           ? "block"
+  //           : "none";
+  //       }
+  //     });
+  //   };
 
-    const observer = new IntersectionObserver(observerCallback, {
-      threshold: 0.15,
-    });
+  //   const observer = new IntersectionObserver(observerCallback, {
+  //     threshold: 0.15,
+  //   });
 
-    if (projectContainerRef.current) {
-      observer.observe(projectContainerRef.current);
-    }
+  //   if (projectContainerRef.current) {
+  //     observer.observe(projectContainerRef.current);
+  //   }
 
-    return () => {
-      if (projectContainerRef.current) {
-        observer.unobserve(projectContainerRef.current);
-      }
-    };
-  }, []);
-  useEffect(() => {
-    if(window.innerWidth < 1240){
-      setView("grid" );
-    }
+  //   return () => {
+  //     if (projectContainerRef.current) {
+  //       observer.unobserve(projectContainerRef.current);
+  //     }
+  //   };
+  // }, []);
+  // useEffect(() => {
+  //   if(window.innerWidth < 1240){
+  //     setView("grid" );
+  //   }
    
-    const observerCallback = (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting && contracts) {
-          changeViewButtonRef.current.style.display = entry.isIntersecting || window.innerWidth < 1240
-            ? "none"
-            : "block";
-        }
-      });
-    };
+  //   // const observerCallback = (entries) => {
+  //   //   entries.forEach((entry) => {
+  //   //     if (entry.isIntersecting && contracts) {
+  //   //       changeViewButtonRef.current.style.display = entry.isIntersecting || window.innerWidth < 1240
+  //   //         ? "none"
+  //   //         : "block";
+  //   //     }
+  //   //   });
+  //   // };
 
-    const observer = new IntersectionObserver(observerCallback, {
-      threshold: 1,
-    });
+  //   // const observer = new IntersectionObserver(observerCallback, {
+  //   //   threshold: 1,
+  //   // });
 
-    if (contracts) {
-      contracts.forEach(Contract => observer.observe(Contract));
-    }
+  //   // if (contracts) {
+  //   //   contracts.forEach(Contract => observer.observe(Contract));
+  //   // }
 
-    return () => {
-      if (contracts) {
-        contracts.forEach(Contract => observer.unobserve(Contract));
-      }
-    };
-  }, [contracts,setView]);
+  //   // return () => {
+  //   //   if (contracts) {
+  //   //     contracts.forEach(Contract => observer.unobserve(Contract));
+  //   //   }
+  //   // };
+  // }, [contracts,setView]);
 
 
 //   useEffect(() => {
@@ -171,7 +171,7 @@ const handleMouseMove = (e, index) => {
         <h2 className='subtitle    text-[1em] sm:text-[1.1em]'>Take a Glimpse Into My Creative Journey Through Code and Design</h2>
        
        <div className="projectcontaier   ">
-       <div className="Gridlistbutton flex justify-center items-center space-x-4 mt-5  " id='changview' ref={changeViewButtonRef}>
+       {/* <div className="Gridlistbutton flex justify-center items-center space-x-4 mt-5  " id='changview' ref={changeViewButtonRef}>
       <button
         className={`px-4 py-2 text-white rounded-md ${
           view === "list" ? " bg-[#be24a9]" : "bg-[#010824] hover:bg-[#be24a9]"
@@ -189,7 +189,7 @@ const handleMouseMove = (e, index) => {
         
       <img src="/menu.png" alt="" className=' invert w-5' />
       </button></a>
-    </div>
+    </div> */}
         <div className={` grid gap-60  mt-10 lg:mt-20 w-fit ` +` ${view ==='list' ? 'projectlist':'projectlist2 justify-center lg:justify-normal'}`} ref={projectContainerRef}>
           
       {listprojects.map((value,key)=>(
