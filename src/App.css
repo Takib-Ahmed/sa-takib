@@ -1,6 +1,39 @@
 #projects{
     padding: 50px !important;
   }
+
+
+  
+
+  .slick-dots li.slick-active button:before {
+    opacity: .75;
+    color: #e945e3;
+}
+.slick-dots li button:before {
+    opacity: .75;
+    color:wheat;
+}
+  
+  .slick-dots li.slick-active div {
+    background-color: white; /* Active color */
+  /* Optional: Add scale effect */
+    transition: all 0.3s ease;
+  }
+  
+  .slick-dots li div {
+     /* Default color (gray-300) */
+  
+    border-radius: 50%;
+    transition: all 0.3s ease;
+  }
+  
+  
+  .slick-dots li.slick-active div{
+    background-color: plnk; /* Active color */
+   /* Optional: Add scale effect */
+    transition: all 0.3s ease;
+  }
+  
   .rect2 {
     stroke-dasharray: 440;
     stroke-dashoffset: 440;
@@ -54,7 +87,7 @@ backdrop-filter: blur(500px);
         padding: 26.5px ;
     
         & .cover{
-            overflow: hidden;
+           
             width:330px;
             height: 230px;
             align-items: center;
@@ -200,6 +233,9 @@ overflow: hidden;
         color: #010824;
     }
     & .cover{
+        & .slick-dots {
+            filter: invert(1);
+        }
 img{
     filter: invert(2);
 }

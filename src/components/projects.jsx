@@ -7,6 +7,7 @@ import { faGithub } from '@fortawesome/free-brands-svg-icons/faGithub'
 import { faEye } from '@fortawesome/free-regular-svg-icons'
 import { useEffect } from 'react'
 import { useRef } from 'react'
+import Slider from "react-slick";
 
 const Projects = ({setView,view}) => {
   const [listprojects] = useState([
@@ -164,6 +165,19 @@ const handleMouseMove = (e, index) => {
 //     // Cleanup on unmount
  
 //   }, [setView]);
+
+
+var subsettings = {
+  dots: true,
+  infinite: false,
+  speed: 500,
+  slidesToShow: 1,
+  slidesToScroll: 1,   
+  arrows: false,
+  appendDots: (dots) => (
+    <div className="p-1 absolute top-0 bg-black">
+      <ul className="flex justify-center gap-0 mx-10 -translate-y-7">{dots}</ul>
+    </div>)};
   return (
     <>
       <section className=" projects   " id='projects' >
@@ -198,13 +212,24 @@ const handleMouseMove = (e, index) => {
                 handleMouseMove(e,key)
               }}>
 
-<div className="cover  relative ">
- <img src= {value.image} alt="" className='  ' />
+<div className="relative">
+<div className=" cover   relative ">
+<Slider {...subsettings} className=' w-80  relative'>
+<img src= {value.image} alt="" className=' ' />
+<img src= {value.image} alt="" className=' ' />
+<img src= {value.image} alt="" className=' ' />
+</Slider>
+
+
 <div className="flex  flex-wrap absolute right-2 top-2 gap-1.5">
 <a href={value.github}><FontAwesomeIcon icon={faGithub} className='   github  text-white  '></FontAwesomeIcon></a>
 <a href={value.live}><FontAwesomeIcon icon={faEye} className='    livelink    text-white eye '></FontAwesomeIcon></a>
 
 </div>
+</div>
+<div className="p-1  z-10 bg-black w-full absolute hidden">
+      <ul className="flex justify-center gap-0 mx-10 ">...</ul>
+    </div>
 </div>
          <div className="details grid gap-0 ">
           <br className=' hidden sm:block' />

@@ -47,7 +47,6 @@ const [Revealed,setReveled] = useState([])
     const observer = new IntersectionObserver((entries, observer) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          console.log("Adding Reveal class");
           entry.target.classList.add("Reveal");
         setReveled((prev)=>[...prev,entry.target.classList])
         
