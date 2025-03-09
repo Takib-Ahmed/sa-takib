@@ -259,9 +259,7 @@ const Projects = ({ setView, view }) => {
                       </a>
                     </div>
                   </div>
-                  <div className="p-1  z-10 bg-black w-full absolute hidden">
-                    <ul className="flex justify-center gap-0 mx-10 ">...</ul>
-                  </div>
+        
                 </div>
                 <div className="details grid gap-0 ">
                   <br className=" hidden sm:block" />

@@ -4,11 +4,8 @@
 
 @import url('https://fonts.googleapis.com/css2?family=MuseoModerno:wght@200;500;700&display=swap');
 
-@tailwind base;
-@tailwind components;
+
 @tailwind utilities;
-
-
 @import "tailwindcss";
 
 
@@ -87,8 +84,9 @@ position: fixed;
     justify-content: space-between;
     padding: 0 150px !important;
     z-index: 100;
-    backdrop-filter: blur(10px);
+   
     -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
     & img{
         width: 80px;
 filter: invert(1);
@@ -752,12 +750,14 @@ flex-wrap: wrap;
     background-color:transparent;
     box-shadow: 0 8px 32px rgba(0,0,0,0.37);
     text-wrap:wrap;
+    
 /* animation: Reveal 1s linear both;
 animation-timeline: view(80% 5%); */
 
-  backdrop-filter: blur(100px);
+
   filter:brightness(1.1) saturate(1.1);
     -webkit-backdrop-filter: blur(100px);
+    backdrop-filter: blur(100px);
     /* background-color: #010824; */
     & svg:not(.SVG){
        
@@ -768,9 +768,10 @@ animation-timeline: view(80% 5%); */
         border-radius: 15%;
    margin-bottom: 20%;
 
-        backdrop-filter: blur(100px);
+      
     
        -webkit-backdrop-filter: blur(100px);
+       backdrop-filter: blur(100px);
         box-shadow: 0 8px 32px rgba(0,0,0,0.37);
    
     }
@@ -892,12 +893,14 @@ height: auto;
     .projectcard{
       
         animation-timeline: view(95% 5%);
+    
      position: sticky;
 top: calc(64px + (var(--position ) * 20px));
         width: 100%;
 background-image: linear-gradient(180deg,#010824 ,rgba(238, 238, 238, 0));
-backdrop-filter: blur(500px);
+
         -webkit-backdrop-filter: blur(100px);
+        backdrop-filter: blur(500px);
         border: 1px solid rgba(255,255,255,0.18);
         box-shadow: 0 8px 32px rgba(0,0,0,0.37);
         box-shadow: 0 150px 150px #e945e333;
@@ -930,8 +933,9 @@ backdrop-filter: blur(500px);
                 background-color:rgba(238, 238, 238, 0.313) ;
                 padding: 10px;
                      border-radius: 50%;
-                     backdrop-filter: blur(50px);
-                     -webkit-backdrop-filter: blur(50px);  
+                     
+                     -webkit-backdrop-filter: blur(50px);
+                     backdrop-filter: blur(50px);  
             }
         }
   &:nth-child(1){
@@ -979,8 +983,9 @@ backdrop-filter: blur(500px);
         background-color:#eee2 ;
    padding: 1px;
         border-radius: 10px;
-        backdrop-filter: blur(50px);
+        
         -webkit-backdrop-filter: blur(50px);
+        backdrop-filter: blur(50px);
 
     }
             
@@ -1052,8 +1057,9 @@ backdrop-filter: blur(500px);
             background-color:#eee2 ;
        padding: 1px;
             border-radius: 10px;
-            backdrop-filter: blur(50px);
+            
             -webkit-backdrop-filter: blur(50px);
+            backdrop-filter: blur(50px);
 
         }
                 
@@ -1073,16 +1079,18 @@ backdrop-filter: blur(500px);
                     background-color:rgba(238, 238, 238, 0.133) ;
                     padding: 1px;
                          border-radius: 10px;
-                         backdrop-filter: blur(50px);
+                         
                          -webkit-backdrop-filter: blur(50px);
+                         backdrop-filter: blur(50px);
                 }
                & .framework{
                 padding: 5px;
               
                     background-color:rgba(238, 238, 238, 0.358) ;
                 border-radius: 10px;
-                backdrop-filter: blur(50px);
+                
                 -webkit-backdrop-filter: blur(50px);
+                backdrop-filter: blur(50px);
                }
 
             }
@@ -1483,8 +1491,9 @@ margin-bottom : 2%;
 
         width: 100%;
 background-image: linear-gradient(180deg,#010824 ,rgba(238, 238, 238, 0));
-backdrop-filter: blur(500px);
+
         -webkit-backdrop-filter: blur(100px);
+        backdrop-filter: blur(500px);
         border: 1px solid rgba(255,255,255,0.18);
         box-shadow: 0 8px 32px rgba(0,0,0,0.37);
         box-shadow: 0 150px 150px #e945e333;
@@ -1515,8 +1524,9 @@ backdrop-filter: blur(500px);
                 background-color:rgba(238, 238, 238, 0.313) ;
                 padding: 10px;
                      border-radius: 50%;
-                     backdrop-filter: blur(50px);
                      -webkit-backdrop-filter: blur(50px);  
+                     backdrop-filter: blur(50px);
+                 
             }
         }
   
@@ -1560,8 +1570,9 @@ backdrop-filter: blur(500px);
             background-color:#eee2 ;
        padding: 1px;
             border-radius: 10px;
-            backdrop-filter: blur(50px);
+           
             -webkit-backdrop-filter: blur(50px);
+            backdrop-filter: blur(50px);
          
 
         }
@@ -1583,8 +1594,9 @@ backdrop-filter: blur(500px);
                     background-color:rgba(238, 238, 238, 0.133) ;
                     padding: 1px;
                          border-radius: 10px;
-                         backdrop-filter: blur(50px);
+                      
                          -webkit-backdrop-filter: blur(50px);
+                         backdrop-filter: blur(50px);
                       
                      
 
@@ -1594,8 +1606,9 @@ backdrop-filter: blur(500px);
               
                     background-color:rgba(238, 238, 238, 0.358) ;
                 border-radius: 10px;
-                backdrop-filter: blur(50px);
+        
                 -webkit-backdrop-filter: blur(50px);
+                backdrop-filter: blur(50px);
                }
 
             }
