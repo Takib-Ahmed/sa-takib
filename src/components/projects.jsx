@@ -76,6 +76,7 @@ const Projects = ({ setView, view }) => {
   const contracts = document.querySelectorAll(".contract");
 
   const boxesRef = useRef([]);
+  const projectListedRef = useRef(null);
 
   const handleMouseMove = (e, index) => {
     const box = boxesRef.current[index];
@@ -89,74 +90,73 @@ const Projects = ({ setView, view }) => {
     }
   };
 
-  // useEffect(() => {
-  //   const observerCallback = (entries) => {
-  //     entries.forEach((entry) => {
-  //       if (changeViewButtonRef.current) {
-  //         changeViewButtonRef.current.style.display = entry.isIntersecting  && window.innerWidth > 1240
-  //           ? "block"
-  //           : "none";
-  //       }
-  //     });
-  //   };
 
-  //   const observer = new IntersectionObserver(observerCallback, {
-  //     threshold: 0.15,
-  //   });
+  useEffect(() => {
+    if (window.innerWidth < 1240) {
+      setView("grid");
+    }
 
-  //   if (projectContainerRef.current) {
-  //     observer.observe(projectContainerRef.current);
-  //   }
+    const observerCallback = (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting && contracts) {
+          changeViewButtonRef.current.style.display =
+            entry.isIntersecting || window.innerWidth < 1240 ? "none" : "block";
+        }
+      });
+    };
 
-  //   return () => {
-  //     if (projectContainerRef.current) {
-  //       observer.unobserve(projectContainerRef.current);
-  //     }
-  //   };
-  // }, []);
-  // useEffect(() => {
-  //   if(window.innerWidth < 1240){
-  //     setView("grid" );
-  //   }
+    const observer = new IntersectionObserver(observerCallback, {
+      threshold: 1,
+    });
 
-  //   // const observerCallback = (entries) => {
-  //   //   entries.forEach((entry) => {
-  //   //     if (entry.isIntersecting && contracts) {
-  //   //       changeViewButtonRef.current.style.display = entry.isIntersecting || window.innerWidth < 1240
-  //   //         ? "none"
-  //   //         : "block";
-  //   //     }
-  //   //   });
-  //   // };
+    if (contracts) {
+      contracts.forEach((Contract) => observer.observe(Contract));
+    }
 
-  //   // const observer = new IntersectionObserver(observerCallback, {
-  //   //   threshold: 1,
-  //   // });
+    return () => {
+      if (contracts) {
+        contracts.forEach((Contract) => observer.unobserve(Contract));
+      }
+    };
+  }, [contracts, setView]);
 
-  //   // if (contracts) {
-  //   //   contracts.forEach(Contract => observer.observe(Contract));
-  //   // }
+  useEffect(() => {
+    const handleResize = () => {
+      setView(window.innerWidth < 1240 ? "grid" : "list");
+    };
 
-  //   // return () => {
-  //   //   if (contracts) {
-  //   //     contracts.forEach(Contract => observer.unobserve(Contract));
-  //   //   }
-  //   // };
-  // }, [contracts,setView]);
+    // Listen for window resize events
 
-  //   useEffect(() => {
-  //     const handleResize = () => {
-  //       setView(window.innerWidth < 1240 ? "grid" : 'list');
+    window.addEventListener("load", handleResize);
+    window.addEventListener("resize", handleResize);
+    // Cleanup on unmount
+  }, [setView]);
 
-  //     };
+  useEffect(() => {
+    const observerCallback = (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          changeViewButtonRef.current.style.display = "block";
+        } else {
+          changeViewButtonRef.current.style.display = "none";
+        }
+      });
+    };
 
-  //     // Listen for window resize events
+    const observer = new IntersectionObserver(observerCallback, {
+      threshold: 0.15,
+    });
 
-  //     window.addEventListener("load", handleResize);
-  // window.addEventListener("resize", handleResize);
-  //     // Cleanup on unmount
+    if (projectListedRef.current) {
+      observer.observe(projectListedRef.current);
+    }
 
-  //   }, [setView]);
+    return () => {
+      if (projectListedRef.current) {
+        observer.unobserve(projectListedRef.current);
+      }
+    };
+  }, [projectListedRef]);
 
   var subsettings = {
     dots: true,
@@ -183,36 +183,45 @@ const Projects = ({ setView, view }) => {
           Take a Glimpse Into My Creative Journey Through Code and Design
         </h2>
 
-        <div className="projectcontaier   ">
-          {/* <div className="Gridlistbutton flex justify-center items-center space-x-4 mt-5  " id='changview' ref={changeViewButtonRef}>
-      <button
-        className={`px-4 py-2 text-white rounded-md ${
-          view === "list" ? " bg-[#be24a9]" : "bg-[#010824] hover:bg-[#be24a9]"
-        }`}
-        onClick={() => setView("list")}
-      >
-  <img src="/list-47-512.png" alt="" className=' invert w-5' />
-      </button>
-      <a href="#projects"><button
-        className={`px-4 py-2 text-white rounded-md ${
-          view === "grid" ? "bg-[#be24a9]" : "bg-[#010824] hover:bg-[#be24a9]"
-        }`}
-        onClick={() => setView("grid")}
-      >
-        
-      <img src="/menu.png" alt="" className=' invert w-5' />
-      </button></a>
-    </div> */}
+        <div className="projectcontaier   " >
+          <div
+            className="Gridlistbutton hidden lg:flex justify-center items-center space-x-4 mt-5  "
+            id="changview"
+            ref={changeViewButtonRef}
+          >
+            <button
+              className={`px-4 py-2 text-white rounded-md ${
+                view === "list"
+                  ? " bg-[#be24a9]"
+                  : "bg-[#010824] hover:bg-[#be24a9]"
+              }`}
+              onClick={() => setView("list")}
+            >
+              <img src="/list-47-512.png" alt="" className=" invert w-5" />
+            </button>
+            <a href="#projects">
+              <button
+                className={`px-4 py-2 text-white rounded-md ${
+                  view === "grid"
+                    ? "bg-[#be24a9]"
+                    : "bg-[#010824] hover:bg-[#be24a9]"
+                }`}
+                onClick={() => setView("grid")}
+              >
+                <img src="/menu.png" alt="" className=" invert w-5" />
+              </button>
+            </a>
+          </div>
           <div
             className={
-              ` grid gap-60  mt-10 lg:mt-20 w-fit ` +
+              ` grid gap-60  mt-10 lg:mt-20 w-fit  projectlisted ` +
               ` ${
                 view === "list"
                   ? "projectlist"
                   : "projectlist2 justify-center lg:justify-normal"
               }`
             }
-        
+            ref={projectListedRef}
           >
             {listprojects.map((value, key) => (
               <div
@@ -229,19 +238,21 @@ const Projects = ({ setView, view }) => {
                 <div className="relative">
                   <div className=" cover   relative ">
                     <Slider {...subsettings} className=" min-w-full  top-0  ">
-                    <img
-                          src={value.image}
-                          alt=""
-                          className=" projectcover   "
-                        />      <img
+                      <img
                         src={value.image}
                         alt=""
                         className=" projectcover   "
-                      />      <img
-                          src={value.image}
-                          alt=""
-                          className=" projectcover   "
-                        />
+                      />{" "}
+                      <img
+                        src={value.image}
+                        alt=""
+                        className=" projectcover   "
+                      />{" "}
+                      <img
+                        src={value.image}
+                        alt=""
+                        className=" projectcover   "
+                      />
                     </Slider>
 
                     <div className="flex  flex-wrap absolute right-2 top-3 gap-1.5">
@@ -259,7 +270,6 @@ const Projects = ({ setView, view }) => {
                       </a>
                     </div>
                   </div>
-        
                 </div>
                 <div className="details grid gap-0 ">
                   <br className=" hidden sm:block" />
@@ -273,7 +283,9 @@ const Projects = ({ setView, view }) => {
                     <br className=" hidden sm:block" />
                     <div className="mission flex gap-2 sm:gap-2.5 md:gap-3 lg:gap-4 mt-5 sm:mt-0   ">
                       <img
-                        className={` w-9  invert   ` + `${view === "list" && "invert"}`}
+                        className={
+                          ` w-9  invert   ` + `${view === "list" && "invert"}`
+                        }
                         src={myrole}
                         alt=""
                       />

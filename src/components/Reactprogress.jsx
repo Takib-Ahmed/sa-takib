@@ -7,7 +7,7 @@ export default function  RectProgresss({screenSize,value,Revealed,KEY}){
 
     useEffect(() => {
     
-      const time = KEY * 35
+      const time = KEY+1 * 20
       
       const isRevealed = Revealed.some((reveal) => KEY!=0 ?reveal.contains(KEY) && reveal.contains("Reveal"): true);
       const timeout = isRevealed && setTimeout(() => {
@@ -32,7 +32,7 @@ export default function  RectProgresss({screenSize,value,Revealed,KEY}){
        <svg 
          fill="transparent"
          id="svg" 
-         viewBox={screenSize>400 ?"0 0 110 117" :"0 0 95 130"}
+         viewBox={screenSize>520 ?"0 0 110 117" :"0 0 95 110"}
         
          xmlns="http://www.w3.org/2000/svg" 
          className="w-full h-full   rounded-[10%]    top-0 absolute left-0 SVG    "

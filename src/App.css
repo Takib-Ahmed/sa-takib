@@ -225,6 +225,13 @@ filter: invert(0) ;
 
 }
 }
+
+@media only screen and (max-width: 1241px) {
+.Gridlistbutton{
+  display: none !important;
+}
+}
+
 @media only screen and (max-width: 1110px) {
   .home {
    display: flex !important; 
@@ -639,6 +646,9 @@ filter: invert(0) ;
           
           }
           @media only screen and (max-width: 420px){
+            .skilllist{
+              gap: 3vw !important;
+            }
               .profession{
                   height: auto !important;
               }

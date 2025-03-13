@@ -173,7 +173,7 @@ filter: invert(1);
             
                 position: absolute;
                left: 20px;
-               animation: l2r linear forwards 1s , show 0.5s ease-in-out forwards 1s;
+               animation: l2r linear forwards 0.92s , show 0.5s ease-in-out forwards 1s;
           
 
         }
@@ -730,12 +730,11 @@ grid-template-columns: repeat(auto-fill,300px); */
 display: flex;
 
 
-
 font-weight: 450;
 font-size: 1rem;
 font-family: "Mona Sans", "MonaSansFallback", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
 justify-content: space-between;
-gap: 1vw;
+gap: 2vw;
 position: relative;
 flex-wrap: wrap;
 
@@ -758,14 +757,14 @@ animation-timeline: view(80% 5%); */
   filter:brightness(1.1) saturate(1.1);
     /* -webkit-backdrop-filter: blur(100px);
     backdrop-filter: blur(100px); */
-    background: #00092B;
+  
     /* background-color: #010824; */
     & svg:not(.SVG){
        
     
       
         justify-self:center;
-        background-color:transparent ;
+   
         border-radius: 15%;
    margin-bottom: 20%;
 
@@ -773,7 +772,7 @@ animation-timeline: view(80% 5%); */
 /*     
        -webkit-backdrop-filter: blur(100px);
        backdrop-filter: blur(100px); */
-       background: #00092B;
+       background-color: #00092b00;
         box-shadow: 0 8px 32px rgba(0,0,0,0.37);
    
     }
@@ -954,7 +953,7 @@ background-image: linear-gradient(180deg,#010824 ,rgba(238, 238, 238, 0));
    
                 padding-left: 0.5px ;
                 padding-right: 19px;
-                animation: showcover2  ease  both; 
+            
                 animation-timeline: view(90% 1%);
                 img{
                     border-radius: 0px 0px 0px 5px;
@@ -1012,23 +1011,10 @@ background-image: linear-gradient(180deg,#010824 ,rgba(238, 238, 238, 0));
     }
             
         }
-        &:nth-child(even){
-     
 
-            & .cover{
-             
-               
-            }
-            .details{
-                animation: showcover  ease  both; 
-                animation-timeline: view(90% 1%);
-            }
-        }
         & .details{
             margin-top: -5px;
             font-family: "MuseoModerno",system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-            animation: showcover2  ease  both; 
-            animation-timeline: view(90% 1%);
             width: 40%;
             & .name{
               
@@ -1228,116 +1214,6 @@ text-align: center;
     background-size: 15px;
     background-position: calc(100% - 10px);
     background-repeat: no-repeat;
-}
-#homelink{
-    animation: beactive linear both,borderbottom linear 6s  infinite;
-    animation-timeline: scroll(y);
-   
-    
-}
-
-@keyframes beactive {
-    0%{
-        border-bottom: 2px solid #be24a9;
-        color: #e945e3;
-    }
-    15%{
- border-bottom: none;
- color: #ffff;
-    }
-    100%{
-        border-bottom: none;
-        color: #ffff;    
-    }
-    
-}
-
-#skillslink{
-    animation: beactive2 linear both;
-    animation-timeline: scroll(y);
-   
-    
-}
-@keyframes beactive2 {
-    0%{
-        border-bottom: none;
-        color: #ffff;
-  
-    }
-    15%{
-        border-bottom: 2px solid #be24a9;
-        color: #e945e3;
-    }
-
-    30%{
-        border-bottom: none;
-        color: #ffff;
-    }
-    
-    100%{
-        border-bottom: none;
-        color: #ffff; 
-    }
-    
-}
-#projectslink{
-    animation: beactive3 linear both;
-    animation-timeline: scroll(y);
-   
-    
-}
-@keyframes beactive3 {
-    0%{
-        border-bottom: none;
-        color: #ffff;
-  
-    }
-   
-
-15%{
-    border-bottom: none;
-    color: #ffff;    
-}
-    30.0000001%{
-        border-bottom: 2px solid #be24a9;
-        color: #e945e3;
-    }
-    75%{
-        border-bottom: 2px solid #be24a9;
-        color: #e945e3;
-    }
-    100%{
-        border-bottom: none;
-        color: #ffff; 
-    }
-    
-}
-#contractslink{
-    animation: beactive4 linear both;
-    animation-timeline: scroll(y); 
-}
-@keyframes beactive4 {
-    0%{
-        border-bottom: none;
-        color: #ffff;
-  
-    }
-   
-
-86%{
-    border-bottom: none;
-    color: #ffff;    
-}
- 
-    90%{
-        border-bottom: 2px solid #be24a9;
-        color: #e945e3;
-    }
-    100%{
-        border-bottom: 2px solid #be24a9;
-        color: #e945e3;
-    }
-    
 }
 input{
     background-color: transparent;
@@ -1644,113 +1520,7 @@ background-image: linear-gradient(180deg,#010824 ,rgba(238, 238, 238, 0));
     }
 }
 
-#homelinks{
-    animation: gridactive linear both,borderbottom linear 6s  infinite;
-    animation-timeline: scroll(y);
-   
-    
-}
-
-@keyframes gridactive {
-    0%{
-        border-bottom: 2px solid #be24a9;
-        color: #e945e3;
-    }
-    39%{
- border-bottom: none;
- color: #ffff;
-    }
-    100%{
-        border-bottom: none;
-        color: #ffff;    
-    }
-    
-}
-
-#skillslinks{
-    animation: gridactive2 linear both;
-    animation-timeline: scroll(y);
-   
-    
-}
-@keyframes gridactive2 {
-    0%{
-        border-bottom: none;
-        color: #ffff;
-  
-    }
-    39%{
-        border-bottom: 2px solid #be24a9;
-        color: #e945e3;
-    }
-
-    50%{
-        border-bottom: none;
-        color: #ffff;
-    }
-    
-    100%{
-        border-bottom: none;
-        color: #ffff; 
-    }
-    
-}
-#projectslinks{
-    animation: gridactive3 linear both;
-    animation-timeline: scroll(y);
-   
-    
-}
-@keyframes gridactive3 {
-    0%{
-        border-bottom: none;
-        color: #ffff;
-  
-    }
-   
-
-39%{
-    border-bottom: none;
-    color: #ffff;    
-}
-   50%{
-        border-bottom: 2px solid #be24a9;
-        color: #e945e3;
-    }
-    75%{
-        border-bottom: 2px solid #be24a9;
-        color: #e945e3;
-    }
-    100%{
-        border-bottom: none;
-        color: #ffff; 
-    }
-    
-}
-#contractslinks{
-    animation: gridactive4 linear both;
-    animation-timeline: scroll(y); 
-}
-@keyframes gridactive4 {
-    0%{
-        border-bottom: none;
-        color: #ffff;
-  
-    }
-   
-
-86%{
-    border-bottom: none;
-    color: #ffff;    
-}
- 
-    90%{
-        border-bottom: 2px solid #be24a9;
-        color: #e945e3;
-    }
-    100%{
-        border-bottom: 2px solid #be24a9;
-        color: #e945e3;
-    }
-    
+.active{
+    border-bottom: 2px solid #be24a9;
+    color: #e945e3;
 }

@@ -89,7 +89,7 @@ const [Revealed,setReveled] = useState([])
         <br />
         <div className="listanimation  ">
           {" "}
-          <div className="list items-center  sm:mt-5 md:mt-10 lg:mt-12"  >
+          <div className="list items-center  sm:mt-5 md:mt-10 lg:mt-12 grid grid-cols-4 w-full skilllist "  >
             {listskills.map((value, key) => (
        <SkillCard key={key} value={value} KEY={key} Revealed={Revealed} itemRefs={itemRefs}   screenSize={screenSize}/>
             ))}

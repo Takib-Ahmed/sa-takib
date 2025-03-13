@@ -9,9 +9,9 @@ export default function SkillCard({value,KEY,screenSize,Revealed,itemRefs}){
 
       useEffect(() => {
         
-          const time = KEY * 30
+          const time = KEY!= 0 ? KEY * 20:KEY+1*25
           const progressTime =   progress  + 25
-          const isRevealed = Revealed.some((reveal) => KEY!=0 ?reveal.contains(KEY) && reveal.contains("Reveal"): true);
+          const isRevealed = Revealed.some((reveal) => reveal.contains(KEY) && reveal.contains("Reveal"));
           const timeout = isRevealed && setTimeout(() => {
             const interval = setInterval(() => {
               setProgress((prev) => {
@@ -36,7 +36,7 @@ export default function SkillCard({value,KEY,screenSize,Revealed,itemRefs}){
         style={screenSize>425 ? { transitionDelay: `${(KEY * 100)}ms` } : { transitionDelay: `${(KEY * 50)}ms` }}
           key={KEY}
           ref={(el) => (itemRefs.current[KEY] = el)} // Assign refs to each item
-          className={`item  ${KEY}  shadow-slate-400 shadow-2xl relative  Hidden items-center justify-center ${value.name === 'Bootstrap' && screenSize<435  ? ' hidden':""}`} // Default class is Hidden
+          className={`item  ${KEY} bg-[#00092b] shadow-slate-400 shadow-2xl relative  Hidden items-center justify-center ${value.name === 'Bootstrap' && screenSize<420 ? ' hidden':""}`} // Default class is Hidden
         >
 
 
@@ -45,16 +45,16 @@ export default function SkillCard({value,KEY,screenSize,Revealed,itemRefs}){
 
 {value.icon ? 
 (value.name === 'HTMLs' ? 
-<FontAwesomeIcon icon={value.icon}    style={{ color: value.color , fontSize:screenSize>=768? '95px':'45px'}} /> 
+<FontAwesomeIcon icon={value.icon}    style={{ color: value.color , fontSize:screenSize>=865? '95px':'45px'}} /> 
 : <value.icon 
 
   className={`shadow  items-center  `} 
   style={{ color: value.color }} 
-  size={screenSize>=768? value.size:40} 
+  size={screenSize>=865? value.size:40} 
   
 /> 
 ) 
-: <><Vscode  size={screenSize>=768? 85:35}/><div className="h-" ></div></>
+: <><Vscode  size={screenSize>=865? 85:35}/><div className="h-" ></div></>
 }
 
    
