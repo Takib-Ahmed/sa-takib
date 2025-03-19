@@ -7,7 +7,7 @@ export default function  RectProgresss({screenSize,value,Revealed,KEY}){
 
     useEffect(() => {
     
-      const time = KEY+1 * 20
+      const time = KEY+1 * 10
       
       const isRevealed = Revealed.some((reveal) => KEY!=0 ?reveal.contains(KEY) && reveal.contains("Reveal"): true);
       const timeout = isRevealed && setTimeout(() => {

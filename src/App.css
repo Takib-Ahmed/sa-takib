@@ -4,6 +4,159 @@
   padding: 50px !important;
 }
 
+#projects2{
+
+  .projectcard{
+
+  
+    & .details{
+
+        & .name{
+ 
+  color: blueviolet;
+
+        }
+
+        & .languages{
+       
+       
+            p{
+               
+                color: whitesmoke;
+            }
+
+    
+
+        }
+    }
+
+
+
+
+    &::before {
+     overflow: hidden;
+        content: '';
+        position: absolute;
+        top: var(--y);
+        left: var(--x);
+        width: 0;
+        height: 0;
+        background:#010824;
+     
+        transition: width 0.5s ease, height 0.5s ease, top 0s, left 0s;
+        border-radius: 50%;
+        transform: translate(-50%, -50%);
+        z-index: -1;
+      filter: invert(1);
+      }
+      
+      &:hover::before {
+        width: 1300px;
+        height: 1300px;
+        
+      }
+      
+overflow: hidden;
+&:hover{
+filter: invert(1);
+.name{
+    color: #010824;
+}
+& .cover{
+    & .slick-dots {
+        filter: invert(1);
+    }
+img{
+filter: invert(2);
+}
+& .github , .eye{
+font-size: 16.5px;
+background-color:rgba(238, 238, 238, 0.966) ;
+padding: 10px;
+     border-radius: 50%;
+     
+     -webkit-backdrop-filter: blur(50px); 
+     backdrop-filter: blur(50px);
+     filter: invert(2) !important; 
+     color: black !important;
+
+}
+}
+& .details{
+    .des{
+        color: #010824 !important;
+    }
+}
+
+.mission{
+    p{
+        font-weight: bolder;
+       color: #010824 !important;
+       filter: invert(1);
+    }
+    font-size: 0.79em;
+    font-weight: bold;
+    color: #ee9856;
+    filter:invert(1) brightness(1.3);
+
+    align-items: center;
+
+& img{
+background-color:#eee2 ;
+padding: 1px;
+border-radius: 10px;
+
+-webkit-backdrop-filter: blur(50px);
+backdrop-filter: blur(50px);
+filter: invert(0) ;
+
+}
+    
+}
+& .languages{
+    font-size: 0.79em;
+    text-align: left;
+    align-items: center;
+    filter: brightness(1.5);color: #c523d0;
+    
+ 
+
+    & p{
+        font-weight: bolder;
+        color: #010824 ;
+        filter: invert(0);
+    }
+
+    & img{
+       
+        background-color:rgba(238, 238, 238, 0.133) ;
+        padding: 1px;
+             border-radius: 10px;
+             
+             -webkit-backdrop-filter: blur(50px);
+             backdrop-filter: blur(50px);
+             filter: invert(1);  
+         
+
+    }
+   & .framework{
+    padding: 5px;
+  
+        background-color:rgba(238, 238, 238, 0.358) ;
+    border-radius: 10px;
+    
+    -webkit-backdrop-filter: blur(50px);
+    backdrop-filter: blur(50px);
+    filter: invert(1);
+
+   }
+
+}
+}
+
+    }
+}
+
 
 
 
@@ -177,17 +330,19 @@ filter: invert(0) ;
       font-size: 0.79em;
       text-align: left;
       align-items: center;
-      filter: brightness(1.5);color: #c523d0;
+      filter: brightness(1.5) ;color: #c523d0;
       
    
  
       & p{
+
           font-weight: bolder;
           color: #010824 ;
-          filter: invert(0);
+        
+      
       }
 
-      & img{
+       img{
          
           background-color:rgba(238, 238, 238, 0.133) ;
           padding: 1px;
@@ -207,7 +362,7 @@ filter: invert(0) ;
       
       -webkit-backdrop-filter: blur(50px);
       backdrop-filter: blur(50px);
-      filter: invert(1);
+      filter: invert(0);
 
      }
 
@@ -844,6 +999,31 @@ filter: invert(0) ;
 
  
           }
+
+            .techs{
+
+.title{position: relative;
+&::after{
+  content: 'Technologies';
+ display: flex;
+  text-align: left;
+
+}
+}}
+          @media only screen and (max-width: 370px){
+            .techs{
+
+.title{position: relative;
+&::after{
+  content: 'Techs';
+ display: flex;
+  text-align: left;
+}  
+}
+
+            }
+          }
+       
         
           @media only screen and (max-width: 350px){
 

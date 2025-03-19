@@ -5,30 +5,9 @@ import Vscode from "./svgs/vscode";
 import { useEffect, useState } from "react";
 
 export default function SkillCard({value,KEY,screenSize,Revealed,itemRefs}){
-    const [progress, setProgress] = useState(0);
+    const [progress, setProgress] = useState(value.skill);
 
-      useEffect(() => {
-        
-          const time = KEY!= 0 ? KEY * 20:KEY+1*25
-          const progressTime =   progress  + 25
-          const isRevealed = Revealed.some((reveal) => reveal.contains(KEY) && reveal.contains("Reveal"));
-          const timeout = isRevealed && setTimeout(() => {
-            const interval = setInterval(() => {
-              setProgress((prev) => {
-                if (prev >= value.skill) return value.skill; // যদি সর্বোচ্চ মানে পৌঁছে যায়, তাহলে থামাও
-                
-                // Revealed-এ `KEY` এবং `Reveal` ক্লাস আছে কিনা চেক করো
-    
-                return isRevealed &&  value.skill>=prev ? prev + 1 : value.skill; // যদি KEY থাকে, তাহলে বাড়াও
-              });
-            }, progressTime);
-        
-            // ইন্টারভ্যাল বন্ধ করার জন্য ক্লিনআপ ফাংশন
-            return () => clearInterval(interval);
-          },  time);
-        
-          return () => clearTimeout(timeout);
-        }, [value.skill, Revealed, KEY,progress]);
+
     return (
         <div
            

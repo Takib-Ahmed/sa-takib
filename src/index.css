@@ -921,7 +921,7 @@ background-image: linear-gradient(180deg,#010824 ,rgba(238, 238, 238, 0));
             position: relative;
             border-radius: 20px;
             padding: 20px;
-            padding-right: 0.5px;
+            padding-right: 0px;
             animation: showcover  ease both; 
             animation-timeline: view(90% 1%);
             img{
@@ -951,7 +951,7 @@ background-image: linear-gradient(180deg,#010824 ,rgba(238, 238, 238, 0));
             & .cover{
                 background-image: linear-gradient(-45deg,#be24a9,#473bb4);
    
-                padding-left: 0.5px ;
+                padding-left: 0px ;
                 padding-right: 19px;
             
                 animation-timeline: view(90% 1%);

@@ -92,7 +92,7 @@ const Projects = ({ setView, view }) => {
 
 
   useEffect(() => {
-    if (window.innerWidth < 1240) {
+    if (window.innerWidth < 1200) {
       setView("grid");
     }
 
@@ -100,7 +100,7 @@ const Projects = ({ setView, view }) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting && contracts) {
           changeViewButtonRef.current.style.display =
-            entry.isIntersecting || window.innerWidth < 1240 ? "none" : "block";
+            entry.isIntersecting || window.innerWidth < 1200 ? "none" : "block";
         }
       });
     };
@@ -122,7 +122,7 @@ const Projects = ({ setView, view }) => {
 
   useEffect(() => {
     const handleResize = () => {
-      setView(window.innerWidth < 1240 ? "grid" : "list");
+      setView(window.innerWidth < 1200 ? "grid" : "list");
     };
 
     // Listen for window resize events
@@ -183,7 +183,7 @@ const Projects = ({ setView, view }) => {
           Take a Glimpse Into My Creative Journey Through Code and Design
         </h2>
 
-        <div className="projectcontaier   " >
+        <div className="projectcontaier   "   >
           <div
             className="Gridlistbutton hidden lg:flex justify-center items-center space-x-4 mt-5  "
             id="changview"
@@ -279,8 +279,9 @@ const Projects = ({ setView, view }) => {
                   <div className="des  description">
                     <p>{value.Des}</p>
                   </div>
-                  <div className="grid gap-2">
-                    <br className=" hidden sm:block" />
+                  <br className=" hidden sm:block" />
+                  <div className=" flex items-center  gap-2 gap-x-10 md:gap-x-20 lg:gap-x-24 flex-wrap">
+                 
                     <div className="mission flex gap-2 sm:gap-2.5 md:gap-3 lg:gap-4 mt-5 sm:mt-0   ">
                       <img
                         className={
@@ -294,27 +295,27 @@ const Projects = ({ setView, view }) => {
                         {value.mission}
                       </div>
                     </div>
-                    <div className="languages flex flex-wrap sm:flex-nowrap gap-2 sm:gap-10">
-                      <div className=" flex gap-2 sm:gap-2.5 md:gap-3 lg:gap-4">
+                    <div className="languages items-center flex flex-wrap sm:flex-nowrap gap-2 sm:gap-10">
+                      {/* <div className=" flex gap-2 sm:gap-2.5 md:gap-3 lg:gap-4">
                         <img
                           src={value.langicon}
                           alt=""
                           className=" w-9 h-9   plicon"
                         />
-                        {/* w-12 h-12 */}
+                
                         <div>
                           <p className="  ">Languages</p>
                           <font className=" font-bold"> {value.languages}</font>
                         </div>
-                      </div>
-                      <div className=" flex gap-2 sm:gap-2.5 md:gap-3 lg:gap-4">
+                      </div> */}
+                      <div className={` flex gap-2 sm:gap-2.5 md:gap-3 lg:gap-4 techs    ${ key===1?'' : 'mt-5 sm:mt-0'}`}>
                         <img
                           src={value.frameworkicon}
                           alt=""
-                          className=" w-9 h-9  plicon invert framework  "
+                          className=" w-9 h-9  plicon invert framework  lg:mt-1"
                         />
                         <div className=" text-[#7711ED]">
-                          <p className=" text-white  ">Library</p>
+                          <p className=" text-white title  text-left "></p>
                           <font className="font-bold"> {value.frameworks}</font>
                         </div>
                       </div>
