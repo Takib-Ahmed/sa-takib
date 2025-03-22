@@ -11,7 +11,7 @@ import CircularMenu from './components/SocialsMenu'
 
 function App() {
  
-  const [view, setView] = useState("grid");
+  const [view, setView] = useState("list");
   return (
     <main>
    

@@ -1,16 +1,20 @@
 /* eslint-disable react/prop-types */
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import myrole from "../assets/user-role.svg";
-import { faGithub } from "@fortawesome/free-brands-svg-icons/faGithub";
-import { faEye } from "@fortawesome/free-regular-svg-icons";
-import { useEffect } from "react";
+
 import { useRef } from "react";
 import Slider from "react-slick";
+import ProjectCard from "./projectcard";
+import { useEffect, useState } from "react";
 
 const Projects = ({ setView, view }) => {
   const listprojects = [
     {
-      image: "/Projects/screencapture-localhost-5173-2025-01-16-22_39_56.png",
+      image: "/public/Projects/porthome (2).png",
+      images:[
+        '/public/Projects/porthome (2).png',
+        '/public/Projects/portskills.png',
+              '/public/Projects/portporjects.png',
+                    '/public/Projects/portcontract.png'
+      ],
       name: "Portpolio",
       Des: "A modern and fully responsive portfolio website designed to showcase personal projects, skills, and experiences.",
       mission: "Frontend",
@@ -22,7 +26,18 @@ const Projects = ({ setView, view }) => {
       live: "https://sa-takib.vercel.app/",
     },
     {
-      image: "/Projects/nasafits.com.png",
+      image: "/public/Projects/nasafits.com.png",
+      images:[
+        '/public/Projects/nasafits.com.png',
+        '/public/Projects/screencapture-nasafits-vercel-app-2025-03-21-23_56_12.png',
+              // '/public/Projects/bannershow.png',
+                    '/public/Projects/screencapture-nasafits-vercel-app-details-5-2025-03-22-00_15_54.png',
+                    '/public/Projects/screencapture-nasafits-vercel-app-cart-2025-03-22-00_19_24.png',
+                     '/public/Projects/screencapture-nasafits-vercel-app-checkout-2025-03-22-00_24_38.png',
+                     '/public/Projects/screencapture-nasafits-vercel-app-profile-Dashboard-2025-03-22-00_27_40.png'
+
+
+      ],
       name: "Ecommerce Site",
       Des: "A full-stack e-commerce site with user auth, product management, cart, secure checkout, user & admin dashboard.",
       mission: "Brand, Grapic & UI Design, Full-Stack",
@@ -34,7 +49,7 @@ const Projects = ({ setView, view }) => {
       live: "https://nasafits.vercel.app/",
     },
     {
-      image: "/Projects/feedback.net.png",
+      image: "/public/Projects/feedback.net.png",
       name: "Feedback Platform",
       Des: "A user-friendly feedback three-page platform (Home, Search, Details) with search functionality and interactive sliders for a smooth user experience.",
       mission: "Frontend",
@@ -71,28 +86,16 @@ const Projects = ({ setView, view }) => {
     },
   ];
 
-  const projectContainerRef = useRef(null);
+
   const changeViewButtonRef = useRef(null);
   const contracts = document.querySelectorAll(".contract");
 
-  const boxesRef = useRef([]);
+ 
   const projectListedRef = useRef(null);
-
-  const handleMouseMove = (e, index) => {
-    const box = boxesRef.current[index];
-    if (box) {
-      const rect = box.getBoundingClientRect();
-      const x = e.clientX - rect.left;
-      const y = e.clientY - rect.top;
-
-      box.style.setProperty("--x", `${x}px`);
-      box.style.setProperty("--y", `${y}px`);
-    }
-  };
 
 
   useEffect(() => {
-    if (window.innerWidth < 1200) {
+    if (window.innerWidth < 900) {
       setView("grid");
     }
 
@@ -100,7 +103,7 @@ const Projects = ({ setView, view }) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting && contracts) {
           changeViewButtonRef.current.style.display =
-            entry.isIntersecting || window.innerWidth < 1200 ? "none" : "block";
+            entry.isIntersecting || window.innerWidth < 900 ? "none" : "block";
         }
       });
     };
@@ -122,7 +125,7 @@ const Projects = ({ setView, view }) => {
 
   useEffect(() => {
     const handleResize = () => {
-      setView(window.innerWidth < 1200 ? "grid" : "list");
+      setView(window.innerWidth < 900 ? "grid":"list");
     };
 
     // Listen for window resize events
@@ -144,7 +147,7 @@ const Projects = ({ setView, view }) => {
     };
 
     const observer = new IntersectionObserver(observerCallback, {
-      threshold: 0.15,
+      threshold: 0.1,
     });
 
     if (projectListedRef.current) {
@@ -158,21 +161,26 @@ const Projects = ({ setView, view }) => {
     };
   }, [projectListedRef]);
 
-  var subsettings = {
-    dots: true,
-    infinite: false,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    arrows: false,
-    appendDots: (dots) => (
-      <div className="p-1 absolute top-0 bg-black">
-        <ul className="flex justify-center gap-0 mx-10 -translate-y-7">
-          {dots}
-        </ul>
-      </div>
-    ),
-  };
+
+//  export const renderAdditionalDots = ({images}) => 
+
+  
+//   return (
+//     <div className="flex justify-center gap-2 mt-4 absolute  translate-24">
+//       {images.map((image, i) => (
+//        <img 
+//     width="5px"
+//          src={image}
+//          alt={image}
+//          className={` ${
+//            currentSlide === i
+//              ? "border-2  border-sky-500"
+//              : "border border-gray-300"
+//          }`}
+//        />
+//       ))}
+//     </div>
+//   );
   return (
     <>
       <section className=" projects   " id="projects">
@@ -185,7 +193,7 @@ const Projects = ({ setView, view }) => {
 
         <div className="projectcontaier   "   >
           <div
-            className="Gridlistbutton hidden lg:flex justify-center items-center space-x-4 mt-5  "
+            className="Gridlistbutton  justify-center items-center space-x-4 mt-5    w-full"
             id="changview"
             ref={changeViewButtonRef}
           >
@@ -224,105 +232,7 @@ const Projects = ({ setView, view }) => {
             ref={projectListedRef}
           >
             {listprojects.map((value, key) => (
-              <div
-                className="projectcard relative   flex justify-around"
-                key={key}
-                style={{
-                  "--position": key + 1,
-                }}
-                ref={(el) => (boxesRef.current[key] = el)}
-                onMouseMove={(e) => {
-                  handleMouseMove(e, key);
-                }}
-              >
-                <div className="relative">
-                  <div className=" cover   relative ">
-                    <Slider {...subsettings} className=" min-w-full  top-0  ">
-                      <img
-                        src={value.image}
-                        alt=""
-                        className=" projectcover   "
-                      />{" "}
-                      <img
-                        src={value.image}
-                        alt=""
-                        className=" projectcover   "
-                      />{" "}
-                      <img
-                        src={value.image}
-                        alt=""
-                        className=" projectcover   "
-                      />
-                    </Slider>
-
-                    <div className="flex  flex-wrap absolute right-2 top-3 gap-1.5">
-                      <a href={value.github}>
-                        <FontAwesomeIcon
-                          icon={faGithub}
-                          className="   github  text-white  "
-                        ></FontAwesomeIcon>
-                      </a>
-                      <a href={value.live}>
-                        <FontAwesomeIcon
-                          icon={faEye}
-                          className="    livelink    text-white eye "
-                        ></FontAwesomeIcon>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-                <div className="details grid gap-0 ">
-                  <br className=" hidden sm:block" />
-                  <div className="name mt-2.5 sm:mt-0">
-                    <h3>{value.name}</h3>
-                  </div>
-                  <div className="des  description">
-                    <p>{value.Des}</p>
-                  </div>
-                  <br className=" hidden sm:block" />
-                  <div className=" flex items-center  gap-2 gap-x-10 md:gap-x-20 lg:gap-x-24 flex-wrap">
-                 
-                    <div className="mission flex gap-2 sm:gap-2.5 md:gap-3 lg:gap-4 mt-5 sm:mt-0   ">
-                      <img
-                        className={
-                          ` w-9  invert   ` + `${view === "list" && "invert"}`
-                        }
-                        src={myrole}
-                        alt=""
-                      />
-                      <div>
-                        <p className=" text-black  ">Mission</p>
-                        {value.mission}
-                      </div>
-                    </div>
-                    <div className="languages items-center flex flex-wrap sm:flex-nowrap gap-2 sm:gap-10">
-                      {/* <div className=" flex gap-2 sm:gap-2.5 md:gap-3 lg:gap-4">
-                        <img
-                          src={value.langicon}
-                          alt=""
-                          className=" w-9 h-9   plicon"
-                        />
-                
-                        <div>
-                          <p className="  ">Languages</p>
-                          <font className=" font-bold"> {value.languages}</font>
-                        </div>
-                      </div> */}
-                      <div className={` flex gap-2 sm:gap-2.5 md:gap-3 lg:gap-4 techs    ${ key===1?'' : 'mt-5 sm:mt-0'}`}>
-                        <img
-                          src={value.frameworkicon}
-                          alt=""
-                          className=" w-9 h-9  plicon invert framework  lg:mt-1"
-                        />
-                        <div className=" text-[#7711ED]">
-                          <p className=" text-white title  text-left "></p>
-                          <font className="font-bold"> {value.frameworks}</font>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+        <ProjectCard key={key} view={view} KEY={key} value={value}/>
             ))}
           </div>
         </div>

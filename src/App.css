@@ -170,7 +170,13 @@ filter: invert(0) ;
 }
 
 .slick-dots li.slick-active div {
-  background-color: white; /* Active color */
+  background-color:#e945e3; /* Active color */
+/* Optional: Add scale effect */
+  transition: all 0.3s ease;
+}
+
+.slick-dots  {
+  background-color:#e945e3; /* Active color */
 /* Optional: Add scale effect */
   transition: all 0.3s ease;
 }
@@ -178,9 +184,11 @@ filter: invert(0) ;
 .slick-dots li div {
    /* Default color (gray-300) */
 
-  border-radius: 50%;
+  border-radius: 50px;
   transition: all 0.3s ease;
+
 }
+
 
 
 .slick-dots li.slick-active div{
@@ -189,6 +197,12 @@ filter: invert(0) ;
   transition: all 0.3s ease;
 }
 
+
+
+.slick-dots li div {
+  
+  transition: all 0.3s ease;
+}
 .rect2 {
   stroke-dasharray: 440;
   stroke-dashoffset: 440;
@@ -279,6 +293,7 @@ overflow: hidden;
       & .slick-dots {
           filter: invert(1);
       }
+      
 img{
   filter: invert(2);
 }
@@ -294,6 +309,9 @@ img{
        color: black !important;
 
 }
+  }
+  & .slider-dots{
+    filter: invert(1);
   }
   & .details{
       .des{
@@ -376,18 +394,41 @@ filter: invert(0) ;
 .projectlist2{
   justify-content: center !important;
   align-content: flex-start !important;
- 
 
+
+}
+.projectlist{
+  .projectcard{
+    & .cover{
+       width:550px !important;
+       height: 430px !important;
+     }
+    }
 }
 }
 
 @media only screen and (max-width: 1241px) {
-.Gridlistbutton{
-  display: none !important;
+
+.projectlist{
+  .projectcard{
+    & .cover{
+       width:500px !important;
+       height: 400px !important;
+     }
+    }
 }
 }
 
 @media only screen and (max-width: 1110px) {
+
+  .projectlist{
+    .projectcard{
+      & .cover{
+         width:450px !important;
+         height: 350px !important;
+       }
+      }
+  }
   .home {
    display: flex !important; 
  flex-direction: column-reverse !important;
@@ -420,6 +461,17 @@ filter: invert(0) ;
 }
 }
 @media only screen and (max-width: 994px) {
+  
+  .projectlist{
+    .projectcard{
+      & .cover{
+         width:400px !important;
+         height: 340px !important;
+       }
+      }
+  }
+
+  
   .contractcontainer {
       display: flex !important;
       justify-content: center !important;
@@ -448,7 +500,25 @@ filter: invert(0) ;
   }
   
     }
+    
+    @media only screen and (max-width: 950px){
+
+   
+      header{
+        padding: 0 20px !important;
+     }
+    }
+
+    @media only screen and (max-width: 900px){
+      .Gridlistbutton{
+        display: none !important;
+      }
+
+
+    }
 @media only screen and (max-width: 771px) {
+
+
   .home {
    display: flex; 
  
@@ -1095,5 +1165,21 @@ width: 100vw;
 .projectcover{
   height: auto!important;
   width: 100rem !important;
+  border-radius: 0% !important;
  
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
 }

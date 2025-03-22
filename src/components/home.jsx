@@ -6,7 +6,7 @@ import { faGithub } from '@fortawesome/free-brands-svg-icons'
 import { faLinkedin } from '@fortawesome/free-brands-svg-icons'
 import Download from "../assets/download (1).png"
 import { faWhatsapp } from '@fortawesome/free-brands-svg-icons'
-
+import { RiMessage3Fill } from "react-icons/ri";
 const Home = () => {
 
   return (
@@ -41,7 +41,10 @@ const Home = () => {
 
 
       </section>
-   
+   <div className='  hidden fixed   bottom-5 right-5 flex bg-[#010824] invert w-[6rem] z-50 rounded-full  p-2  items-center justify-between'>
+
+ connect   <RiMessage3Fill />
+   </div>
     </div>)
 
 }
