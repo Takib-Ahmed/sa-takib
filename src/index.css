@@ -244,14 +244,14 @@ background-color: black;
         
          & .cv {
             display: block;
-                font-size: 30px;
+  
                 color: #eee;
                 font-weight: bold;
                 text-decoration: none;
                
                 background-image: linear-gradient(45deg, #FCAF45, #F56040, #E1306C, #833AB4);
                 width: max-content;
-        padding: 0.5% 5%;
+    
         border-radius: 40px;
         box-shadow:#d02e23 0px 1px 10px 1px;
         transition: all 0.5s !important;

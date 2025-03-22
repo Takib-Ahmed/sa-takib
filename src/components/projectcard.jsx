@@ -139,7 +139,7 @@ export default function ProjectCard({KEY,value,view}){
                     </div>
                   </div>
 
-               <div className={` flex w-full  justify-between gap-1 py-1 slider-dots   ${view!='grid' ? 'translate-y-4 ':'translate-y-1'}`}>
+               <div className={` flex w-full  justify-between gap-1 py-2  slider-dots   ${view!='grid' ? 'translate-y-4 ':'translate-y-1'}`}>
                {  value.images?.map((image,KEY)=>(
                         <div
                         style={{
@@ -149,7 +149,7 @@ export default function ProjectCard({KEY,value,view}){
                         
                         }}
 
-
+ 
                         onClick={() => {
                           sliderRef.current.slickGoTo(KEY); // Programmatically navigate to the clicked slide
                           setCurrentSlide(KEY);
@@ -157,7 +157,7 @@ export default function ProjectCard({KEY,value,view}){
                         }}
                           className="  cursor-pointer w-full  h-fit   top-0   relative         bg-white rounded-none  "
                         KEY={KEY} >
-                         <p          className={`  h-[2.5px]   rounded-none  ${
+                         <p          className={`  h-[4.5px]   rounded-2xl  ${
               currentSlide === KEY
                 ? " bg-[#e945e3]"
                 : ""

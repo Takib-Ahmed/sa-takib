@@ -22,9 +22,9 @@ const Home = () => {
           </p>
 
 </div>
-          <div className="links  flex  justify-between lg:justify-normal  sm:gap-5  items-center">
+          <div className="links  flex  justify-around lg:justify-normal  sm:gap-5  items-center">
         
-             <a href="/CV/Sa Takib.pdf" className='cv' download  ><div className=' flex  gap-2'><p>CV</p> <img src={Download} alt="" className=' hidden sm:block mt-2 w-7 h-7 invert ' /></div></a>
+             <a href="/CV/Sa Takib.pdf" className='cv  sm:px-7 py-2.5 text-3xl md:text-4xl' download  ><div className=' px-2 md:px-0  flex  items-center  sm:gap-2'><p>CV</p> <img src={Download} alt="" className=' hidden sm:block  w-9 invert ' /></div></a>
              <a href="" className=' relative rounded-[100%]  text-4xl px-[1.05rem] py-[0.7rem] '><FontAwesomeIcon href='#' icon={faLinkedin}/></a><a href='https://github.com/Takib-Ahmed'  className=' relative rounded-[100%]  text-4xl px-[1.05rem] py-[0.7rem] '><FontAwesomeIcon icon={faGithub}/></a><a href='https://www.instagram.com/md.takeb'  className=' relative rounded-[100%]  text-4xl px-[1.05rem] py-[0.7rem]'><FontAwesomeIcon icon={faInstagram}/></a><a href='https://wa.me/01615081141' className=' relative rounded-[100%]  text-4xl px-[1.05rem] py-[0.7rem]' ><FontAwesomeIcon  icon={faWhatsapp}/></a></div></div>
         
         <div className=" avatar text-right   ">
