@@ -8,12 +8,12 @@ import { useEffect, useState } from "react";
 const Projects = ({ setView, view }) => {
   const listprojects = [
     {
-      image: "/public/Projects/porthome (2).png",
+      image: "/Projects/porthome (2).png",
       images:[
-        '/public/Projects/porthome (2).png',
-        '/public/Projects/portskills.png',
-              '/public/Projects/portporjects.png',
-                    '/public/Projects/portcontract.png'
+        '/Projects/porthome (2).png',
+        '/Projects/portskills.png',
+              '/Projects/portporjects.png',
+                    '/Projects/portcontract.png'
       ],
       name: "Portpolio",
       Des: "A modern and fully responsive portfolio website designed to showcase personal projects, skills, and experiences.",
@@ -26,15 +26,15 @@ const Projects = ({ setView, view }) => {
       live: "https://sa-takib.vercel.app/",
     },
     {
-      image: "/public/Projects/nasafits.com.png",
+      image: "/Projects/nasafits.com.png",
       images:[
-        '/public/Projects/nasafits.com.png',
-        '/public/Projects/screencapture-nasafits-vercel-app-2025-03-21-23_56_12.png',
-              // '/public/Projects/bannershow.png',
-                    '/public/Projects/screencapture-nasafits-vercel-app-details-5-2025-03-22-00_15_54.png',
-                    '/public/Projects/screencapture-nasafits-vercel-app-cart-2025-03-22-00_19_24.png',
-                     '/public/Projects/screencapture-nasafits-vercel-app-checkout-2025-03-22-00_24_38.png',
-                     '/public/Projects/screencapture-nasafits-vercel-app-profile-Dashboard-2025-03-22-00_27_40.png'
+        '/Projects/nasafits.com.png',
+        '/Projects/screencapture-nasafits-vercel-app-2025-03-21-23_56_12.png',
+              // '/Projects/bannershow.png',
+                    '/Projects/screencapture-nasafits-vercel-app-details-5-2025-03-22-00_15_54.png',
+                    '/Projects/screencapture-nasafits-vercel-app-cart-2025-03-22-00_19_24.png',
+                     '/Projects/screencapture-nasafits-vercel-app-checkout-2025-03-22-00_24_38.png',
+                     '/Projects/screencapture-nasafits-vercel-app-profile-Dashboard-2025-03-22-00_27_40.png'
 
 
       ],
@@ -49,7 +49,7 @@ const Projects = ({ setView, view }) => {
       live: "https://nasafits.vercel.app/",
     },
     {
-      image: "/public/Projects/feedback.net.png",
+      image: "/Projects/feedback.net.png",
       name: "Feedback Platform",
       Des: "A user-friendly feedback three-page platform (Home, Search, Details) with search functionality and interactive sliders for a smooth user experience.",
       mission: "Frontend",
