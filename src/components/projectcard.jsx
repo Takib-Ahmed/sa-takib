@@ -117,7 +117,7 @@ export default function ProjectCard({KEY,value,view}){
                         alt=""
                         className=" projectcover   "
                       /></div>   
-                      
+                      // <video src="/public/Recording 2025-03-22 222631.mp4" autoPlay className="    h-full w-full  "></video>
                     // <iframe src={value.live} frameborder="0" className="  cover h-full"></iframe>
 }
 
@@ -139,12 +139,12 @@ export default function ProjectCard({KEY,value,view}){
                     </div>
                   </div>
 
-               <div className={` flex w-full  justify-between gap-1 py-2  slider-dots   ${view!='grid' ? 'translate-y-4 ':'translate-y-1'}`}>
+               <div className={` flex w-full  justify-between gap-1 py-2  slider-dots   z-50 ${view!='grid' ? 'translate-y-4 ':'translate-y-1'}`}>
                {  value.images?.map((image,KEY)=>(
                         <div
                         style={{
                   
-                          color: "blue",
+                         
                           borderRadius:'10px'
                         
                         }}
@@ -155,9 +155,9 @@ export default function ProjectCard({KEY,value,view}){
                           setCurrentSlide(KEY);
                            // Update currentSlide to reflect the navigation
                         }}
-                          className="  cursor-pointer w-full  h-fit   top-0   relative         bg-white rounded-none  "
+                          className="  cursor-pointer w-full  h-fit    top-0   relative    z-50     bg-white rounded-none  "
                         KEY={KEY} >
-                         <p          className={`  h-[4.5px]   rounded-2xl  ${
+                         <p          className={`  h-[4.5px] z-50  rounded-2xl  ${
               currentSlide === KEY
                 ? " bg-[#e945e3]"
                 : ""
@@ -169,7 +169,7 @@ export default function ProjectCard({KEY,value,view}){
                   
                </div>
                 </div>
-                <div className={`details grid gap-0 ${KEY==1 &&  ' mt-2'} `}>
+                <div className={`details grid items-center gap-0 ${KEY==1 &&  ' mt-2'} `}>
                 
                   <div className="name mt-2.5 sm:mt-0">
                     <h3>{value.name}</h3>
@@ -178,7 +178,7 @@ export default function ProjectCard({KEY,value,view}){
                     <p>{value.Des}</p>
                   </div>
                   <br className=" hidden sm:block" />
-                  <div className=" flex items-center justify-between sm:justify-normal  gap-2 gap-x-10 md:gap-x-20 lg:gap-x-24 flex-wrap">
+                  <div className=" flex items-center justify-between sm:justify-normal  gap-2 gap-x-10 md:gap-y-5 md:gap-x-20 lg:gap-x-24 flex-wrap">
                  
                     <div className="mission flex gap-2 sm:gap-2.5 md:gap-3 lg:gap-4 mt-5 sm:mt-0   ">
                       <img
