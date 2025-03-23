@@ -430,15 +430,13 @@ filter: invert(0) ;
    
     a{
       position: absolute !important;
-       transform: translateY(-30%);
+       transform: translateY(-100%);
        right: 1.1rem !important;
        /* color: green !important;
      background: #ffff !important; */
      padding: 7px 9px;
      transition: all 1s  ease;
-     &:hover{
-      transform: translateX(0px) translateY(-11.5px) !important;
-     }
+
 
     }
     a:not(:nth-child(5)){
