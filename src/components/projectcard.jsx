@@ -139,9 +139,16 @@ export default function ProjectCard({KEY,value,view}){
                     </div>
                   </div>
 
-               <div className={` flex w-full  justify-between gap-1 py-2  slider-dots   z-50 ${view!='grid' ? 'translate-y-4 ':'translate-y-1'}`}>
+               <div className={` flex w-full  justify-between gap-1   slider-dots   z-50 ${view!='grid' ? 'translate-y-4 ':'translate-y-1'}`}>
                {  value.images?.map((image,KEY)=>(
-                        <div
+               <div          onClick={() => {
+                sliderRef.current.slickGoTo(KEY); // Programmatically navigate to the clicked slide
+                setCurrentSlide(KEY);
+                 // Update currentSlide to reflect the navigation
+              }}
+              KEY={KEY}         className="  cursor-pointer w-full  h-full  py-2.5    top-0   relative    z-50     rounded-none  " >
+
+<div
                         style={{
                   
                          
@@ -150,20 +157,17 @@ export default function ProjectCard({KEY,value,view}){
                         }}
 
  
-                        onClick={() => {
-                          sliderRef.current.slickGoTo(KEY); // Programmatically navigate to the clicked slide
-                          setCurrentSlide(KEY);
-                           // Update currentSlide to reflect the navigation
-                        }}
+               
                           className="  cursor-pointer w-full  h-fit    top-0   relative    z-50     bg-white rounded-none  "
-                        KEY={KEY} >
-                         <p          className={`  h-[4.5px] z-50  rounded-2xl  ${
+                        >
+                         <p          className={`  h-[3.5px] z-50  rounded-2xl  ${
               currentSlide === KEY
                 ? " bg-[#e945e3]"
                 : ""
             }`} ></p>
                          
                         </div>
+               </div>
                         
                   ))}
                   

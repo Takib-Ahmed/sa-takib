@@ -109,6 +109,68 @@ filter: invert(1);
         }
     }
 }
+
+.links{
+    animation: Toup .8s linear forwards;
+   
+         & a {
+                  
+            background-color: #010824 !important;
+                  
+                    border: 1px solid transparent;
+            
+      
+                   
+                    /* box-shadow: white 0px 3px 8px; */
+                    /* box-shadow:#e945e3 0px 1px 10px 1px; */
+                    transition: all 0.5s !important;
+                    
+     &:hover{
+        
+transform: translateX(-15px);
+background-color: white !important;
+        /* box-shadow:#ca23d0 0px 2px 10px 2px; */
+        
+     }
+                }
+         & a:nth-child(2){
+         
+         &:hover{
+       
+            color:#0C64C5;
+         
+         }
+
+         }
+         & a:nth-child(3)
+         {
+            color: white;
+        
+             width: fit-content;
+             overflow: hidden;
+         
+&:hover{
+
+
+color: black;
+ 
+}
+         }
+         & a:nth-child(4){
+
+&:hover{
+    color: #E1306C ;
+
+}
+    }
+    & a:nth-child(5){
+
+        &:hover{
+            color: green;
+        
+        }
+      } 
+}
 .section{
 
     width: min(1300px,100%);
@@ -195,8 +257,8 @@ filter: invert(1);
                    
                     border: 1px solid transparent;
             
-              background: #e945e6ea;
-                   
+              /* background: #e945e6ea ; */
+              background:black !important;   
                     /* box-shadow: white 0px 3px 8px; */
                     box-shadow:#faf8f8 0px 1px 10px 1px;
                     transition: all 0.5s !important;
@@ -204,41 +266,45 @@ filter: invert(1);
      &:hover{
         
 transform: translateY(-5px);
+background:white !important;
         box-shadow:#ca23d0 0px 2px 10px 2px;
         
      }
                 }
          & a:nth-child(2){
-            background-color:black;
+           
          &:hover{
        
             color:#0C64C5;
-            background: white;
+            
+    background: white;
+         
          }
 
          }
          & a:nth-child(3)
          {
             color: white;
-            background: black;
+            background:black !important;
 &:hover{
 
-    background: white;
+    background: white !important;
     color: black;
+    filter:   invert(0) !important;
 }
          }
          & a:nth-child(4){
-background-color: black;
+            background:black !important;
 &:hover{
     color: #E1306C ;
-    background-color: white;
+    background: white !important;
 }
     }
     & a:nth-child(5){
-        background-color: black;
+        background:black !important;
         &:hover{
             color: green;
-            background-color: white;
+            background: white !important;
         }
       } 
         
@@ -249,7 +315,7 @@ background-color: black;
                 font-weight: bold;
                 text-decoration: none;
                
-                background-image: linear-gradient(45deg, #FCAF45, #F56040, #E1306C, #833AB4);
+                background-image: linear-gradient(45deg, #FCAF45, #F56040, #E1306C, #833AB4) !important;
                 width: max-content;
     
         border-radius: 40px;
@@ -267,6 +333,10 @@ background-color: black;
     
 
 
+
+
+
+
      
 .profession{
     background-image:linear-gradient(to right,#F3265F,#59c10a,#7F40AC,#7BE728) ;
@@ -279,7 +349,7 @@ height: 40px;
     &::before{
         content: '';
        
-        animation: passions 15s infinite linear 1.5s;
+        animation: passions 15s infinite linear .5s;
     }
     &::after{
         content: "";
@@ -291,167 +361,169 @@ height: 40px;
  
 @keyframes passions {
     0%{
-        content: 'J';
+        content: 'F';
     }
     1%{
-        content: 'Ju';
+        content: 'Fr';
     }
     2%{
-        content: 'Jun';
+        content: 'Fro';
     }
     3%{
-        content: 'Juni';
+        content: 'Fron';
     }
     4%{
-        content: 'Junio';
+        content: 'Front';
     }
     5%{
-        content: 'Junior';
+        content: 'Fronte';
     }
     6%{
-        content: 'Junior ';
+        content: 'Fronten';
     }
     7%{
-        content: 'Junior F';
+        content: 'Frontend';
     }
     8%{
-        content: 'Junior Fr';
+        content: 'Frontend ';
     }
     9%{
-        content: 'Junior Fro';
+        content: 'Frontend W';
     }
     10%{
-        content: 'Junior Front';
+        content: 'Frontend We';
     }
     11%{
-        content: 'Junior Fronte';
+        content: 'Frontend Web';
     }
     12%{
-        content: 'Junior Fronten';
+        content: 'Frontend Web ';
     }
     13%{
-        content: 'Junior Frontend';
+        content: 'Frontend Web D';
     }
     14%{
-        content: 'Junior Frontend ';
+        content: 'Frontend Web De';
     }
     15%{
-        content: 'Junior Frontend D';
+        content: 'Frontend Web Dev';
     }
     16%{
-        content: 'Junior Frontend De';
+        content: 'Frontend Web Deve';
     }
     17%{
-        content: 'Junior Frontend Dev';
+        content: 'Frontend Web Devel';
     }
     18%{
-        content: 'Junior Frontend Deve';
+        content: 'Frontend Web Develo';
     }
     19%{
-        content: 'Junior Frontend Devel';
+        content: 'Frontend Web Develop';
     }
     20%{
-        content: 'Junior Frontend Develo';
-    }
-    21%{
-        content: 'Junior Frontend Develop';
-    }
-    22%{
-        content: 'Junior Frontend Develope';
+        content: 'Frontend Web Develope';
     }
 
-    22%, 32.99%{
-        content: 'Junior Frontend Developer';
+    20%, 32.99%{
+        content: 'Frontend Web Developer';
     }
- 
+
     33%{
-        content: 'Junior Frontend Develop';
+        content: 'Frontend Web Develope';
     }
     34%{
-        content: 'Junior Frontend Develo';
+        content: 'Frontend Web Develop';
     }
     35% {
-        content: 'Junior Frontend D';
+        content: 'Frontend Web Develo';
     }
     36% {
-        content: 'Junior Frontend ';
+        content: 'Frontend Web Devel';
     }
     37% {
-        content: 'Junior Frontend';
+        content: 'Frontend Web Deve';
     }
     38% {
-        content: 'Junior Fronten';
+        content: 'Frontend Web Dev';
     }
     39% {
-        content: 'Junior Fronte';
+        content: 'Frontend Web De';
     }
     40% {
-        content: 'Junior Front';
+        content: 'Frontend Web D';
     }
     41% {
-        content: 'Junior Fro';
+        content: 'Frontend Web ';
     }
     42% {
-        content: 'Junior Fr';
+        content: 'Frontend Web';
     }
     43% {
-        content: 'Junior F';
+        content: 'Frontend We';
     }
     44% {
-        content: 'Junior ';
+        content: 'Frontend W';
     }
     45% {
-        content: 'Junior';
+        content: 'Frontend ';
     }
     46% {
-        content: 'Junio';
+        content: 'Frontend';
     }
     47% {
-        content: 'Juni';
+        content: 'Fronten';
     }
     48% {
-        content: 'Jun';
+        content: 'Fronte';
     }
     49% {
-        content: 'Ju';
+        content: 'Front';
     }
     50% {
-        content: 'J';
+        content: 'Fron';
     }
     51% {
-        content: '';
+        content: 'Fro';
     }
     52% {
-        content: 'P';
+        content: 'Fr';
     }
     53% {
-        content: 'Pr';
+        content: 'F';
     }
     54% {
-        content: 'Pro';
+        content: '';
     }
     55% {
-        content: 'Prog';
+        content: 'P';
     }
     56% {
-        content: 'Progr';
+        content: 'Pr';
     }
     57% {
-        content: 'Progra';
+        content: 'Pro';
     }
     58% {
-        content: 'Program';
+        content: 'Prog';
     }
     59% {
-        content: 'Programm';
+        content: 'Progr';
     }
     60% {
+        content: 'Progra';
+    }
+    61% {
+        content: 'Program';
+    }
+    62% {
+        content: 'Programm';
+    }
+    63% {
         content: 'Programme';
     }
-    61%,  67.99% {
+    64%, 67.99% {
         content: 'Programmer';
     }
-
 
     68% {
         content: 'Programme';
@@ -480,10 +552,7 @@ height: 40px;
     76% {
         content: 'P';
     }
-    77% {
-        content: 'P';
-    }
-    78%, 79% {
+    77%, 79% {
         content: '';
     }
   
@@ -508,7 +577,7 @@ height: 40px;
     86% {
         content: 'Youtube';
     }
-    87% , 92.99%{
+    87%, 92.99%{
         content: 'Youtuber';
     }
  
@@ -536,13 +605,8 @@ height: 40px;
     100% {
         content: '';
     }
-
-  
-
-    
- 
-
 }
+
 @keyframes cursor {
  
     to{
