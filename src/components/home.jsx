@@ -45,7 +45,7 @@ const Home = () => {
 
  connect   <RiMessage3Fill />
    </div>
-<div className='  fc-container fixed right-0 top-0  h-full  flex justify-end items-end lg:justify-center lg:items-center  z-50 '>
+<div className=' cursor-none  fc-container fixed right-0 top-0  h-full  flex justify-end items-end lg:justify-center lg:items-center  z-50 '>
    <div className="links fixedcontracts   p-4 lg:p-1   mt-10    flex flex-col  justify-start  gap-5 sm:gap-10    w-max  items-center   rounded-r-[3.5rem]">
         
         <a href="/CV/Sa Takib.pdf" className='cv hidden hover:text-black  text-[20px] px-2 py-[0.45rem] rounded-full' download  ><div className=' grid  items-center  sm:gap-2'><p>CV</p> <img src={Download} alt="" className=' hidden   invert ' /></div></a>

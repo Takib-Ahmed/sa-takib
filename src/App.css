@@ -433,9 +433,14 @@ filter: invert(0) ;
        right: 1.1rem !important;
        color: green !important;
      background: #ffff !important;
+     padding: 7px 9px;
      &:hover{
-      transform: none !important;
+      transform: translateX(0px) translateY(-11.5px) !important;
      }
+
+    }
+    a:not(:nth-child(5)){
+display: none;
     }
   }
 
