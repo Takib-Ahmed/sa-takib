@@ -156,11 +156,19 @@ export default function ProjectCard({KEY,value,view}){
                         
                         }}
 
- 
+                        onClick={() => {
+                          sliderRef.current.slickGoTo(KEY); // Programmatically navigate to the clicked slide
+                          setCurrentSlide(KEY);
+                           // Update currentSlide to reflect the navigation
+                        }}
                
                           className="  cursor-pointer w-full  h-fit    top-0   relative    z-50     bg-white rounded-none  "
                         >
-                         <p          className={`  h-[3.5px] z-50  rounded-2xl  ${
+                         <p    onClick={() => {
+                sliderRef.current.slickGoTo(KEY); // Programmatically navigate to the clicked slide
+                setCurrentSlide(KEY);
+                 // Update currentSlide to reflect the navigation
+              }}       className={`  h-[3.5px] z-50  rounded-2xl  ${
               currentSlide === KEY
                 ? " bg-[#e945e3]"
                 : ""
