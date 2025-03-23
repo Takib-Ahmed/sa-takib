@@ -422,18 +422,20 @@ filter: invert(0) ;
   .fc-container{
     justify-content: flex-end !important;
     align-items: flex-end !important;
-  }
+    transition: all 1s  ease;
   .fixedcontracts{
     padding: 0 !important;
     transform: translateX(5px) !important;
-  
+    transition: all 1s  ease;
+   
     a{
       position: absolute !important;
        transform: translateY(-30%);
        right: 1.1rem !important;
-       color: green !important;
-     background: #ffff !important;
+       /* color: green !important;
+     background: #ffff !important; */
      padding: 7px 9px;
+     transition: all 1s  ease;
      &:hover{
       transform: translateX(0px) translateY(-11.5px) !important;
      }
@@ -442,7 +444,35 @@ filter: invert(0) ;
     a:not(:nth-child(5)){
 display: none;
     }
+
+
   }
+
+&:hover{
+
+  a{
+    position: relative !important;
+    transform: translateY(0%) !important;
+    right: 1.1rem !important;
+     /* color: green !important;
+   background: #ffff !important; */
+   padding: 7px 9px;
+   display: block !important ;
+   &:hover{
+    background-color: #010824 !important;
+    transform: translateX(0px) translateY(0px) !important;
+   }
+   
+
+  }
+
+  a:nth-child(5) , .cv{
+    display: none !important;
+  }
+
+
+
+}}
 
 
 }
