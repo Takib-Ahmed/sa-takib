@@ -391,6 +391,9 @@ filter: invert(0) ;
  
 }
 @media only screen and (max-width: 1420px){
+  .fixedcontracts{
+    padding: 0 !important;
+  }
 .projectlist2{
   justify-content: center !important;
   align-content: flex-start !important;
@@ -406,7 +409,38 @@ filter: invert(0) ;
     }
 }
 }
+@media only screen and (max-width: 1341px){
+  .fixedcontracts{
+    padding: 0 !important;
+    transform: translateX(5px) !important;
+  }
+}
 
+
+@media only screen and (max-width: 1325px){
+
+  .fc-container{
+    justify-content: flex-end !important;
+    align-items: flex-end !important;
+  }
+  .fixedcontracts{
+    padding: 0 !important;
+    transform: translateX(5px) !important;
+  
+    a{
+      position: absolute !important;
+       transform: translateY(-30%);
+       right: 1.1rem !important;
+       color: green !important;
+     background: #ffff !important;
+     &:hover{
+      transform: none !important;
+     }
+    }
+  }
+
+
+}
 @media only screen and (max-width: 1241px) {
 
 .projectlist{

@@ -126,6 +126,7 @@ filter: invert(1);
                     transition: all 0.5s !important;
                     
      &:hover{
+       
         
 transform: translateX(-15px);
 background-color: white !important;
