@@ -1,7 +1,14 @@
+import {motion,useScroll} from 'motion/react'
 export default function Loader(){
+    const {scrollYProgress} = useScroll()
     return (
-        <div className=" fixed w-screen start-0  hidden md:block Loader">
+        <motion.div
+        style={{
+             scaleX: scrollYProgress  // স্ক্রল প্রগ্রেস অনুযায়ী উইডথ সেট করা
+        }}
+        
+        className=" fixed start-0  w-screen origin-left  hidden md:block  Loader">
 
-        </div>
+        </motion.div>
     );
 }

@@ -162,7 +162,7 @@ const Projects = ({ setView, view }) => {
   }, [projectListedRef]);
 
 
-//  export const renderAdditionalDots = ({images}) => 
+
 
   
 //   return (

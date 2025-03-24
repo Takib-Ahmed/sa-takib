@@ -1231,20 +1231,13 @@ display: none;
     z-index: 100000000000000;
       height: 0.5px;
       background-color: #e945e3;
-      overflow: hidden;
-      animation: Loader linear forwards;
-      animation-timeline: scroll(y);
-bottom: 0.1%;
+      /* overflow: hidden; */
+      /* animation: Loader linear forwards;
+      animation-timeline: scroll(y); */
+top: 0%;
+z-index: 100000000000000;
   }
-  @keyframes Loader{
-      from{
-          width: 0;
-      }
-      to{
-width: 100vw;
 
-      }
-  }
 
 
   @keyframes Floating {
