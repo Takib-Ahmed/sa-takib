@@ -9,7 +9,43 @@ import { faWhatsapp } from '@fortawesome/free-brands-svg-icons'
 import { LuMessageCircleX } from "react-icons/lu";
 import { LuMessageCircleMore } from "react-icons/lu";
 import { LuMessageCirclePlus } from "react-icons/lu";
+import { useState } from 'react'
 const Home = () => {
+const contractlinks = [
+  {
+    fonticon:faLinkedin,
+color:"#0C64C5",
+
+
+
+  },
+  {
+    fonticon:faGithub,
+    color: 'black',
+    url:'https://github.com/Takib-Ahmed',
+
+  },  {
+    fonticon:faInstagram,
+    color: "#E1306C",
+    url:'https://www.instagram.com/md.takeb'
+
+  },  {
+    fonticon:faWhatsapp,
+color:"green",
+url:'https://wa.me/01615081141'
+
+  },
+  {
+    icon:LuMessageCircleMore,
+   
+
+  },{
+    icon:LuMessageCircleX,
+ 
+  }
+]
+
+const [isactive,setisactive] = useState(false)
 
   return (
     <div>
@@ -48,14 +84,32 @@ const Home = () => {
  connect   <LuMessageCirclePlus />
    </div>
 <div className='  fc-container fixed right-0 top-0  h-screen  flex justify-end items-end lg:justify-center lg:items-center  z-50 '>
-   <div className="links fixedcontracts  lg:mt-32   p-4 lg:p-1    flex flex-col  justify-start  lg:justify-center gap-5 sm:gap-10    w-max  items-center   rounded-r-[3.5rem]">
+   <div className={`contractlinks  md:bottom-5  lg:bottom-0 ${isactive && 'hovered  translate-x-[1.5px]  '}   fixedcontracts hover:bg-[#010824]  lg:mt-32   p-4 lg:p-1    flex flex-col  justify-start  lg:justify-center gap-5 sm:gap-10    w-max  items-center   rounded-r-[3.5rem]`} 
+   
+   onMouseEnter={()=>{
+    setisactive(true)
+   }}
+   onMouseLeave={()=>
+   {
+    setisactive(false)
+   }
+   }
+   
+   >
         
         {/* <a href="/CV/Sa Takib.pdf" className='cv hidden hover:text-black  text-[20px] px-2 py-[0.45rem] rounded-full' download  ><div className=' grid  items-center  sm:gap-2'><p>CV</p> <img src={Download} alt="" className=' hidden   invert ' /></div></a> */}
-        <a href="" className=' absolute  -translate-y-full right-4  lg:relative rounded-[100%]  px-2 py-[0.45rem] text-2xl lg:text-3xl flex justify-center items-center  '><FontAwesomeIcon href='#' icon={faLinkedin}/></a><a href='https://github.com/Takib-Ahmed'  className='flex justify-center items-center absolute  -translate-y-full right-4  lg:relative rounded-[100%] text-2xl lg:text-3xl px-2 py-[0.45rem] '><FontAwesomeIcon icon={faGithub}/></a><a href='https://www.instagram.com/lg.takeb'  className=' flex justify-center items-center px-2 py-[0.45rem]  absolute  -translate-y-full right-4  lg:relative rounded-[100%] text-2xl lg:text-3xl '><FontAwesomeIcon icon={faInstagram}/></a><a href='https://wa.me/01615081141' className='flex justify-center items-center px-2 py-[0.45rem] absolute  -translate-y-full right-4  lg:relative rounded-[100%] text-2xl lg:text-3xl  ' ><FontAwesomeIcon  icon={faWhatsapp}/></a>
-        
-        <a  className='flex   justify-center items-center px-2 py-[0.45rem] absolute  -translate-y-full right-4  lg:relative rounded-[100%] text-2xl lg:text-3xl  ' > <LuMessageCircleMore /></a>
-        <a  className='flex   justify-center items-center px-2 py-[0.45rem] absolute  -translate-y-full right-4  lg:relative rounded-[100%] text-2xl lg:text-3xl  ' > <LuMessageCircleX /></a>
-        
+  
+     
+        {
+          contractlinks.map((links,key)=>(
+            <a key={key} href={links.url} className={` absolute  cursor-pointer  -translate-y-full bottom-6 md:bottom-0  right-4  lg:relative rounded-[100%]  px-2 py-[0.45rem] text-2xl lg:text-3xl flex justify-center items-center  ${links.icon && 'hover:text-[#010824]  '} `}>{links.fonticon ? <FontAwesomeIcon  icon={links.fonticon}/>:<links.icon
+            
+            onClick={()=>{
+              setisactive(prev=>!prev)
+            }}
+            />}</a> 
+          ))
+        }
         </div></div>
     </div>)
 
