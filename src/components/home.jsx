@@ -79,12 +79,12 @@ const [isactive,setisactive] = useState(false)
 
 
       </section>
-   <div className='  hidden fixed   bottom-5 right-5 flex bg-[#010824] invert w-[6rem] z-50 rounded-full  p-2  items-center justify-between'>
+   <div className='  hidden   bg-[#010824] invert w-[6rem] z-50 rounded-full  p-2  items-center justify-between'>
 
  connect   <LuMessageCirclePlus />
    </div>
-<div className='  fc-container fixed right-0 top-0  h-screen  flex justify-end items-end lg:justify-center lg:items-center  z-50 '>
-   <div className={`contractlinks  md:bottom-5  lg:bottom-0 ${isactive && 'hovered  translate-x-[1.5px]  '}   fixedcontracts hover:bg-[#010824]  lg:mt-32   p-4 lg:p-1    flex flex-col  justify-start  lg:justify-center gap-5 sm:gap-10    w-max  items-center   rounded-r-[3.5rem]`} 
+<div className='  fc-container fixed right-0 top-0  h-full  flex justify-end items-end lg:justify-center lg:items-center  z-50 '>
+   <div className={`fixedcontracts  contractlinks    translate-y-7 lg:translate-y-0  md:bottom-5 lg:bottom-0 ${isactive && 'hovered    lg:mb-0 '}    hover:bg-[#010824]  lg:mt-32   p-4 lg:p-1    flex flex-col  justify-start  lg:justify-center gap-5 sm:gap-10    w-max  items-center   rounded-r-[3.5rem]`} 
    
    onMouseEnter={()=>{
     setisactive(true)
@@ -102,11 +102,11 @@ const [isactive,setisactive] = useState(false)
      
         {
           contractlinks.map((links,key)=>(
-            <a key={key} href={links.url} className={` absolute  cursor-pointer  -translate-y-full bottom-6 md:bottom-0  right-4  lg:relative rounded-[100%]  px-2 py-[0.45rem] text-2xl lg:text-3xl flex justify-center items-center  ${links.icon && 'hover:text-[#010824]  '} `}>{links.fonticon ? <FontAwesomeIcon  icon={links.fonticon}/>:<links.icon
-            
+            <a key={key}  href={links.url} className={` absolute  cursor-pointer  -translate-y-full bottom-6 md:bottom-0  right-4  lg:relative rounded-[100%]  px-2 py-[0.45rem] text-2xl lg:text-3xl flex justify-center items-center  ${links.icon && 'hover:text-[#010824]  '} `}>{links.fonticon ? <FontAwesomeIcon  icon={links.fonticon}/>:<links.icon
             onClick={()=>{
-              setisactive(prev=>!prev)
+              setisactive(!isactive)
             }}
+      
             />}</a> 
           ))
         }

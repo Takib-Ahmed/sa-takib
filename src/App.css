@@ -428,11 +428,11 @@ filter: invert(0) ;
     padding: 0 !important;
 margin-top: 0;
 position: fixed;
-
+transform: translateY(2rem) !important;
 
    
     a{
-      position: absolute !important;
+      position: absolute ;
 
        right: 1rem !important;
    
@@ -444,7 +444,7 @@ filter: invert(1);
 justify-items: center !important;
 
 &:nth-child(5) , &:nth-child(6){
-  padding: 8px 8px !important;
+  padding: 0.65rem !important;
 }
 
 &:hover{
@@ -465,6 +465,7 @@ display: none;
     }
     & a:nth-child(5){
       display: block;
+      
             }
 
 
@@ -483,10 +484,13 @@ display: none;
 
 
 .hovered {
+  
   &:hover{
 
     a{
-      position: relative !important;
+
+      transform: translateX(.5px) !important;
+      position: relative ;
     
     
        /* color: green !important;
@@ -560,6 +564,8 @@ display: none;
 
 
 @media only screen and (max-width: 1125px) {
+
+  
 .list{
   justify-content: space-around !important;
 }
