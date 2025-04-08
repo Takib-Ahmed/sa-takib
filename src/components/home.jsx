@@ -10,6 +10,7 @@ import { LuMessageCircleX } from "react-icons/lu";
 import { LuMessageCircleMore } from "react-icons/lu";
 import { LuMessageCirclePlus } from "react-icons/lu";
 import { useState } from 'react'
+import { motion } from 'motion/react'
 const Home = () => {
 const contractlinks = [
   {
@@ -102,12 +103,27 @@ const [isactive,setisactive] = useState(false)
      
         {
           contractlinks.map((links,key)=>(
-            <a key={key}  href={links.url} className={` absolute  cursor-pointer  -translate-y-full bottom-6 md:bottom-0  right-4  lg:relative rounded-[100%]  px-2 py-[0.45rem] text-2xl lg:text-3xl flex justify-center items-center  ${links.icon && 'hover:text-[#010824]  '} `}>{links.fonticon ? <FontAwesomeIcon  icon={links.fonticon}/>:<links.icon
+            <motion.a   key={key}  href={links.url}  dragDirectionLock drag  dragConstraints={{
+              left:0,
+              right:0,
+              top:-500,
+              bottom:0
+            }} className={` absolute  cursor-pointer  -translate-y-full bottom-6 md:bottom-0  right-4  lg:relative rounded-[100%]  px-2 py-[0.45rem] text-2xl lg:text-3xl flex justify-center items-center  ${links.icon && 'hover:text-[#010824]  '} `}>{links.fonticon ? <FontAwesomeIcon  icon={links.fonticon}/>: <motion.div whileTap={{
+              scale:1.1
+            }} 
+            
+            >
+              
+              <links.icon
+
+
+
             onClick={()=>{
               setisactive(!isactive)
             }}
       
-            />}</a> 
+            />
+              </motion.div>}</motion.a> 
           ))
         }
         </div></div>

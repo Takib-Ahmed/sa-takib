@@ -24,23 +24,23 @@ title:'Email'
 <div className="des text-wrap  mx-5">
 Ensure transparency, professionalism, and a smooth working process for every project.
 </div>
-<div className="contractcontainer flex flex-wrap justify-center   flex-col-reverse lg:flex-row  lg:flex-nowrap lg:justify-between gap-52 p-5 pb-0 contract">
-    <div className="inputs grid gap-4  pb-0 lg:ms-[-5vw]  mt-32 lg:mt-0">
+<div className="contractcontainer flex flex-wrap justify-center  flex-col-reverse lg:flex-row  lg:flex-nowrap lg:justify-between lg:gap-52 p-5 pb-0 contract">
+    <div className="inputs grid gap-4  pb-0 lg:ms-[-5vw] mt-24 sm:mt-10  md:mt-32 lg:mt-0">
   <form action="" name="contractus" >
           <div className="name">
             <h4 className="title">Name</h4><br />
-            <input type="name" required placeholder="Name" className="nameinput input rounded-[30px] contract  w-[60vw]  lg:w-[30vw] " />
+            <input type="name" required placeholder="Name" className="nameinput input rounded-[30px] contract  w-[70vw]  lg:w-[30vw] " />
         </div>
         <div className="email">
             <h4 className="title">email</h4><br />
-            <input type="email" required placeholder="Email"  className="emailinput input contract w-[60vw]  lg:w-[30vw] " />
+            <input type="email" required placeholder="Email"  className="emailinput input contract w-[70vw]  lg:w-[30vw] " />
         </div>
         <div className="message relative  ">
             <h4 className="title">message</h4><br />
-            <textarea type="text" name="text" placeholder="message" className="messageinput input min-h-[30vw] lg:min-h-[16vw] w-[60vw]  lg:w-[30vw] placeholder:text-center placeholder:translate-y-[11vw] lg:placeholder:translate-y-[5vw]  left-[0px] mt-1  contract" />
+            <textarea type="text" name="text" placeholder="message" className="messageinput input min-h-[40vw] lg:min-h-[16vw] w-[80vw]  lg:w-[30vw] placeholder:text-center  placeholder:translate-y-[11vw] md:placeholder:translate-y-[17vw] lg:placeholder:translate-y-[6vw]  left-[0px] mt-1  contract" />
         </div>
    <br />
-        <div className="send  button"><button className=" bg-pink-700 w-[60vw]   lg:w-[30vw] rounded-[25px] p-2 py-3 contract " type="submit">
+        <div className="send  button"><button className=" bg-pink-700 w-[80vw]   lg:w-[30vw] rounded-[25px] p-2 py-3 contract " type="submit">
             Send</button></div>
   </form>
     </div> 
