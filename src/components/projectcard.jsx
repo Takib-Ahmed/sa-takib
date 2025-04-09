@@ -189,12 +189,11 @@ export default function ProjectCard({KEY,value,view}){
                 </div>
                 <div className={`details grid items-center gap-0 ${KEY==1 &&  ' mt-2'}  `}>
                 
-              <div className="h-10 my-1.5 flex items-center justify-between">
-                <a href={value.live} className={`name     sm:mt-0 flex items-center gap-2 hover:border-b w-fit   ${view==='grid' ?'':" border-[#ef0b0b]"}`}>
-                    <h3>{value.name}</h3><LuExternalLink className={`${view === 'grid'? 'text-2xl':'text-[#ef0b0b] text-4xl'}   `}/>
+              <div className={`${view==='grid'?"h-10  my-1.5": KEY===2 || KEY===1 ?" h-9 !my-0":" h-12 !my-0"} flex items-center justify-between`}>
+                <a href={value.live} className={`name    sm:mt-0 flex items-center gap-2 hover:border-b w-fit   ${view==='grid' ?'':" border-[#ef0b0b]"}`}>
+                    <h3  className="  ">{value.name}</h3><LuExternalLink className={`${view === 'grid'? 'text-2xl  ':'text-[#ef0b0b] text-4xl mb-1 '}   `}/>
                   </a>
-         <a href="
-         " className=" hidden"><IoCodeSlashOutline /></a>
+
               </div>
               
                   <div className="des  description">
