@@ -85,7 +85,7 @@ const [isactive,setisactive] = useState(false)
  connect   <LuMessageCirclePlus />
    </div>
 <div className='  fc-container fixed right-0 top-0  h-full  flex justify-end items-end lg:justify-center lg:items-center  z-50 '>
-   <div className={`fixedcontracts  contractlinks    translate-y-7 lg:translate-y-0  md:bottom-5 lg:bottom-0 ${isactive && 'hovered    lg:mb-0 '}    hover:bg-[#010824]  lg:mt-32   p-4 lg:p-1    flex flex-col  justify-start  lg:justify-center gap-5 sm:gap-10    w-max  items-center   rounded-r-[3.5rem]`} 
+   <div className={`fixedcontracts  contractlinks    translate-y-7 lg:translate-y-0  md:bottom-5 lg:bottom-0 ${isactive && 'hovered    lg:mb-0 '}    lg:mt-32   p-4 lg:p-1    flex flex-col  justify-start  lg:justify-center gap-5 sm:gap-10    w-max  items-center   rounded-l-[3.5rem]`} 
    
    onMouseEnter={()=>{
     setisactive(true)

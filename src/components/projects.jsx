@@ -182,7 +182,6 @@ const Projects = ({ setView, view }) => {
 //     </div>
 //   );
   return (
-    <>
       <section className=" projects   " id="projects">
         <h1 className="title text-[1.5em] md:text-[2.5em] lg:text-[5em]">
           This is my Projects
@@ -237,7 +236,7 @@ const Projects = ({ setView, view }) => {
           </div>
         </div>
       </section>
-    </>
+
   );
 };
 

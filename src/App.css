@@ -731,6 +731,10 @@ display: none;
 
   @media only screen and (max-width: 535px) {
 
+
+    #projects{
+      padding: 20px !important;
+    }
       .section{
   
       
@@ -833,19 +837,30 @@ display: none;
               width: 100% !important;
               .projectcard{
                   width: 100% !important;
-                  border-radius: 20px;
-                  padding: 25px !important ;
+                  border-radius: 15px;
+                  padding: 18px !important ;
               
                   & .cover{
                       overflow: hidden;
-                      width:100% !important;                    
+                      width:100% !important;  
+                                        
                   }
            
                   & .details{
                       & .name{
                
-                          font-size: 1.8em !important;}
-               
+                          font-size: 1.8em !important;
+                    }
+                & .des{
+           line-height:17px !important;
+            font-size: 0.88em;
+            font-weight: 500;
+    filter: brightness(1.5);
+
+          height:55px;
+          overflow:hidden;
+          margin-top:0px !important;
+            }
           
                       & .mission{
           
@@ -859,9 +874,18 @@ display: none;
                   }
                           
                       }
+             
          
                   }
-
+                  & .github , .eye{
+                    font-size: 16px !important;
+                    background-color:rgba(238, 238, 238, 0.313) ;
+                    padding: 6px !important;
+                         border-radius: 100%;
+                         -webkit-backdrop-filter: blur(50px);  
+                         backdrop-filter: blur(50px);
+                     
+                }
 
           
                   }
@@ -873,6 +897,9 @@ display: none;
 
       @media only screen and (max-width: 470px) {
       
+        #projects{
+          padding: 15px !important;
+        }
           .header{
 
               width: 100%;
@@ -981,6 +1008,10 @@ display: none;
           
           }
           @media only screen and (max-width: 420px){
+
+            #projects{
+              padding: 10px !important;
+            }
             .skilllist{
               gap: 3vw !important;
             }
@@ -988,15 +1019,15 @@ display: none;
                   height: auto !important;
               }
               .projectlist2{
-             
+             padding: 0 !important;
                   .projectcard{
           
-  
+                    width: 100% !important;
                   
                       & .cover{
                           overflow: hidden;
                           width:100% !important;
-                          height: 230px;
+                          height: 250px !important;
                 
                       }
                 
@@ -1193,6 +1224,7 @@ display: none;
 }
 }}
           @media only screen and (max-width: 370px){
+            
             .techs{
 
 .title{position: relative;

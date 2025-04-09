@@ -3,8 +3,10 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import myrole from "../assets/user-role.svg";
 import { faGithub } from "@fortawesome/free-brands-svg-icons/faGithub";
 import { faEye } from "@fortawesome/free-regular-svg-icons";
-import { useEffect, useRef, useState } from "react";
+import {  useRef, useState } from "react";
+import { LuExternalLink } from "react-icons/lu";
 import Slider from "react-slick";
+import { IoCodeSlashOutline } from "react-icons/io5";
 export default function ProjectCard({KEY,value,view}){
   const [Isinview,setisinview] = useState()
   const sliderRef = useRef(null);
@@ -96,13 +98,15 @@ export default function ProjectCard({KEY,value,view}){
     {
       value.images.map((image,KEY)=>(
 
-    
-        <img
+<a href={value.live}>
+      
+<img
         KEY={KEY}
         src={image}
         alt=""
         className=" projectcover  rounded-none  "
       /> 
+</a>
       ))}
     
                     </Slider>  
@@ -112,18 +116,18 @@ export default function ProjectCard({KEY,value,view}){
   
                     
                     :
-                    <div className="  h-full  "> <img
+                    <a  href={value.live} className="  h-full  "> <img
                         src={value.image}
                         alt=""
                         className=" projectcover   "
-                      /></div>   
+                      /></a>   
                       // <video src="/public/Recording 2025-03-22 222631.mp4" autoPlay className="    h-full w-full  "></video>
                     // <iframe src={value.live} frameborder="0" className="  cover h-full"></iframe>
 }
 
 
 
-                    <div className="flex  flex-wrap absolute right-2 top-3 gap-1.5">
+                    <div className=" hidden flex-wrap absolute right-2 top-3 gap-1.5">
                       <a href={value.github}>
                         <FontAwesomeIcon
                           icon={faGithub}
@@ -157,22 +161,24 @@ export default function ProjectCard({KEY,value,view}){
                         }}
 
                         onClick={() => {
-                          sliderRef.current.slickGoTo(KEY); // Programmatically navigate to the clicked slide
                           setCurrentSlide(KEY);
+                          sliderRef.current.slickGoTo(KEY); // Programmatically navigate to the clicked slide
+                         
                            // Update currentSlide to reflect the navigation
                         }}
                
                           className="  cursor-pointer w-full  h-fit    top-0   relative    z-50     bg-white rounded-none  "
                         >
-                         <p    onClick={() => {
+                         <div    onClick={() => {
+                            setCurrentSlide(KEY);
                 sliderRef.current.slickGoTo(KEY); // Programmatically navigate to the clicked slide
-                setCurrentSlide(KEY);
+              
                  // Update currentSlide to reflect the navigation
               }}       className={`  h-[3.5px] z-50  rounded-2xl  ${
               currentSlide === KEY
                 ? " bg-[#e945e3]"
                 : ""
-            }`} ></p>
+            }`} ></div>
                          
                         </div>
                </div>
@@ -181,11 +187,16 @@ export default function ProjectCard({KEY,value,view}){
                   
                </div>
                 </div>
-                <div className={`details grid items-center gap-0 ${KEY==1 &&  ' mt-2'} `}>
+                <div className={`details grid items-center gap-0 ${KEY==1 &&  ' mt-2'}  `}>
                 
-                  <div className="name mt-2.5 sm:mt-0">
-                    <h3>{value.name}</h3>
-                  </div>
+              <div className="h-10 my-1.5 flex items-center justify-between">
+                <a href={value.live} className={`name     sm:mt-0 flex items-center gap-2 hover:border-b w-fit   ${view==='grid' ?'':" border-[#ef0b0b]"}`}>
+                    <h3>{value.name}</h3><LuExternalLink className={`${view === 'grid'? 'text-2xl':'text-[#ef0b0b] text-4xl'}   `}/>
+                  </a>
+         <a href="
+         " className=" hidden"><IoCodeSlashOutline /></a>
+              </div>
+              
                   <div className="des  description">
                     <p>{value.Des}</p>
                   </div>
