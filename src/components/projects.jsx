@@ -4,53 +4,85 @@ import { useRef } from "react";
 import Slider from "react-slick";
 import ProjectCard from "./projectcard";
 import { useEffect, useState } from "react";
-
+import Filtertabs from "./filtertab";
+import { Reorder } from "motion/react"
 const Projects = ({ setView, view }) => {
-  const listprojects = [
+  const listprojects = [ {
+    image: "/Projects/screencapture-thrivext-vercel-app-JavaScript-Essentials-for-React-Javascript-Key-Features-and-Concepts-2025-04-26-18_05_47.png",
+ 
+    name: "Documentation",
+    Des: "Thrivext — A modern documentation site built with Next.js and Nextra, led and managed by me with a collaborative team effort",
+    mission: "Documentation",
+    languages: "#html #css #js",
+    frameworkicon: "/framework.png",
+    frameworks: "#nextra #next.js #tailwind",
+    langicon: "/programming-language-modified.png",
+    github: "https://github.com/Takib-Ahmed/sa-takib.git",
+    live: "https://thrivext.vercel.app/",
+  } , {
+    image: "/Projects/screencapture-mypay-zeta-vercel-app-2025-04-26-17_13_23.png",
+ 
+    name: "Saas Landing Page",
+    Des: "MyPay — A modern SaaS payment solution landing page, built with Next.js, TailwindCSS, and smooth animations.",
+    mission: "Frontend",
+    languages: "#html #css #js",
+    frameworkicon: "/framework.png",
+    frameworks: "#next.js #tailwind",
+    langicon: "/programming-language-modified.png",
+    github: "https://github.com/Takib-Ahmed/sa-takib.git",
+    live: "https://mypay-zeta.vercel.app/",
+  },  {
+    image: "/Projects/nasafits.com.png",
+    images:[
+      '/Projects/nasafits.com.png',
+      '/Projects/screencapture-nasafits-vercel-app-2025-03-21-23_56_12.png',
+            // '/Projects/bannershow.png',
+                  '/Projects/screencapture-nasafits-vercel-app-details-5-2025-03-22-00_15_54.png',
+                  '/Projects/screencapture-nasafits-vercel-app-cart-2025-03-22-00_19_24.png',
+                   '/Projects/screencapture-nasafits-vercel-app-checkout-2025-03-22-00_24_38.png',
+                   '/Projects/screencapture-nasafits-vercel-app-profile-Dashboard-2025-03-22-00_27_40.png'
+
+
+    ],
+    name: "Ecommerce Site",
+    Des: "A full-stack e-commerce site with user auth, product management, cart, secure checkout, user & admin dashboard.",
+    mission: "Brand, Grapic & UI Design, Full-Stack",
+    languages: "#html #css #js",
+    frameworkicon: "/framework.png",
+    frameworks: ['MERN Stack'],
+    langicon: "/programming-language-modified.png",
+    github: "https://github.com/Takib-Ahmed/nasafits.git",
+    live: "https://nasafits.vercel.app/",
+  },
     {
       image: "/Projects/porthome (2).png",
       images:[
-        '/Projects/porthome (2).png',
-        '/Projects/portskills.png',
-              '/Projects/portporjects.png',
-                    '/Projects/portcontract.png'
+        '/Projects/screencapture-mezzbancity-eta-vercel-app-2025-04-26-16_55_22.png',
+        '/Projects/screencapture-mezzbancity-eta-vercel-app-2025-104-26-16_55_22.png',
+        '/Projects/screencapture-mezzbancity-eta-vercel-app-cart-2025-04-26-17_50_27.png',
+        '/Projects/screencapture-mezzbancity-eta-vercel-app-checkout-2025-04-26-17_51_30.png',
+        
+
+      
       ],
-      name: "Portpolio",
-      Des: "A modern and fully responsive portfolio website designed to showcase personal projects, skills, and experiences.",
+      name: "Resturant App",
+      Des: "Mezzban City – A stylish restaurant website showcasing our menu, special dishes, and online booking. Built with Next.js and TailwindCSS, fully responsive and user-friendly.",
       mission: "Frontend",
       languages: "#html #css #js",
       frameworkicon: "/framework.png",
-      frameworks: "#react",
+      frameworks: "#next.js #tailwind",
       langicon: "/programming-language-modified.png",
       github: "https://github.com/Takib-Ahmed/sa-takib.git",
-      live: "https://sa-takib.vercel.app/",
+      live: "https://mezzbancity-eta.vercel.app/",
     },
-    {
-      image: "/Projects/nasafits.com.png",
-      images:[
-        '/Projects/nasafits.com.png',
-        '/Projects/screencapture-nasafits-vercel-app-2025-03-21-23_56_12.png',
-              // '/Projects/bannershow.png',
-                    '/Projects/screencapture-nasafits-vercel-app-details-5-2025-03-22-00_15_54.png',
-                    '/Projects/screencapture-nasafits-vercel-app-cart-2025-03-22-00_19_24.png',
-                     '/Projects/screencapture-nasafits-vercel-app-checkout-2025-03-22-00_24_38.png',
-                     '/Projects/screencapture-nasafits-vercel-app-profile-Dashboard-2025-03-22-00_27_40.png'
 
-
-      ],
-      name: "Ecommerce Site",
-      Des: "A full-stack e-commerce site with user auth, product management, cart, secure checkout, user & admin dashboard.",
-      mission: "Brand, Grapic & UI Design, Full-Stack",
-      languages: "#html #css #js",
-      frameworkicon: "/framework.png",
-      frameworks: ["#react", " #talwind"],
-      langicon: "/programming-language-modified.png",
-      github: "https://github.com/Takib-Ahmed/nasafits.git",
-      live: "https://nasafits.vercel.app/",
-    },
     {
       image: "/Projects/feedback.net.png",
       name: "Feedback Platform",
+      images:["/Projects/feedback.net.png",
+        '/Projects/screencapture-feedbacksnet-vercel-app-detailspage-2025-04-26-18_10_09.png',
+      '/public/Projects/screencapture-feedbacksnet-vercel-app-search-2025-04-26-18_19_45.png'],
+
       Des: "A user-friendly feedback three-page platform (Home, Search, Details) with search functionality and interactive sliders for a smooth user experience.",
       mission: "Frontend",
       languages: "#html #css #js",
@@ -90,7 +122,7 @@ const Projects = ({ setView, view }) => {
   const changeViewButtonRef = useRef(null);
   const contracts = document.querySelectorAll(".contract");
 
- 
+ const [toShow,setshow] = useState('All')
   const projectListedRef = useRef(null);
 
 
@@ -164,23 +196,9 @@ const Projects = ({ setView, view }) => {
 
 
 
-  
-//   return (
-//     <div className="flex justify-center gap-2 mt-4 absolute  translate-24">
-//       {images.map((image, i) => (
-//        <img 
-//     width="5px"
-//          src={image}
-//          alt={image}
-//          className={` ${
-//            currentSlide === i
-//              ? "border-2  border-sky-500"
-//              : "border border-gray-300"
-//          }`}
-//        />
-//       ))}
-//     </div>
-//   );
+  let Projects = toShow==='All'? listprojects: listprojects.filter(project=>project.mission.includes(toShow))
+  const [items, setItems] = useState(Projects)
+
   return (
       <section className=" projects   " id="projects">
         <h1 className="title text-[1.5em] md:text-[2.5em] lg:text-[5em]">
@@ -189,7 +207,9 @@ const Projects = ({ setView, view }) => {
         <h2 className="subtitle    text-[1em] sm:text-[1.1em]">
           Take a Glimpse Into My Creative Journey Through Code and Design
         </h2>
-
+<div className="pt-5">
+<Filtertabs setshow={setshow}/>
+</div>
         <div className="projectcontaier   "   >
           <div
             className="Gridlistbutton  justify-center items-center space-x-4 mt-5    w-full"
@@ -219,9 +239,9 @@ const Projects = ({ setView, view }) => {
               </button>
             </a>
           </div>
-          <div
+          <Reorder.Group  values={items} onReorder={setItems}
             className={
-              ` grid gap-60  mt-10 lg:mt-20 w-fit  projectlisted ` +
+              ` grid gap-60  mt-10 lg:mt-12 w-fit  projectlisted ` +
               ` ${
                 view === "list"
                   ? "projectlist"
@@ -230,10 +250,10 @@ const Projects = ({ setView, view }) => {
             }
             ref={projectListedRef}
           >
-            {listprojects.map((value, key) => (
+            {Projects.map((value, key) => (
         <ProjectCard key={key} view={view} KEY={key} value={value}/>
             ))}
-          </div>
+          </Reorder.Group>
         </div>
       </section>
 

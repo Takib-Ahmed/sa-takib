@@ -212,7 +212,7 @@ filter: invert(0) ;
 
 .rect2:nth-of-type(1) {
   stroke-dashoffset: 0;
-  stroke:#b703b1;
+  stroke:oklch(0.627 0.265 303.9);
 
 }
 

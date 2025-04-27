@@ -7,6 +7,8 @@ import {  useRef, useState } from "react";
 import { LuExternalLink } from "react-icons/lu";
 import Slider from "react-slick";
 import { IoCodeSlashOutline } from "react-icons/io5";
+import { FaGithub } from "react-icons/fa";
+import { Reorder } from "motion/react"
 export default function ProjectCard({KEY,value,view}){
   const [Isinview,setisinview] = useState()
   const sliderRef = useRef(null);
@@ -79,7 +81,7 @@ export default function ProjectCard({KEY,value,view}){
 //       }, [sliderRef]);
     return (
         <>
-              <div
+              <Reorder.Item
                 className="projectcard relative   flex justify-around"
                 KEY={KEY}
                 style={{
@@ -127,8 +129,11 @@ export default function ProjectCard({KEY,value,view}){
 
 
 
-                    <div className=" hidden flex-wrap absolute right-2 top-3 gap-1.5">
-                      <a href={value.github}>
+                    <div className="  flex-wrap absolute right-1.5 top-1.5 ">
+                    <button className="w-9 h-9 rounded-full flex items-center justify-center bg-gradient-to-r from-gray-700 to-black hover:from-gray-600 hover:to-gray-900 transition">
+      <FaGithub size={18} className="text-white" />
+    </button>
+                      {/* <a href={value.github}>
                         <FontAwesomeIcon
                           icon={faGithub}
                           className="   github  text-white  "
@@ -139,7 +144,7 @@ export default function ProjectCard({KEY,value,view}){
                           icon={faEye}
                           className="    livelink    text-white eye "
                         ></FontAwesomeIcon>
-                      </a>
+                      </a> */}
                     </div>
                   </div>
 
@@ -174,9 +179,9 @@ export default function ProjectCard({KEY,value,view}){
                 sliderRef.current.slickGoTo(KEY); // Programmatically navigate to the clicked slide
               
                  // Update currentSlide to reflect the navigation
-              }}       className={`  h-[3.5px] z-50  rounded-2xl  ${
+              }}       className={`  h-[3.8px] z-50  rounded-2xl  ${
               currentSlide === KEY
-                ? " bg-[#e945e3]"
+                ? " bg-purple-500"
                 : ""
             }`} ></div>
                          
@@ -242,6 +247,6 @@ export default function ProjectCard({KEY,value,view}){
                     </div>
                   </div>
                 </div>
-              </div></>
+              </Reorder.Item></>
     );
 }
