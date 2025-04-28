@@ -633,7 +633,7 @@ height: 40px;
 }
 .avatar{
     animation: toleft 0.8s ease-in-out forwards;
-    transition: all 1.5s;   
+    transition: all 1s;   
  .card{
       display: inline-flex;  
       flex-direction: column;
@@ -710,11 +710,12 @@ animation: toup2 0.1s linear forwards reverse;
 }
 @keyframes toleft {
     from{
-        transform: translateX(10vw);
+        /* transform: translateX(10vw); */
         opacity: 0;
+        scale: .8;
     }
     to{
-        transform: translateX(0vw); 
+        /* transform: translateX(0vw);  */
         opacity: 1;
     }
     
@@ -723,6 +724,7 @@ animation: toup2 0.1s linear forwards reverse;
     from{
         transform: translateX(-10vw);
         opacity: 0;
+        scale: .8;
     }
     to{
         transform: translateX(0vw); 
@@ -980,6 +982,7 @@ height: auto;
     
      position: sticky;
 top: calc(64px + (var(--position ) * 20px));
+
         width: 100%;
 background-image: linear-gradient(180deg,#010824 ,rgba(238, 238, 238, 0));
 /* 

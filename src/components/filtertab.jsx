@@ -31,14 +31,24 @@ const Filtertabs = ({setshow}) => {
   
 
   useEffect(() => {
-    const currentTab = tabsRef.current[activeTab];
-    if (currentTab) {
-      setTabPosition({
-        left: currentTab.offsetLeft,
-        width: currentTab.offsetWidth,
-      });
-    }
+    const updateTabPosition = () => {
+      const currentTab = tabsRef.current[activeTab];
+      if (currentTab) {
+        setTabPosition({
+          left: currentTab.offsetLeft,
+          width: currentTab.offsetWidth,
+        });
+      }
+    };
+  
+    updateTabPosition(); // প্রথমে একবার রান করাও
+    window.addEventListener('resize', updateTabPosition);
+  
+    return () => {
+      window.removeEventListener('resize', updateTabPosition); // cleanup
+    };
   }, [activeTab]);
+  
 
   return (
     <div className="relative  border-b border-purple-500 px-1.5 sm:px-2.5 md:px-5  lg:px-10">

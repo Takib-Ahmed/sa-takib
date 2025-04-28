@@ -3,13 +3,13 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import myrole from "../assets/user-role.svg";
 import { faGithub } from "@fortawesome/free-brands-svg-icons/faGithub";
 import { faEye } from "@fortawesome/free-regular-svg-icons";
-import {  useRef, useState } from "react";
+import {  useEffect, useRef, useState } from "react";
 import { LuExternalLink } from "react-icons/lu";
 import Slider from "react-slick";
 import { IoCodeSlashOutline } from "react-icons/io5";
 import { FaGithub } from "react-icons/fa";
-import { Reorder } from "motion/react"
-export default function ProjectCard({KEY,value,view}){
+import { AnimatePresence, motion, Reorder, useMotionValue, useTransform } from "motion/react"
+export default function ProjectCard({KEY,value,view,scrollYProgress, scaleFactor,handleMouseMove,boxesRef,setActiveTab,  setHovered}){
   const [Isinview,setisinview] = useState()
   const sliderRef = useRef(null);
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -52,6 +52,35 @@ export default function ProjectCard({KEY,value,view}){
           </div>)
       };
     
+      const scale = useTransform(scrollYProgress, [0, 1], [1, scaleFactor]);
+
+
+  
+      const x = useMotionValue(0.5);  // Start at center
+      const y = useMotionValue(0.5);
+    
+      const rotateX = useTransform(y, [0, 1], [-15, 15]);
+      const rotateY = useTransform(x, [0, 1], [15, -15]);
+
+      function handleMouseMove2(e) {
+        setHovered(true)
+ 
+        const rect = e.currentTarget.getBoundingClientRect();
+        const mouseX = (e.clientX - rect.left) / rect.width;
+        const mouseY = (e.clientY - rect.top) / rect.height;
+        x.set(mouseX);
+        y.set(mouseY);
+        
+      }
+    
+      function handleMouseLeave() {
+        setHovered(false)
+        x.set(0.5);
+        y.set(0.5);
+
+      }
+
+      
 
 
 //       useEffect(() => {
@@ -82,14 +111,40 @@ export default function ProjectCard({KEY,value,view}){
     return (
         <>
               <Reorder.Item
-                className="projectcard relative   flex justify-around"
+ transition={{ type: "spring", stiffness: 150, damping: 20 }}
+ref={(el) => (boxesRef.current[KEY] = el)}
+onMouseMove={(e) => {
+  handleMouseMove(e, KEY);
+ view==='grid' &&  handleMouseMove2(e)
+}}
+onMouseEnter={() =>setActiveTab(KEY) }
+onMouseLeave={() => {
+
+  view==='grid' && handleMouseLeave()
+}}
+            drag={false}
+                className="projectcard relative    flex justify-around origin-top"
                 KEY={KEY}
                 style={{
                   "--position": KEY + 1,
+                  scale: view==='list' ?scale:1,
+                  transformStyle: "preserve-3d",
+                  rotateX,
+                  rotateY,
+                  perspective: 1500,
                 }}
               
        
               >
+                
+        
+            <motion.div
+          className="absolute inset-0 bg-gradient-to-br from-white/30 to-transparent pointer-events-none"
+          style={{
+            opacity: useTransform(x, [0, 0.5, 1], [0.2, 0, 0.2]),
+          }}
+        >
+      </motion.div>
                 <div className="relative">
                   <div className={` cover   relative    overflow-hidden     `}> 
               
@@ -129,10 +184,10 @@ export default function ProjectCard({KEY,value,view}){
 
 
 
-                    <div className="  flex-wrap absolute right-1.5 top-1.5 ">
-                    <button className="w-9 h-9 rounded-full flex items-center justify-center bg-gradient-to-r from-gray-700 to-black hover:from-gray-600 hover:to-gray-900 transition">
+                    <div className="  flex-wrap absolute right-1.5 top-1.5  ">
+                    <a href={value.github} className="w-9 h-9  cursor-pointer rounded-full flex items-center justify-center bg-gradient-to-r from-gray-700 to-black hover:from-gray-600 hover:to-gray-900 transition">
       <FaGithub size={18} className="text-white" />
-    </button>
+    </a>
                       {/* <a href={value.github}>
                         <FontAwesomeIcon
                           icon={faGithub}

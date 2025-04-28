@@ -62,7 +62,7 @@ export default function  RectProgresss({screenSize,value,Revealed,KEY}){
            rx="10" 
            ry="10"
            style={{strokeDashoffset:440 * progress*0.01,stroke:value.color}}
-         className="rect2  transition-all duration-300 "
+         className="rect2  transition-all duration-200 "
          ></rect>
        </svg> 
     );

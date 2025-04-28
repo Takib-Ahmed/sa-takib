@@ -12,7 +12,7 @@ export default function SkillCard({value,KEY,screenSize,Revealed,itemRefs}){
         <div
            
 
-        style={screenSize>425 ? { transitionDelay: `${(KEY * 100)}ms` } : { transitionDelay: `${(KEY * 50)}ms` }}
+        style={screenSize>425 ? { transitionDelay: `${(KEY * 90)}ms` } : { transitionDelay: `${(KEY * 40)}ms` }}
           key={KEY}
           ref={(el) => (itemRefs.current[KEY] = el)} // Assign refs to each item
           className={`item  ${KEY} bg-[#00092b] shadow-slate-400 shadow-2xl relative  Hidden items-center justify-center ${value.name === 'Bootstrap' && screenSize<420 ? ' hidden':""}`} // Default class is Hidden
