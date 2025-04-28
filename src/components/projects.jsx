@@ -387,7 +387,8 @@ useEffect(() => {
             />
 
           ))}
-               <motion.div
+         
+              {/* <motion.div
                  ref={movingBoxRef}
           className={`absolute   inset-0 border-[#010824] bg-[#010824]  invert border-1  hidden    -z-[1]  rounded-[20px]  w-full     h-full transition-all duration-300 `}
           style={{
@@ -400,7 +401,7 @@ useEffect(() => {
         
                  perspective: 1500,
           }}
-        />
+        ></motion.div> */}
         </Reorder.Group>
       </div>
     </section>

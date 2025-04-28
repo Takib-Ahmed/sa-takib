@@ -22,13 +22,16 @@
     background-color: #e945e4 ;
   }
  html{
+  
    scroll-behavior: smooth;
 /* scrollbar-color :#e945e4 #1f00405e; */
 /* &::-webkit-scrollbar-thumb:hover {
     background: #1f00405e !important;
   } */
   
+  
  }
+
 
 #root{
     padding: 0;
@@ -37,8 +40,8 @@ margin: 0;
 
 }
 body{
-overflow-x: hidden;
 
+   
 padding: 0;
 box-sizing: border-box;
 margin: 0;
