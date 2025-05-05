@@ -19,10 +19,10 @@ import { FaGithub } from "react-icons/fa";
 import SkillCard from "./skillcard";
 const Skills = () => {
   const listskills = [
-    { name: "Next.js", icon: SiNextdotjs, color: '#fff', size: 85, skill:95  },
-    { name: "React.js", icon: FaReact, color: '#61DAFB', size: 85 ,skill :50 },
-    { name: "TypeScript", icon: BiLogoTypescript, color: '#3178C6', size: 90, skill:95 },
-    { name: "JavaScript", icon: IoLogoJavascript, color: '#F7DF1E', size: 85 , skill:80},
+    { name: "Next.js", icon: SiNextdotjs, color: '#fff', size: 85, skill:50  },
+    { name: "React.js", icon: FaReact, color: '#61DAFB', size: 85 ,skill :90 },
+    { name: "TypeScript", icon: BiLogoTypescript, color: '#3178C6', size: 90, skill:50 },
+    { name: "JavaScript", icon: IoLogoJavascript, color: '#F7DF1E', size: 85 , skill:90},
    
     { name: "Shadcn", icon: SiShadcnui, color: '#fff', size: 80 ,skill:50             },
     { name: "Next UI", icon: SiNextui, color: '#fff', size: 85 ,    skill:70        },
@@ -32,10 +32,10 @@ const Skills = () => {
     { name: "Express", icon: SiExpress, color: '#fff', size: 85, skill:50 },
     { name: "MongoDB", icon: SiMongodb, color: 'green', size: 85, skill:50 },
 
-    { name: "Git", icon: FaGit, color: '#F05032', size: 85, skill:80 },
+    { name: "Git", icon: FaGit, color: '#F05032', size: 85, skill:90 },
     { name: "GitHub", icon: FaGithub, color: '#fff', size: 85, skill:90 },
     { name: "CSS", icon: SiCss3, color: '#1572B6', size: 85, skill:95 },
-    { name: "HTML", icon: FaHtml5, color: '#E34F26', size: 85, skill:95 },
+    { name: "HTML", icon: FaHtml5, color: '#E34F26', size: 85, skill:98 },
     { name: "VS Code", color: '#007ACC', size: 85 , skill:95},
   ]
   
@@ -83,8 +83,8 @@ const [Revealed,setReveled] = useState([])
   return (
     <div className=" flex justify-end ">
       <section className="skills   md:my-5 lg:my-5 p-[25px]   sm:p-[50px]" id="skills">
-        <div className="des">My Skills</div>
-        <div className="title text-[1.8em] md:text-[2.5em] lg:text-[3em]">Technologies That I know</div>
+        <div className="des Hidden2">My Skills</div>
+        <div className="title text-[1.8em] md:text-[2.5em] lg:text-[3em] Hidden2">Technologies That I know</div>
         <br />
         <br />
         <div className="listanimation  ">

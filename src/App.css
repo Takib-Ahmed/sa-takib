@@ -1225,7 +1225,7 @@ body, html{
 
 }
 }}
-          @media only screen and (max-width: 370px){
+          @media only screen and (max-width: 400px){
             
             .techs{
 
@@ -1263,12 +1263,12 @@ body, html{
   .Loader{
       color:#d1cdcdc1;
     z-index: 100000000000000;
-      height: 0.5px;
+    
       background-color: #e945e3;
       /* overflow: hidden; */
       /* animation: Loader linear forwards;
       animation-timeline: scroll(y); */
-top: 0%;
+
 z-index: 100000000000000;
   }
 

@@ -8,10 +8,13 @@ import Projects from './components/projects'
 import Skills from './components/skills'
 import Loader from './components/Loader'
 import CircularMenu from './components/SocialsMenu'
+import { useRevealOnScroll } from './components/RevealAnimation'
 
 function App() {
  
   const [view, setView] = useState("list");
+
+  useRevealOnScroll()
   return (
     <main>
    

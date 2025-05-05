@@ -55,7 +55,7 @@ const Filtertabs = ({setshow}) => {
       <div className="flex relative">
         {/* Moving div */}
         <div
-          className="absolute bottom-0 border-b-[#010824] border-b-2 bg-[#010824]     h-[101%] translate-y-[0.05rem] rounded-t-lg  border-1 border-t-1  border-purple-500 transition-all duration-300"
+          className="absolute bottom-0 border-b-[#010824] border-b-2 bg-[#010824]     h-[101%] translate-y-[0.09rem]  sm:translate-y-[0.05rem] rounded-t-lg  border-1 border-t-1  border-purple-500 transition-all duration-300"
           style={{
             left: tabPosition.left,
             width: tabPosition.width+1,

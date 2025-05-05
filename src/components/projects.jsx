@@ -41,7 +41,7 @@ const Projects = ({ setView, view }) => {
     mission: "Documentation",
     languages: "#html #css #js",
     frameworkicon: "/framework.png",
-    frameworks: "#nextra #next.js #tailwind",
+    frameworks: "Nextra, Next.js, Tailwind CSS",
     langicon: "/programming-language-modified.png",
     github: "https://github.com/Takib-Ahmed/thrivext",
     live: "https://thrivext.vercel.app/",
@@ -53,7 +53,7 @@ const Projects = ({ setView, view }) => {
     mission: "Frontend",
     languages: "#html #css #js",
     frameworkicon: "/framework.png",
-    frameworks: "#next.js #tailwind",
+    frameworks: "Next.js, Taiwlind CSS",
     langicon: "/programming-language-modified.png",
     github: "https://github.com/Takib-Ahmed/mypay",
     live: "https://mypay-zeta.vercel.app/",
@@ -75,7 +75,7 @@ const Projects = ({ setView, view }) => {
     mission: "Brand, Grapic & UI Design, Full-Stack",
     languages: "#html #css #js",
     frameworkicon: "/framework.png",
-    frameworks: ['MERN Stack'],
+    frameworks: ['MERN, Hero UI, Zustand'],
     langicon: "/programming-language-modified.png",
     github: "https://github.com/Takib-Ahmed/nasafits.git",
     live: "https://nasafits.vercel.app/",
@@ -96,7 +96,7 @@ const Projects = ({ setView, view }) => {
       mission: "Frontend",
       languages: "#html #css #js",
       frameworkicon: "/framework.png",
-      frameworks: "#next.js #tailwind",
+      frameworks: "Next.js, Tailwind CSS, Redux",
       langicon: "/programming-language-modified.png",
       github: "https://github.com/Takib-Ahmed/mezzbancity",
       live: "https://mezzbancity-eta.vercel.app/",
@@ -113,7 +113,7 @@ const Projects = ({ setView, view }) => {
       mission: "Frontend",
       languages: "#html #css #js",
       frameworkicon: "/framework.png",
-      frameworks: "#react",
+      frameworks: "React",
       langicon: "/programming-language-modified.png",
       github: "https://github.com/Takib-Ahmed/feedback.com.git",
       live: "https://feedbacksnet.vercel.app/",
@@ -125,7 +125,7 @@ const Projects = ({ setView, view }) => {
       mission: "Frontend",
       languages: "#html #css #js",
       frameworkicon: "/framework.png",
-      frameworks: "#react",
+      frameworks: "React",
       langicon: "/programming-language-modified.png",
       github: "https://github.com/Takib-Ahmed/taskmanager.app.git",
       live: "https://taskmanager-app-virid.vercel.app/",
@@ -137,7 +137,7 @@ const Projects = ({ setView, view }) => {
       mission: "Frontend",
       languages: "#html #css #js",
       frameworkicon: "/framework.png",
-      frameworks: "#bootstrap",
+      frameworks: "Bootstrap",
       langicon: "/programming-language-modified.png",
       github: "https://github.com/Takib-Ahmed/aniwatchclone.git",
       live: "https://takib-ahmed.github.io/aniwatchclone/",
@@ -232,8 +232,11 @@ const [items, setItems] = useState(filteredProjects);
 
 // Normal function: position অনুযায়ী scaleFactor calculate করবে
 const getScaleFactor = (index, totalItems) => {
+if(filteredProjects.length>1){
   const itemPosition = index / (totalItems - 1 || 1);
+  
   return 1 - Math.abs(itemPosition - 1) * 0.15;
+}
 };
 
 
@@ -318,10 +321,10 @@ useEffect(() => {
 
   return (
     <section className="projects" id="projects">
-      <h1 className="title text-[1.5em] md:text-[2.5em] lg:text-[5em]">
+      <h1 className="title text-[1.5em] md:text-[2.5em] lg:text-[5em] Hidden2 ">
         This is my Projects
       </h1>
-      <h2 className="subtitle text-[1em] sm:text-[1.1em]">
+      <h2 className="subtitle text-[1em] sm:text-[1.1em] Hidden2">
         Take a Glimpse Into My Creative Journey Through Code and Design
       </h2>
 
