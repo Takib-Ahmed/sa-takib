@@ -368,7 +368,7 @@ useEffect(() => {
           className={`grid gap-60 mt-10 lg:mt-12 w-fit projectlisted ${
             view === "list"
               ? "projectlist"
-              : "projectlist2 justify-center lg:justify-normal"
+              : "projectlist2  justify-center lg:justify-normal"
           }`}
           ref={projectListedRef}
         >
