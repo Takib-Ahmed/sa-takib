@@ -25,8 +25,8 @@ const Skills = () => {
     { name: "JavaScript", icon: IoLogoJavascript, color: '#F7DF1E', size: 85 , skill:90},
    
     { name: "Shadcn", icon: SiShadcnui, color: '#fff', size: 80 ,skill:50             },
-    { name: "Next UI", icon: SiNextui, color: '#fff', size: 85 ,    skill:70        },
-    { name: "Tailwind CSS", icon: SiTailwindcss, color: '#38BDF8', size: 85, skill:95 },
+    { name: "Next UI", icon: SiNextui, color: '#fff', size: 85 ,    skill:80       },
+    { name: "Tailwind CSS", icon: SiTailwindcss, color: '#38BDF8', size: 85, skill:90 },
     { name: "Bootstrap", icon: FaBootstrap, color: '#7711ED', size: 85 , skill:90},
     { name: "Node.js", icon: FaNodeJs, color: 'green', size: 85 ,skill:50},
     { name: "Express", icon: SiExpress, color: '#fff', size: 85, skill:50 },
@@ -35,7 +35,7 @@ const Skills = () => {
     { name: "Git", icon: FaGit, color: '#F05032', size: 85, skill:90 },
     { name: "GitHub", icon: FaGithub, color: '#fff', size: 85, skill:90 },
     { name: "CSS", icon: SiCss3, color: '#1572B6', size: 85, skill:95 },
-    { name: "HTML", icon: FaHtml5, color: '#E34F26', size: 85, skill:98 },
+    { name: "HTML", icon: FaHtml5, color: '#E34F26', size: 85, skill:95 },
     { name: "VS Code", color: '#007ACC', size: 85 , skill:95},
   ]
   

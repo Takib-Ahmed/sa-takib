@@ -1,7 +1,7 @@
 
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faInstagram } from '@fortawesome/free-brands-svg-icons'
+import { faInstagram, faYoutube } from '@fortawesome/free-brands-svg-icons'
 import { faGithub } from '@fortawesome/free-brands-svg-icons'
 import { faLinkedin } from '@fortawesome/free-brands-svg-icons'
 import Download from "../assets/download (1).png"
@@ -26,9 +26,9 @@ url:'https://www.linkedin.com/in/sa-takib/'
     url:'https://github.com/Takib-Ahmed',
 
   },  {
-    fonticon:faInstagram,
-    color: "#E1306C",
-    url:'https://www.instagram.com/md.takeb'
+    fonticon:faYoutube,
+    color: "red",
+    url:'https://www.youtube.com/@EasyCodingDev'
 
   },  {
     fonticon:faWhatsapp,
@@ -64,7 +64,7 @@ const [isactive,setisactive] = useState(false)
           <div className="links  flex  justify-around lg:justify-normal  sm:gap-5  items-center">
         
              <a href="/CV/Sa Takib.pdf" className='cv  sm:px-7 py-2.5 text-3xl md:text-4xl' download  ><div className=' px-2 md:px-0  flex  items-center  sm:gap-2'><p>CV</p> <img src={Download} alt="" className=' hidden sm:block  w-9 invert ' /></div></a>
-             <a href="" className=' relative rounded-[100%]  text-4xl px-[1.05rem] py-[0.7rem] '><FontAwesomeIcon href='#' icon={faLinkedin}/></a><a href='https://github.com/Takib-Ahmed'  className=' relative rounded-[100%]  text-4xl px-[1.05rem] py-[0.7rem] '><FontAwesomeIcon icon={faGithub}/></a><a href='https://www.instagram.com/md.takeb'  className=' relative rounded-[100%]  text-4xl px-[1.05rem] py-[0.7rem]'><FontAwesomeIcon icon={faInstagram}/></a><a href='https://wa.me/01615081141' className=' relative rounded-[100%]  text-4xl px-[1.05rem] py-[0.7rem]' ><FontAwesomeIcon  icon={faWhatsapp}/></a></div></div>
+             <a href="" className=' relative rounded-[100%]  text-4xl px-[1.05rem] py-[0.7rem] '><FontAwesomeIcon href='#' icon={faLinkedin}/></a><a href='https://github.com/Takib-Ahmed'  className=' relative rounded-[100%]  text-4xl px-[1.05rem] py-[0.7rem] '><FontAwesomeIcon icon={faGithub}/></a><a href='https://www.youtube.com/@EasyCodingDev'  className=' relative rounded-[100%]  text-4xl px-[0.85rem] py-[0.7rem]'><FontAwesomeIcon icon={faYoutube}/></a><a href='https://wa.me/01615081141' className=' relative rounded-[100%]  text-4xl px-[1.05rem] py-[0.7rem]' ><FontAwesomeIcon  icon={faWhatsapp}/></a></div></div>
         
         <div className=" avatar text-right   ">
           <div className="card   mb-0 md:my-0 inline-flex flex-col  h-[20rem] mt-8 sm:mt-0 sm:h-[100%]">

@@ -172,7 +172,7 @@ color: black;
          & a:nth-child(3){
 
 &:hover{
-    color: #E1306C ;
+    color: red ;
 
 }
     }
@@ -314,7 +314,7 @@ background:white !important;
          & a:nth-child(4){
             background:black !important;
 &:hover{
-    color: #E1306C ;
+    color: red ;
     background: white !important;
 }
     }

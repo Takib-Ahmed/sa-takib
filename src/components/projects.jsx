@@ -45,19 +45,18 @@ const Projects = ({ setView, view }) => {
     langicon: "/programming-language-modified.png",
     github: "https://github.com/Takib-Ahmed/thrivext",
     live: "https://thrivext.vercel.app/",
-  } , {
-    image: "/Projects/screencapture-mypay-zeta-vercel-app-2025-04-26-17_13_23.png",
- 
-    name: "Saas Landing Page",
-    Des: "MyPay — A modern SaaS payment solution landing page, built with Next.js, TailwindCSS, and smooth animations.",
-    mission: "Frontend",
-    languages: "#html #css #js",
-    frameworkicon: "/framework.png",
-    frameworks: "Next.js, Taiwlind CSS",
-    langicon: "/programming-language-modified.png",
-    github: "https://github.com/Takib-Ahmed/mypay",
-    live: "https://mypay-zeta.vercel.app/",
-  },  {
+  } ,  {
+  "image": "/public/Projects/pixll.png",
+  "name": "Pixll Landing Page",
+  "Des": "A modern digital agency landing page showcasing Pixll's full-service offerings, including All-In-One solutions, project-based development, and scalable partnerships.",
+  "mission": "Frontend",
+  "languages": "#html #css #js",
+  "frameworkicon": "/framework.png",
+  "frameworks": "Next.js, Tailwind CSS",
+  "langicon": "/programming-language-modified.png",
+  "github": "https://github.com/Takib-Ahmed/pixll",
+  "live": "https://pixll-gamma.vercel.app/"
+},{
     image: "/Projects/nasafits.com.png",
     images:[
       '/Projects/nasafits.com.png',
@@ -79,7 +78,19 @@ const Projects = ({ setView, view }) => {
     langicon: "/programming-language-modified.png",
     github: "https://github.com/Takib-Ahmed/nasafits.git",
     live: "https://nasafits.vercel.app/",
-  },
+  }, 
+  {
+    image: "/Projects/mypay.png",
+    name: "Saas Landing Page",
+    Des: "MyPay — A modern SaaS payment solution landing page, built with Next.js, TailwindCSS, and smooth animations.",
+    mission: "Frontend",
+    languages: "#html #css #js",
+    frameworkicon: "/framework.png",
+    frameworks: "Next.js, Taiwlind CSS",
+    langicon: "/programming-language-modified.png",
+    github: "https://github.com/Takib-Ahmed/mypay",
+    live: "https://mypay-zeta.vercel.app/",
+  }, 
     {
       image: "/Projects/porthome (2).png",
       images:[
@@ -113,23 +124,12 @@ const Projects = ({ setView, view }) => {
       mission: "Frontend",
       languages: "#html #css #js",
       frameworkicon: "/framework.png",
-      frameworks: "React",
+      frameworks: "React, Tailwind CSS",
       langicon: "/programming-language-modified.png",
       github: "https://github.com/Takib-Ahmed/feedback.com.git",
       live: "https://feedbacksnet.vercel.app/",
     },
-    {
-      image: "/Projects/taskmanager.png",
-      name: "Task Manager",
-      Des: "A lightweight task management app that allows users to organize their daily activities efficiently.",
-      mission: "Frontend",
-      languages: "#html #css #js",
-      frameworkicon: "/framework.png",
-      frameworks: "React",
-      langicon: "/programming-language-modified.png",
-      github: "https://github.com/Takib-Ahmed/taskmanager.app.git",
-      live: "https://taskmanager-app-virid.vercel.app/",
-    },
+
     {
       image: "/Projects/aniwatch.clone.png",
       name: "Aniwatch Clone",
