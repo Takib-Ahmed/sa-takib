@@ -6,28 +6,28 @@ export function Navbar({ view }) {
   const navRefs = useRef([]); // Create a ref array for nav items
 
   // Define thresholds for each section
-  const [thresholds,settherosholds] =  useState({
+  const [thresholds, settherosholds] = useState({
     home: 0.5,
     skills: 0.3,
-    projects: view==='grid'? 0.27:0.1,
+    projects: view === "grid" ? 0.27 : 0.1,
     contracts: 0.5,
   });
 
-
   useEffect(() => {
-  window.innerWidth< 500 ?  settherosholds({
-    home: 0.5,
-    skills: 0.5,
-    projects: view==='grid'&& 0.15,
-    contracts: 0.4,
-  }): settherosholds({
-    home: 0.5,
-    skills: 0.3,
-    projects: view==='grid'? 0.27:0.1,
-    contracts: 0.5,
-  })
+    window.innerWidth < 500
+      ? settherosholds({
+          home: 0.5,
+          skills: 0.5,
+          projects: view === "grid" && 0.15,
+          contracts: 0.4,
+        })
+      : settherosholds({
+          home: 0.5,
+          skills: 0.3,
+          projects: view === "grid" ? 0.27 : 0.1,
+          contracts: 0.5,
+        });
   }, [view]);
-
 
   useEffect(() => {
     const observers = []; // Array to hold observers
@@ -68,7 +68,7 @@ export function Navbar({ view }) {
         }
       });
     };
-  }, [listnav,thresholds]); // Dependency array includes listnav to re-run if it changes
+  }, [listnav, thresholds]); // Dependency array includes listnav to re-run if it changes
 
   return (
     <>

@@ -1,31 +1,37 @@
-import  { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect } from "react";
 import "../App.css";
-import { faTwitter,faInstagram,faMailchimp,faWhatsapp,faLinkedin,faGooglePlus,faYoutube,faFacebook,faGithub } from "@fortawesome/free-brands-svg-icons";
+import {
+  faTwitter,
+  faInstagram,
+  faMailchimp,
+  faWhatsapp,
+  faLinkedin,
+  faGooglePlus,
+  faYoutube,
+  faFacebook,
+  faGithub,
+} from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 const CircularMenu = () => {
   const [isOpen, setIsOpen] = useState(false);
   const bubbleRef = useRef(null);
   const menuItems = [
-    { id: 1, icon: faTwitter  },
-    { id: 2, icon: faLinkedin  } ,
-    { id: 3, icon: faWhatsapp  },
-    { id: 4, icon: faYoutube  },
-    { id: 5, icon: faFacebook  },
-    { id: 6, icon: faGooglePlus,   center: true },
-    { id: 7, icon: faMailchimp  },
-    { id: 8, icon: faGithub  },
-    { id: 9, icon: faInstagram  },
+    { id: 1, icon: faTwitter },
+    { id: 2, icon: faLinkedin },
+    { id: 3, icon: faWhatsapp },
+    { id: 4, icon: faYoutube },
+    { id: 5, icon: faFacebook },
+    { id: 6, icon: faGooglePlus, center: true },
+    { id: 7, icon: faMailchimp },
+    { id: 8, icon: faGithub },
+    { id: 9, icon: faInstagram },
   ];
 
   const toggleMenu = () => setIsOpen(!isOpen);
 
-
-
   return (
     <div ref={bubbleRef} className="relative w-10 h-10 lg:w-14 lg:h-14   ">
-      <div
-        className={`circle-menu relative w-72 h-72 ${isOpen ? "open" : ""}`}
-      >
+      <div className={`circle-menu relative w-72 h-72 ${isOpen ? "open" : ""}`}>
         <ul className="relative w-full h-full list-none flex justify-center items-center">
           {menuItems.map((item, index) => (
             <li
@@ -41,7 +47,10 @@ const CircularMenu = () => {
               onClick={item.center ? toggleMenu : undefined}
             >
               <a href="#" className="text-2xl">
-              <FontAwesomeIcon icon={item.icon} className=" bg-black text-white"></FontAwesomeIcon>
+                <FontAwesomeIcon
+                  icon={item.icon}
+                  className=" bg-black text-white"
+                ></FontAwesomeIcon>
               </a>
             </li>
           ))}
