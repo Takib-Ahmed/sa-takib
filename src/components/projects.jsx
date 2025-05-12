@@ -44,7 +44,7 @@ const Projects = ({ setView, view }) => {
       live: "https://thrivext.vercel.app/",
     },
     {
-      image: "/public/Projects/pixll.png",
+      image: "/Projects/pixll.png",
       name: "Pixll Landing Page",
       Des: "A modern digital agency landing page showcasing Pixll's full-service offerings, including All-In-One solutions, project-based development, and scalable partnerships.",
       mission: "Frontend",
