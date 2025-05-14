@@ -353,7 +353,7 @@ export default function ProjectCard({
                     y: 0,
                     transition: {
                       duration: 0.5,
-                      delay: 0.3,
+                      delay: 0.25,
                     },
                   },
                 }}
@@ -395,7 +395,7 @@ export default function ProjectCard({
                       y: 0,
                       transition: {
                         duration: 0.5,
-                        delay: 0.4,
+                        delay: 0.3,
                       },
                     },
                   }}
@@ -417,7 +417,7 @@ export default function ProjectCard({
                       y: 0,
                       transition: {
                         duration: 0.5,
-                        delay: 0.5,
+                        delay: 0.35,
                       },
                     },
                   }}
