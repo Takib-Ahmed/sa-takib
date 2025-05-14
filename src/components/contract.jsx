@@ -1,3 +1,6 @@
+import { motion } from "framer-motion";
+import { Reveal } from "./ui/Reavel";
+
 export function Contract() {
   const listcontracts = [
     {
@@ -40,7 +43,23 @@ export function Contract() {
                 />
               </div>
               <div className="email">
-                <h4 className="title ">email</h4>
+                <motion.h4     variants={{
+                hidden: {
+                  opacity: 0,
+                  y: 15,
+                },
+                show: {
+                  opacity: 1,
+                  y: 0,
+                  transition: {
+                    duration: 0.5,
+                    delay: 0.1,
+                  },
+                },
+              }}
+              initial="hidden"
+              whileInView={"show"}
+              viewport={{ once: true }} className="title ">email</motion.h4>
                 <br />
                 <input
                   type="email"
@@ -50,7 +69,23 @@ export function Contract() {
                 />
               </div>
               <div className="message relative  ">
-                <h4 className="title ">message</h4>
+                <motion.h4     variants={{
+                hidden: {
+                  opacity: 0,
+                  y: 15,
+                },
+                show: {
+                  opacity: 1,
+                  y: 0,
+                  transition: {
+                    duration: 0.5,
+                    delay: 0.1,
+                  },
+                },
+              }}
+              initial="hidden"
+              whileInView={"show"}
+              viewport={{ once: true }} className="title ">message</motion.h4>
                 <br />
                 <textarea
                   type="text"
@@ -74,9 +109,32 @@ export function Contract() {
             {listcontracts.map((value, key) => (
               <div className="item" key={key}>
                 <br className=" lg:hidden" />
-                <h3 className=" ">{value.title}</h3>
+                <motion.h3
+                
+                    variants={{
+                hidden: {
+                  opacity: 0,
+                  y:  15,
+                },
+                show: {
+                  opacity: 1,
+                  y: 0,
+                  transition: {
+                    duration: 0.5,
+                    delay: 0.1,
+                  },
+                },
+              }}
+              initial="hidden"
+              whileInView={"show"}
+              viewport={{ once: true }}
+                className=" ">{value.title}</motion.h3>
                 <br className=" lg:hidden" />
-                <div className="details ">{value.value}</div>
+        <div className=" flex justify-center">
+                 <Reveal className=" bg-10f4f4 " Slider={true}>
+                 <div className="details ">{value.value}</div>
+               </Reveal>
+        </div>
               </div>
             ))}
           </div>

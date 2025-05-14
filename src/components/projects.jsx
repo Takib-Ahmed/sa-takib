@@ -44,7 +44,7 @@ const Projects = ({ setView, view }) => {
       live: "https://thrivext.vercel.app/",
     },
     {
-      image: "/public/Projects/pixll.png",
+      image: "/Projects/pixll.png",
       name: "Pixll Landing Page",
       Des: "A modern digital agency landing page showcasing Pixll's full-service offerings, including All-In-One solutions, project-based development, and scalable partnerships.",
       mission: "Frontend",
@@ -320,6 +320,7 @@ const Projects = ({ setView, view }) => {
       <h2 className="subtitle text-[1em] sm:text-[1.1em] Hidden2">
         Take a Glimpse Into My Creative Journey Through Code and Design
       </h2>
+
 
       <div className="pt-5">
         <Filtertabs setshow={setshow} />

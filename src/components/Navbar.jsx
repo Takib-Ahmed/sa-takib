@@ -1,10 +1,39 @@
 import logo from "../assets/logo_prev_ui.png";
 import { useEffect, useRef, useState } from "react";
+import { Reveal } from "./ui/Reavel";
+import { motion } from "framer-motion";
 
 export function Navbar({ view }) {
   const listnav = ["home", "skills", "projects", "contracts"];
   const navRefs = useRef([]); // Create a ref array for nav items
+   const [isSmall, setIsSmall] = useState(
+    typeof window !== "undefined" ? window.innerWidth < 640 : false
+  );
 
+  useEffect(() => {
+    const handleResize = () => {
+      setIsSmall(window.innerWidth < 640);
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  // ✅ container now uses `isSmall` correctly
+  const container = (delay) => ({
+    hidden: {
+      opacity: 0,
+      y: isSmall ? 5 : 10,
+    },
+    show:{
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.5,
+        delay: delay,
+      },
+    },
+  });
   // Define thresholds for each section
   const [thresholds, settherosholds] = useState({
     home: 0.5,
@@ -74,17 +103,38 @@ export function Navbar({ view }) {
     <>
       <header>
         <div className="logo">
-          <img src={logo} alt="" className="w-10 sm:w-20" />
+          <motion.img
+                     initial='hidden'
+            whileInView={'show'}  viewport={{ once: true }} variants={{
+    hidden: {
+      opacity: 0,
+      y: isSmall ? 5 : 10,
+    },
+    show:{
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.5,
+        delay: 0.1,
+      },
+    },
+  }} src={logo} alt="" className="w-10 sm:w-20" />
         </div>
         <nav className="text-xs sm:text-base gap-5 sm:gap-16">
           {listnav.map((value, key) => (
-            <a
+      
+                    <motion.a
+                         variants={container(key*0.2)}
+            initial='hidden'
+            whileInView={'show'}  viewport={{ once: true }}
               key={key}
               ref={(el) => (navRefs.current[key] = el)}
               href={"#" + value}
             >
               {value}
-            </a>
+            </motion.a>   
+          
+   
           ))}
         </nav>
       </header>

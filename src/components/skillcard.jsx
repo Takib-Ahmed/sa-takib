@@ -2,8 +2,22 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import RectProgresss from "./Reactprogress";
 import Vscode from "./svgs/vscode";
+import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
-
+  const fadeUP =(delay)=>({
+    hidden:{
+      opacity:0,
+      y:100,
+    },
+    show:{
+   opacity:1,
+      y:0,
+      transition:{
+        duration:0.4,
+        delay:delay,
+      }
+    }
+  })
 export default function SkillCard({
   value,
   KEY,
@@ -15,6 +29,8 @@ export default function SkillCard({
 
   return (
     <div
+    
+     
       style={
         screenSize > 425
           ? { transitionDelay: `${KEY - 0.5 * 90}ms` }
@@ -22,7 +38,7 @@ export default function SkillCard({
       }
       key={KEY}
       ref={(el) => (itemRefs.current[KEY] = el)} // Assign refs to each item
-      className={`item  ${KEY} bg-[#00092b] shadow-slate-400 shadow-2xl relative  Hidden items-center justify-center ${
+      className={`item  ${KEY} bg-[#00092b] shadow-slate-400 shadow-2xl relative Hidden   items-center justify-center  ${
         value.name === "Bootstrap" && screenSize < 420 ? " hidden" : ""
       }`} // Default class is Hidden
     >

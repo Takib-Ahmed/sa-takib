@@ -14,6 +14,7 @@ import {
   useMotionValue,
   useTransform,
 } from "motion/react";
+import { Reveal } from "./ui/Reavel";
 export default function ProjectCard({
   KEY,
   value,
@@ -258,13 +259,31 @@ export default function ProjectCard({
                 : " h-12 !my-0"
             } flex items-center justify-between`}
           >
-            <a
+            {/* <Reveal className={`${(KEY%2)===0 ? ' bg-ef0b0b':' bg-10f4f4'}`}  Slider={true}>         </Reveal> */}
+            <motion.a
+              variants={{
+                hidden: {
+                  opacity: 0,
+                  y: view === "grid" ? 10 : 15,
+                },
+                show: {
+                  opacity: 1,
+                  y: 0,
+                  transition: {
+                    duration: 0.5,
+                    delay: 0.1,
+                  },
+                },
+              }}
+              initial="hidden"
+              whileInView={"show"}
+              viewport={{ once: true }}
               href={value.live}
               className={`name    sm:mt-0 flex items-center gap-2 hover:border-b w-fit   ${
                 view === "grid" ? "" : " border-[#ef0b0b]"
               }`}
             >
-              <h3 className="  ">{value.name}</h3>
+              <h3 className="  text-nowrap ">{value.name}</h3>
               <LuExternalLink
                 className={`${
                   view === "grid"
@@ -272,24 +291,80 @@ export default function ProjectCard({
                     : "text-[#ef0b0b] text-4xl mb-1 "
                 }   `}
               />
-            </a>
+            </motion.a>
           </div>
-
-          <div className="des  description">
+          {/* <Reveal className={`${(KEY%2)===0 ? ' bg-fcaf45 ':' bg-833ab4'}`}  Slider={true}></Reveal> */}
+          <motion.div
+            variants={{
+              hidden: {
+                opacity: 0,
+                y: view === "grid" ? 10 : 15,
+              },
+              show: {
+                opacity: 1,
+                y: 0,
+                transition: {
+                  duration: 0.5,
+                  delay: 0.2,
+                },
+              },
+            }}
+            initial="hidden"
+            whileInView={"show"}
+            viewport={{ once: true }}
+            className="des  description"
+          >
             <p>{value.Des}</p>
-          </div>
+          </motion.div>
+
           <br className=" hidden sm:block" />
           <div className=" flex items-center justify-between sm:justify-normal  gap-2 gap-x-10 md:gap-y-5 md:gap-x-20 lg:gap-x-24 flex-wrap">
             <div className="mission flex gap-2 sm:gap-2.5 md:gap-3 lg:gap-4 mt-5 sm:mt-0   ">
-              <img
+              <motion.img
+                variants={{
+                  hidden: {
+                    opacity: 0,
+                    y: view === "grid" ? 10 : 15,
+                  },
+                  show: {
+                    opacity: 1,
+                    y: 0,
+                    transition: {
+                      duration: 0.5,
+                      delay: 0.2,
+                    },
+                  },
+                }}
+                initial="hidden"
+                whileInView={"show"}
+                viewport={{ once: true }}
                 className={` w-9  invert   ` + `${view === "list" && "invert"}`}
                 src={myrole}
                 alt=""
               />
-              <div>
+              <motion.div
+                variants={{
+                  hidden: {
+                    opacity: 0,
+                    y: view === "grid" ? 10 : 15,
+                  },
+                  show: {
+                    opacity: 1,
+                    y: 0,
+                    transition: {
+                      duration: 0.5,
+                      delay: 0.3,
+                    },
+                  },
+                }}
+                initial="hidden"
+                whileInView={"show"}
+                viewport={{ once: true }}
+              >
                 <p className=" text-black  ">Mission</p>
+                {/* <Reveal className={`  ${(KEY%2)===0 ? ' bg-064c5 invert   ':'bg-2f0cf4 '}`} Slider={true}> </Reveal> */}
                 {value.mission}
-              </div>
+              </motion.div>
             </div>
             <div className="languages items-center flex flex-wrap sm:flex-nowrap gap-2 sm:gap-10">
               {/* <div className=" flex gap-2 sm:gap-2.5 md:gap-3 lg:gap-4">
@@ -309,15 +384,52 @@ export default function ProjectCard({
                   KEY === 1 ? "" : "mt-5 sm:mt-0"
                 }`}
               >
-                <img
+                <motion.img
+                  variants={{
+                    hidden: {
+                      opacity: 0,
+                      y: view === "grid" ? 10 : 15,
+                    },
+                    show: {
+                      opacity: 1,
+                      y: 0,
+                      transition: {
+                        duration: 0.5,
+                        delay: 0.4,
+                      },
+                    },
+                  }}
+                  initial="hidden"
+                  whileInView={"show"}
+                  viewport={{ once: true }}
                   src={value.frameworkicon}
                   alt=""
                   className=" w-9 h-9  plicon invert framework  lg:mt-1"
                 />
-                <div className=" text-[#7711ED]">
+                <motion.div
+                  variants={{
+                    hidden: {
+                      opacity: 0,
+                      y: view === "grid" ? 10 : 15,
+                    },
+                    show: {
+                      opacity: 1,
+                      y: 0,
+                      transition: {
+                        duration: 0.5,
+                        delay: 0.5,
+                      },
+                    },
+                  }}
+                  initial="hidden"
+                  whileInView={"show"}
+                  viewport={{ once: true }}
+                  className=" text-[#7711ED]"
+                >
                   <p className=" text-white title  text-left "></p>
+                  {/* <Reveal className={`  ${' bg-7a43b6    '}`} Slider={true}></Reveal> */}
                   <font className="font-bold"> {value.frameworks}</font>
-                </div>
+                </motion.div>
               </div>
             </div>
           </div>

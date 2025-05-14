@@ -8,7 +8,54 @@
 @tailwind utilities;
 @import "tailwindcss";
 
+@theme {
+  --color-092b: #00092B;
+  --color-092b00: #00092b00;
+  --color-01824: #010824;
+  --color-fef7db: #fef7db;
 
+  --color-064c5: #0C64C5;
+  --color-1f00405e: #1f00405e;
+
+
+  --color-20d788: #20d788;
+  --color-26d023: #26d023;
+  --color-2ba52b: #2ba52b;
+  --color-2f0cf4: #2f0cf4;
+  --color-473bb4: #473bb4;
+  --color-59c10a: #59c10a;
+  --color-5d45fc: #5d45fc;
+  --color-61dafb: #61DAFB;
+  --color-7443b6: #7443b6;
+  --color-7a43b6: #7a43b6;
+  --color-7bef28: #7BEF28;
+  --color-7f40ac: #7F40AC;
+  --color-833ab4: #833AB4;
+  --color-be24a9: #be24a9;
+  --color-c523d0: #c523d0;
+  --color-ca23d0: #ca23d0;
+  --color-cb11f1: #cb11f1;
+  --color-d02e23: #d02e23;
+  --color-d1cdcdc1: #d1cdcdc1;
+  --color-d1cdcdf2: #d1cdcdf2;
+  --color-e1306c: #E1306C;
+  --color-e945e3: #e945e3;
+  --color-e945e333: #e945e333;
+  --color-e945e4: #e945e4;
+  --color-e945e555: #e945e555;
+  --color-ee9856: #ee9856;
+  --color-eee: #eee;
+  --color-eee1: #eee1;
+  --color-eee2: #eee2;
+  --color-eee5: #eee5;
+  --color-ef0b0b: #ef0b0b;
+  --color-10f4f4: #10f4f4;
+  --color-f3265f: #F3265F;
+  --color-f56040: #F56040;
+  --color-faf8f8: #faf8f8;
+  --color-fcaf45: #FCAF45;
+  --color-fff: #fff;
+}
 
 ::-webkit-scrollbar-track {
     -webkit-box-shadow: inset 0 0 6px rgba(83, 83, 83, 0.07);
@@ -119,7 +166,9 @@ filter: invert(1);
 }
 
 .contractlinks{
-    animation: Toup .8s linear forwards;
+
+    animation: Toup 2s linear forwards;
+
    margin-top: 10rem;
  
          & a {
@@ -213,7 +262,7 @@ display: none;
         font-size: 7em;
         font-weight: bold;
         line-height: 1em;
-        animation: toright 0.8s ease-in-out forwards;
+        /* animation: toright 0.8s ease-in-out forwards; */
      z-index: 9999999999999999999999999999999;
         & span{
         background-image:linear-gradient(to right,#7BE728,#F3265F,#7F40AC,#7BE728) ;
@@ -240,23 +289,23 @@ display: none;
        
         & p {
         text-wrap: nowrap;
-          animation: reveal 1s linear forwards;
+          /* animation: reveal 0.41s linear forwards 0.25s; */
           white-space: nowrap;
          
-          opacity: 0;
+          /* opacity: 0; */
           /* animation-delay: .05s; */
           
 
         }
         &::before{
             content: '';
-            border-left:.7em solid #e945e3 ;
+            border-left:.7em solid  #e945e3;
             height: 112px;
             
                 position: absolute;
                left: 20px;
-               animation: l2r linear forwards 0.92s , show 0.5s ease-in-out forwards 1s;
-          
+               /* animation: l2r linear forwards 0.92s , show 0.5s ease-in-out forwards 1s;
+           */
 
         }
         &:hover{
@@ -266,7 +315,7 @@ display: none;
 
     }
     & .links{
-        animation: Toup .8s linear forwards;
+        /* animation: Toup .8s linear forwards; */
         
     }
 
@@ -369,7 +418,7 @@ height: 40px;
     &::before{
         content: '';
        
-        animation: passions 15s infinite linear .5s;
+        animation: passions 15s infinite linear .2s;
     }
     &::after{
         content: "";
@@ -634,8 +683,9 @@ height: 40px;
     }
     
 }
+
 .avatar{
-    animation: toleft 0.8s ease-in-out forwards;
+    animation: toleft 0.5s ease-in-out forwards;
     transition: all 1s;   
  .card{
       display: inline-flex;  
@@ -1452,11 +1502,11 @@ animation-delay: -50s;
 
     @keyframes Toup {
         from{
-       transform: translateY(10vw);
+       transform: translateX(10vw);
        opacity: 0;
         }
            to{
-               transform: translateY(0vw);
+               transform: translateX(0vw);
                opacity: 1;
                
            } 
