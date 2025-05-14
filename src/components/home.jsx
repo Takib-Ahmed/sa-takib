@@ -220,7 +220,7 @@ useEffect(() => {
 
         <div className=" avatar text-right   ">
           <div className="card   mb-0 md:my-0 inline-flex flex-col  h-[20rem] mt-8 sm:mt-0 sm:h-[100%]">
-            <img src="/profile copy.png" alt="" className=" profile" />
+            <img src="https://res.cloudinary.com/duxbdw0bn/image/upload/v1747249540/profile_copy_ek7tik.png" alt="" className=" profile" />
             <div className="info gap-2 sm:gap-3 md:gap-4  lg:gap-5 text-[0.7em] sm:text-xs   md:text-sm lg:text-[1em]">
               <div>Front tend developer</div>
               <div>Bangladeshi</div>

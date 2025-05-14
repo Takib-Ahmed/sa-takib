@@ -31,7 +31,7 @@ const Projects = ({ setView, view }) => {
   const listprojects = [
     {
       image:
-        "/Projects/screencapture-thrivext-vercel-app-JavaScript-Essentials-for-React-Javascript-Key-Features-and-Concepts-2025-04-26-18_05_47.png",
+        "https://res.cloudinary.com/duxbdw0bn/image/upload/v1747249703/screencapture-thrivext-vercel-app-JavaScript-Essentials-for-React-Javascript-Key-Features-and-Concepts-2025-04-26-18_05_47_mgs3tz.png",
 
       name: "Documentation",
       Des: "Thrivext — A modern documentation site built with Next.js and Nextra, led and managed by me with a collaborative team effort",
@@ -44,7 +44,7 @@ const Projects = ({ setView, view }) => {
       live: "https://thrivext.vercel.app/",
     },
     {
-      image: "/Projects/pixll.png",
+      image: "https://res.cloudinary.com/duxbdw0bn/image/upload/v1747249829/pixll_wns3p1.png",
       name: "Pixll Landing Page",
       Des: "A modern digital agency landing page showcasing Pixll's full-service offerings, including All-In-One solutions, project-based development, and scalable partnerships.",
       mission: "Frontend",
@@ -56,15 +56,15 @@ const Projects = ({ setView, view }) => {
       live: "https://pixll-gamma.vercel.app/",
     },
     {
-      image: "/Projects/nasafits.com.png",
+      image: "https://res.cloudinary.com/duxbdw0bn/image/upload/v1747249895/nasafits.com_glaycx.png",
       images: [
-        "/Projects/nasafits.com.png",
-        "/Projects/screencapture-nasafits-vercel-app-2025-03-21-23_56_12.png",
+        "https://res.cloudinary.com/duxbdw0bn/image/upload/v1747249895/nasafits.com_glaycx.png",
+        "https://res.cloudinary.com/duxbdw0bn/image/upload/v1747249960/screencapture-nasafits-vercel-app-2025-03-21-23_56_12_cs8nrz.png",
         // '/Projects/bannershow.png',
-        "/Projects/screencapture-nasafits-vercel-app-details-5-2025-03-22-00_15_54.png",
-        "/Projects/screencapture-nasafits-vercel-app-cart-2025-03-22-00_19_24.png",
-        "/Projects/screencapture-nasafits-vercel-app-checkout-2025-03-22-00_24_38.png",
-        "/Projects/screencapture-nasafits-vercel-app-profile-Dashboard-2025-03-22-00_27_40.png",
+        "https://res.cloudinary.com/duxbdw0bn/image/upload/v1747250004/screencapture-nasafits-vercel-app-details-5-2025-03-22-00_15_54_v8tcn9.png",
+        "https://res.cloudinary.com/duxbdw0bn/image/upload/v1747250029/screencapture-nasafits-vercel-app-cart-2025-03-22-00_19_24_npxoql.png",
+        "https://res.cloudinary.com/duxbdw0bn/image/upload/v1747250067/screencapture-nasafits-vercel-app-checkout-2025-03-22-00_24_38_h5keog.png",
+        "https://res.cloudinary.com/duxbdw0bn/image/upload/v1747250174/screencapture-nasafits-vercel-app-profile-Dashboard-2025-03-22-00_27_40_vbgwmk.png",
       ],
       name: "Ecommerce Site",
       Des: "A full-stack e-commerce site with user auth, product management, cart, secure checkout, user & admin dashboard.",
@@ -77,7 +77,7 @@ const Projects = ({ setView, view }) => {
       live: "https://nasafits.vercel.app/",
     },
     {
-      image: "/Projects/mypay.png",
+      image: "https://res.cloudinary.com/duxbdw0bn/image/upload/v1747250231/mypay_q3pnru.png",
       name: "Saas Landing Page",
       Des: "MyPay — A modern SaaS payment solution landing page, built with Next.js, TailwindCSS, and smooth animations.",
       mission: "Frontend",
@@ -91,10 +91,10 @@ const Projects = ({ setView, view }) => {
     {
       image: "/Projects/porthome (2).png",
       images: [
-        "/Projects/screencapture-mezzbancity-eta-vercel-app-2025-04-26-16_55_22.png",
-        "/Projects/screencapture-mezzbancity-eta-vercel-app-2025-104-26-16_55_22.png",
-        "/Projects/screencapture-mezzbancity-eta-vercel-app-cart-2025-04-26-17_50_27.png",
-        "/Projects/screencapture-mezzbancity-eta-vercel-app-checkout-2025-04-26-17_51_30.png",
+        "https://res.cloudinary.com/duxbdw0bn/image/upload/v1747250259/screencapture-mezzbancity-eta-vercel-app-2025-04-26-16_55_22_orowzy.png",
+        "https://res.cloudinary.com/duxbdw0bn/image/upload/v1747250284/screencapture-mezzbancity-eta-vercel-app-2025-104-26-16_55_22_ygk8ae.png",
+        "https://res.cloudinary.com/duxbdw0bn/image/upload/v1747250319/screencapture-mezzbancity-eta-vercel-app-cart-2025-04-26-17_50_27_llv9qd.png",
+        "https://res.cloudinary.com/duxbdw0bn/image/upload/v1747250346/screencapture-mezzbancity-eta-vercel-app-checkout-2025-04-26-17_51_30_xemrim.png",
       ],
       name: "Resturant App",
       Des: "Mezzban City – A stylish restaurant website showcasing our menu, special dishes, and online booking. Built with Next.js and TailwindCSS, fully responsive and user-friendly.",
@@ -111,9 +111,9 @@ const Projects = ({ setView, view }) => {
       image: "/Projects/feedback.net.png",
       name: "Feedback Platform",
       images: [
-        "/Projects/feedback.net.png",
-        "/Projects/screencapture-feedbacksnet-vercel-app-detailspage-2025-04-26-18_10_09.png",
-        "/public/Projects/screencapture-feedbacksnet-vercel-app-search-2025-04-26-18_19_45.png",
+        "https://res.cloudinary.com/duxbdw0bn/image/upload/v1747250397/feedback.net_rmsufo.png",
+        "https://res.cloudinary.com/duxbdw0bn/image/upload/v1747250444/screencapture-feedbacksnet-vercel-app-detailspage-2025-04-26-18_10_09_h5wdxt.png",
+        "https://res.cloudinary.com/duxbdw0bn/image/upload/v1747250468/screencapture-feedbacksnet-vercel-app-search-2025-04-26-18_19_45_tqejkt.png",
       ],
 
       Des: "A user-friendly feedback three-page platform (Home, Search, Details) with search functionality and interactive sliders for a smooth user experience.",
@@ -127,7 +127,7 @@ const Projects = ({ setView, view }) => {
     },
 
     {
-      image: "/Projects/aniwatch.clone.png",
+      image: "https://res.cloudinary.com/duxbdw0bn/image/upload/v1747250494/aniwatch.clone_fwpqnt.png",
       name: "Aniwatch Clone",
       Des: "A replica of the Aniwatch.tv streaming platform, featuring dynamic sections for trending shows, carousels, and more.",
       mission: "Frontend",
